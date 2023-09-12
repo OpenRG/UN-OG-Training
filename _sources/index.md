@@ -11,7 +11,7 @@ We welcome collaboration on the maintenance and improvement of this tutorial. If
 ## Tutorial site functionality
 This site was created using the [Executable Books](https://executablebooks.org/) [Jupyter Book](https://jupyterbook.org/) platform. All of the content for this tutorial material is publicly accessible, available, and version controlled in the GitHub repository (https://github.com/OpenRG/UN-OG-Training) associated with this book. Some of the functionality of this tutorial site includes the following:
 * **Navigate** through the chapters and sections of the tutorial materials using the chapter table of contents on the left side of the site, and navigate through subsections of each chapter using the subsection table of contents on the right side of each page.
-* Click on the GitHub icon <img src="./images/icon_github.png" width="20px"> in the upper-right of each page to go to the **GitHub repository** or open and issue in the repository.
+* Click on the GitHub icon <img src="./images/icon_GitHub.png" width="20px"> in the upper-right of each page to go to the **GitHub repository** or open and issue in the repository.
 * **Download** each page as a markdown file `.md` or a PDF file `.pdf` by clicking on the download icon <img src="./images/icon_download.png" width="20px"> in the upper-right of each page.
 * Toggle between a desktop window or **full-screen mode** by clicking on the full screen icon <img src="./images/icon_fullscreen.png" width="20px"> in the upper-right of each page.
 * Change the **background** from light to dark to automatic using the background brightness icon <img src="./images/icon_background.png" width="20px"> in the upper-right of each page.
