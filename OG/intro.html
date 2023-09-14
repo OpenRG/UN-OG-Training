@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -161,11 +162,6 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Coding in Python</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../python/intro.html">Introduction to Python</a></li>
-
-
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="../python/StandardLibrary.html">Python Standard Library</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../python/OOP.html">Object Oriented Programming</a></li>
@@ -208,6 +204,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../appendix/glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix/intro.html">Appendix</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">References</span></p>
@@ -461,7 +458,7 @@ document.write(`
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="citation-note" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>For examples of OG modesl used for policy analysis, see <span id="id2">[<a class="reference internal" href="../UN-OG-Training_references.html#id8" title="Alan J. Auerbach, Laurence J. Kotlikoff, and Jonathan Skinner. The efficiency gains from dynamic tax reform. NBER Working Paper 819, National Bureau of Economic Research, December 1981.">Auerbach <em>et al.</em>, 1981</a>, <a class="reference internal" href="../UN-OG-Training_references.html#id9" title="Alan J. Auerbach, Laurence J. Kotlikoff, and Jonathan Skinner. The efficiency gains from dynamic tax reform. International Economic Review, 24(1):81-100, February 1983.">Auerbach <em>et al.</em>, 1983</a>]</span>, <span id="id3">[<a class="reference internal" href="../UN-OG-Training_references.html#id6" title="Alan J. Auerbach and Laurence J. Kotlikoff. An examination of empirical tests of Social Security and savings. In Elhanan Helpman, Assaf Razin, and Efraim Sadka, editors, Social Policy Evaluation: An Economic Perspective, chapter Chap. 8, pages pp. 161-179. Academic Press, 1983.">Auerbach and Kotlikoff, 1983</a>, <a class="reference internal" href="../UN-OG-Training_references.html#id5" title="Alan J. Auerbach and Laurence J. Kotlikoff. Investment versus savings incentives: the size of the bang for the buck and the potential for self-financing business tax cuts. In Lawrence. H. Meyer, editor, The Economic Consequences of Government Deficits, Economic Policy Conference Series, chapter Chap. 4, pages pp. 121-149. Kluwer-Nijhoff Publishing, 1983.">Auerbach and Kotlikoff, 1983</a>, <a class="reference internal" href="../UN-OG-Training_references.html#id4" title="Alan J. Auerbach and Laurence J. Kotlikoff. National savings, economic welfare, and the structure of taxation. In Martin Feldstein, editor, Behavioral Simulation Methods in Tax Policy Analysis, chapter Chap. 13, pages pp. 459-498. University of Chicago Press, 1983.">Auerbach and Kotlikoff, 1983</a>]</span>, and <span id="id4">[<a class="reference internal" href="../UN-OG-Training_references.html#id7" title="Alan J. Auerbach and Laurence J. Kotlikoff. Simulating alternative Social Security responses to the demographic transition. National Tax Journal, 38(2):153-168, June 1985.">Auerbach and Kotlikoff, 1985</a>]</span>.</p>
+<p>For examples of OG modesl used for policy analysis, see <span id="id2">[<a class="reference internal" href="../UN-OG-Training_references.html#id7" title="Alan J. Auerbach, Laurence J. Kotlikoff, and Jonathan Skinner. The efficiency gains from dynamic tax reform. NBER Working Paper 819, National Bureau of Economic Research, December 1981.">Auerbach <em>et al.</em>, 1981</a>, <a class="reference internal" href="../UN-OG-Training_references.html#id8" title="Alan J. Auerbach, Laurence J. Kotlikoff, and Jonathan Skinner. The efficiency gains from dynamic tax reform. International Economic Review, 24(1):81-100, February 1983.">Auerbach <em>et al.</em>, 1983</a>]</span>, <span id="id3">[<a class="reference internal" href="../UN-OG-Training_references.html#id5" title="Alan J. Auerbach and Laurence J. Kotlikoff. An examination of empirical tests of Social Security and savings. In Elhanan Helpman, Assaf Razin, and Efraim Sadka, editors, Social Policy Evaluation: An Economic Perspective, chapter Chap. 8, pages pp. 161-179. Academic Press, 1983.">Auerbach and Kotlikoff, 1983</a>, <a class="reference internal" href="../UN-OG-Training_references.html#id4" title="Alan J. Auerbach and Laurence J. Kotlikoff. Investment versus savings incentives: the size of the bang for the buck and the potential for self-financing business tax cuts. In Lawrence. H. Meyer, editor, The Economic Consequences of Government Deficits, Economic Policy Conference Series, chapter Chap. 4, pages pp. 121-149. Kluwer-Nijhoff Publishing, 1983.">Auerbach and Kotlikoff, 1983</a>, <a class="reference internal" href="../UN-OG-Training_references.html#id3" title="Alan J. Auerbach and Laurence J. Kotlikoff. National savings, economic welfare, and the structure of taxation. In Martin Feldstein, editor, Behavioral Simulation Methods in Tax Policy Analysis, chapter Chap. 13, pages pp. 459-498. University of Chicago Press, 1983.">Auerbach and Kotlikoff, 1983</a>]</span>, and <span id="id4">[<a class="reference internal" href="../UN-OG-Training_references.html#id6" title="Alan J. Auerbach and Laurence J. Kotlikoff. Simulating alternative Social Security responses to the demographic transition. National Tax Journal, 38(2):153-168, June 1985.">Auerbach and Kotlikoff, 1985</a>]</span>.</p>
 </aside>
 </section>
 </section>
