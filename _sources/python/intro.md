@@ -52,7 +52,7 @@ Read the BYU ACME "[Introduction to Python](https://acme.byu.edu/00000181-448a-d
 ```{exercise-end}
 ```
 
-[Put a review of Python data types here: string, byte, float, list, set, dict. Discuss mutability versus immutability as well as iterability. Also introduce NumPy arrays and Pandas DataFrames.]
+We cover Python's built-in functions, constants, and data types and their properties in {numref}`ExerStandardLibrary` of the {ref}`Chap_StdLib` chapter. We also introduce different commonly used objects like Numpy arrays and operations in chapter {ref}`Chap_Numpy` and Pandas DataFrames and operations in chapter {ref}`Chap_Pandas`.
 
 
 (SecPythonIntroPackages)=
@@ -73,13 +73,14 @@ All of these will be included as part of your installation of Anaconda.  Anacond
 ## Python Training Topics
 
 1. [Python Standard Library](StandardLibrary.md)
-2. [Object Oriented Programming](OOP.md)
-3. [NumPy](NumPy.md)
-4. [Pandas](Pandas.md)
-5. [Matplotlib](Matplotlib.md)
-6. [SciPy](SciPy.md)
-7. [Doc strings and comments](DocStrings.md)
-8. [Unit testing in Python](UnitTesting.md)
+2. [Exception handling and file input/output](ExceptionsIO.md)
+3. [Object Oriented Programming](OOP.md)
+4. [NumPy](NumPy.md)
+5. [Pandas](Pandas.md)
+6. [Matplotlib](Matplotlib.md)
+7. [SciPy](SciPy.md)
+8. [Doc strings and comments](DocStrings.md)
+9. [Unit testing in Python](UnitTesting.md)
 
 
 <!-- (SecPythonIntroFootnotes)=

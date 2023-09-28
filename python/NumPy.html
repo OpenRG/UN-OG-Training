@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,8 +39,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -81,6 +82,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -165,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="StandardLibrary.html">Python Standard Library</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="ExceptionsIO.html">Exception Handling and File Input/Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OOP.html">Object Oriented Programming</a></li>
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">NumPy</a></li>
@@ -199,7 +209,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1"><a class="reference internal" href="../OG/Calibration.html">Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a></li>
-
 
 
 
@@ -367,10 +376,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -378,7 +387,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -425,23 +434,37 @@ document.write(`
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
-<p>TODO: update excerises to be more relevant to OG-Core. e.g., matrix represents savings.  Then we do some array operations to multiple savings by the “population distribution” matrix omega.  Then sum to get total savings, accounting for population weights.</p>
+<p>TODO: update exercises to be more relevant to OG-Core. e.g., matrix represents savings.  Then we do some array operations to multiple savings by the “population distribution” matrix omega.  Then sum to get total savings, accounting for population weights.</p>
 <ol class="arabic simple">
-<li><p>Create a Numpy array <code class="docutils literal notranslate"><span class="pre">b</span></code> (defined this as the savings of 2 types of agents over 5 periods):
+<li><p>Create a Numpy array <code class="docutils literal notranslate"><span class="pre">b</span></code> (defined this as the savings of 2 agents (the rows) over 5 periods (the columns)):
 $$ [
-M=</p></li>
+b=</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-57c9bdde-7ab8-4ed5-bb3c-152a166cbe8c">
-<span class="eqno">(1)<a class="headerlink" href="#equation-57c9bdde-7ab8-4ed5-bb3c-152a166cbe8c" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
-    1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
-    3 &amp; 4 &amp; 5 &amp; 6 &amp; 7
+<div class="amsmath math notranslate nohighlight" id="equation-a74c6542-3fe0-488c-9c73-b8f84a34d8e3">
+<span class="eqno">(1)<a class="headerlink" href="#equation-a74c6542-3fe0-488c-9c73-b8f84a34d8e3" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+    1.1 &amp; 2.2 &amp; 3.0 &amp; 2.0 &amp; 1.0 \\
+    3.3 &amp; 4.4 &amp; 5.0 &amp; 3.7 &amp; 2.0
   \end{bmatrix}\]</div>
-<p>].  Use the <code class="docutils literal notranslate"><span class="pre">shape</span></code> method of Numpy arrays to print the shape of this matrix.  Use array slicing to print the first row of <code class="docutils literal notranslate"><span class="pre">A</span></code>.  Use array slicing to print the second column of <code class="docutils literal notranslate"><span class="pre">A</span></code>.  Use array slicing to print the first two rows and the last three columns of <code class="docutils literal notranslate"><span class="pre">A</span></code>.
-2. Reshape the matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> unto a 5x2 matrix.  Assign this new matrix to name <code class="docutils literal notranslate"><span class="pre">B</span></code>.  Use matrix multiplication to find <code class="docutils literal notranslate"><span class="pre">C</span></code>, which is the dot product of <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>.
-3. Multiply the matrix <code class="docutils literal notranslate"><span class="pre">A</span></code> by itself element-wise (Hadamard product).
-4. In one line, create a matrix of zeros that is the same size as <code class="docutils literal notranslate"><span class="pre">A</span></code>.
-5. Something with <code class="docutils literal notranslate"><span class="pre">np.where</span></code>.
-6. Something with appending/stacking.</p>
+<p>].
+$$
+Use the <code class="docutils literal notranslate"><span class="pre">shape</span></code> method of Numpy arrays to print the shape of this matrix.  Use array slicing to print the first row of <code class="docutils literal notranslate"><span class="pre">b</span></code>, which represents the lifecycle savings decisions of the first agent (i.e., the amount they choose to save in each of their 5 periods of life).  Use array slicing to print the second column of <code class="docutils literal notranslate"><span class="pre">b</span></code>, which is the saves of both agents when they are in their second period of life.  Finally, use array slicing to print the first two rows and the last three columns of <code class="docutils literal notranslate"><span class="pre">b</span></code> (i.e., the savings of both agents from middle age onwards).</p>
+<ol class="arabic simple">
+<li><p>Now let’s think about the matrix <code class="docutils literal notranslate"><span class="pre">b</span></code> are representing not two individual agents, but two types of agents who live for five periods.  In this way, we will interpret the values in <code class="docutils literal notranslate"><span class="pre">b</span></code> as the total savings of different cohorts of these two types of agents who are all living together at a point in time.  Now, define a matrix <code class="docutils literal notranslate"><span class="pre">\Omega</span></code>:
+$$ [
+\Omega=</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight" id="equation-15d48bb1-ed6d-4d64-ae39-6a7fb1fb15de">
+<span class="eqno">(2)<a class="headerlink" href="#equation-15d48bb1-ed6d-4d64-ae39-6a7fb1fb15de" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+    0.05 &amp; 0.05 &amp; 0.08 &amp; 0.06 &amp; 0.2 \\
+    0.12 &amp; 0.16 &amp; 0.03 &amp; 0.2 &amp; 0.05
+  \end{bmatrix}\]</div>
+<p>].
+$<span class="math notranslate nohighlight">\(
+`Omega` represents the fraction of agents in the economy of each type/cohort (Note that the elements of `Omega` sum to 1). Use matrix multiplication to find `B`, which is the dot product of `b` and the transpose of `Omega`. What does `B` represent?
+2. Multiply the matrix `b` by the matrix `Omega` element-wise (Hadamard product).  Use the `np.array.sum()` method on the resulting matrix to find the total savings of each cohort.
+3. In one line, create a matrix of zeros that is the same size as `b`.
+4. Use `np.where` to return the elements of `b` that are greater than 2.0 and zero elsewhere.
+5. Now suppose a 3rd type of agent.  This agent has savings \)</span>b_3 = [4.1, 5.1, 7.1, 4.5, 0.9]$.  Use <code class="docutils literal notranslate"><span class="pre">np.vstack</span></code> to stack <code class="docutils literal notranslate"><span class="pre">b</span></code> on top of <code class="docutils literal notranslate"><span class="pre">b_3</span></code> to create a new matrix <code class="docutils literal notranslate"><span class="pre">b_new</span></code>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -469,11 +492,10 @@ M=</p></li>
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="OOP.html"
@@ -493,10 +515,7 @@ M=</p></li>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -561,8 +580,8 @@ By Jason DeBacker and Richard W. Evans
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

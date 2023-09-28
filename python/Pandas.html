@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,8 +39,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -79,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -163,7 +173,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="StandardLibrary.html">Python Standard Library</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="ExceptionsIO.html">Exception Handling and File Input/Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OOP.html">Object Oriented Programming</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="NumPy.html">NumPy</a></li>
@@ -197,7 +207,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1"><a class="reference internal" href="../OG/Calibration.html">Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a></li>
-
 
 
 
@@ -365,10 +374,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -376,7 +385,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -424,17 +433,27 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
 <ol class="arabic simple">
-<li><p>Creating a DataFrame from a dictionary.  Simple example with GDP and inflation for a small set of countries over a few years.</p></li>
-<li><p>Inspecting a DataFrame with <code class="docutils literal notranslate"><span class="pre">head</span></code> and <code class="docutils literal notranslate"><span class="pre">tail</span></code> and <code class="docutils literal notranslate"><span class="pre">describe</span></code> and <code class="docutils literal notranslate"><span class="pre">keys</span></code></p></li>
-<li><p>Something to illustrate indexing.  Can turn dataframe into a panel with multindex.</p></li>
-<li><p>Using <code class="docutils literal notranslate"><span class="pre">groupby</span></code> to aggregate data.</p></li>
-<li><p>Printing a DataFrame as a table (e.g. to tex or json or md)</p></li>
-<li><p>Read in a csv file as a DataFrame.  Use UN population data as an example.  Saving a DataFrame to a CSV file.</p></li>
-<li><p>Creating a new variable in a DataFrame.</p></li>
-<li><p>Selecting a subset of a DataFrame. Using <code class="docutils literal notranslate"><span class="pre">.loc</span></code> and subsetting columns etc</p></li>
-<li><p>Using <code class="docutils literal notranslate"><span class="pre">merge</span></code> to join two DataFrames.  Read other UN data (e.g., fertility) and merge with data from (4)</p></li>
-<li><p>Using the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method</p></li>
-<li><p>Replacing values, dropping, renaming columns</p></li>
+<li><p>Consider the following GDP per capita data (in constant 2011$, source: <a class="reference external" href="https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2020?lang=en">Maddison Project Database</a>):
+|                | IND | MYS | USA | ZAF|
+|—————-|—-|—-|—-|—-|
+| 1990        |  2,087  | 8,179   | 36,982   |  6,111  |
+| 2000         |  2,753  | 13,475   |  45,886  |  7,583  |
+| 2010         | 4,526   |  18,574  |  49,267  | 11,319   |
+| 2018 |   6,806 |  24,842  | 55,335   | 12,166   |</p></li>
+</ol>
+<p>Create a dictionary with keys <code class="docutils literal notranslate"><span class="pre">Year</span></code>, <code class="docutils literal notranslate"><span class="pre">IND</span></code>, <code class="docutils literal notranslate"><span class="pre">MYS</span></code>, <code class="docutils literal notranslate"><span class="pre">USA</span></code>, and <code class="docutils literal notranslate"><span class="pre">ZAF</span></code> and values that are lists of the GDP per capita data for each country.  Create a DataFrame named <code class="docutils literal notranslate"><span class="pre">df</span></code> from this dictionary.  Print the DataFrame.</p>
+<ol class="arabic simple" start="2">
+<li><p>Inspect this data frame.  Print <code class="docutils literal notranslate"><span class="pre">df.head(3)</span></code>.  Print <code class="docutils literal notranslate"><span class="pre">df.tail(3)</span></code>.  Get a list of column names with the <code class="docutils literal notranslate"><span class="pre">keys</span></code> method.  Finally, use the  <code class="docutils literal notranslate"><span class="pre">describe</span></code> method to print descriptive statistics.</p></li>
+<li><p>Pandas DataFrames use an index to keep track of rows.  Not the default index in <code class="docutils literal notranslate"><span class="pre">df</span></code> are integers for each row.  Let’s change the index so the year is the index value. Print the updated DataFrame.</p></li>
+<li><p>Let’s reshape this into a long panel format with a <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/advanced.html"><code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code></a> for the columns.  The first level of the <code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code> should be the country name and the second level should be the year.  The values should be the GDP per capita.  To do this, use the <code class="docutils literal notranslate"><span class="pre">pivottable</span></code> or <code class="docutils literal notranslate"><span class="pre">stack</span></code> methods of the DataFrame class. Please print the resulting DataFrame.</p></li>
+<li><p>Create a new variable that is the growth rate in GDP  period capita from the prior period measure. To do this,  you will use <code class="docutils literal notranslate"><span class="pre">groupby</span></code> to find growth rate for each country over the sample.</p></li>
+<li><p>The DataFrame object has several methods to help output a formatted table suitable for reports or presentations. Use one of these methods to print a DataFrame formatted as a <a class="reference external" href="https://www.markdownguide.org/basic-syntax/">markdown</a> table.</p></li>
+<li><p>In most cases, you are likely to use a DataFrame as a container for a large dataset, not something simple that you can enter by manually as we did above.  Pandas has <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/io.html">several methods</a> to read in data from files are various formats.  Let’s use one of these methods to read in some population data extracted from the <a class="reference external" href="https://population.un.org/wpp/">United Nations’ World Population Prospects</a>.  Note that Pandas will download these data for you if you have a URL to the data file.  The URL for these data on South Africa’s population is: <a class="reference external" href="https://raw.githubusercontent.com/EAPD-DRB/OG-ZAF/main/ogzaf/data/demographic/un_zaf_pop.csv">https://raw.githubusercontent.com/EAPD-DRB/OG-ZAF/main/ogzaf/data/demographic/un_zaf_pop.csv</a>.  Please read in these data (Note: the separator is the verical bar (“|”) and the header is on the second line (in Python this has index 1, so you’ll want to use the argument <code class="docutils literal notranslate"><span class="pre">header=1</span></code>)).  Print the first 5 rows of the DataFrame.</p></li>
+<li><p>Now we’ll select a subset of this DataFrame.  Please create a new DataFrame called <code class="docutils literal notranslate"><span class="pre">zaf_pop</span></code> that contains only the columns <code class="docutils literal notranslate"><span class="pre">AgeId</span></code>, <code class="docutils literal notranslate"><span class="pre">Value</span></code> and only rows where <code class="docutils literal notranslate"><span class="pre">SexId=3</span></code> (i.e., both sexes are included), <code class="docutils literal notranslate"><span class="pre">TimeLabel=2021</span></code> (i.e., only values for the year 2021). Print the first 5 rows of the DataFrame.</p></li>
+<li><p>With your new <code class="docutils literal notranslate"><span class="pre">zaf_pop</span></code> DataFrame, rename the column <code class="docutils literal notranslate"><span class="pre">Value</span></code> to <code class="docutils literal notranslate"><span class="pre">Count</span></code>. Create a new variable in the DataFrame called <code class="docutils literal notranslate"><span class="pre">Density</span></code> that is the fraction of the total population for each age. Print the first 5 rows of the DataFrame.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method to plot the population density across age for South Africa.</p></li>
+<li><p>It’s often the case that we need to combine more than one dataset.  Pandas offers a few options to do this, including the [<code class="docutils literal notranslate"><span class="pre">merge</span></code>] and <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.join.html"><code class="docutils literal notranslate"><span class="pre">join</span></code></a> methods of the DataFrame class. Let’s test this, but reading in the original data again, and finding the population of women in 2021.  Then use <code class="docutils literal notranslate"><span class="pre">merge</span></code> or <code class="docutils literal notranslate"><span class="pre">join</span></code> to combine the <code class="docutils literal notranslate"><span class="pre">zaf_pop</span></code> and <code class="docutils literal notranslate"><span class="pre">zaf_female_pop</span></code> DataFrames.  Plot the density of women and the overall population together.</p></li>
+<li><p>Save your final DataFrame to disk as a csv file.</p></li>
 </ol>
 </section>
 
@@ -463,11 +482,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="NumPy.html"
@@ -487,10 +505,7 @@ document.write(`
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -555,8 +570,8 @@ By Jason DeBacker and Richard W. Evans
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

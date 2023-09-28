@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,8 +39,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -63,6 +64,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'OG/Calibration';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -79,6 +82,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -163,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../python/intro.html">Introduction to Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/StandardLibrary.html">Python Standard Library</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../python/ExceptionsIO.html">Exception Handling and File Input/Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/OOP.html">Object Oriented Programming</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../python/NumPy.html">NumPy</a></li>
@@ -197,7 +209,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a></li>
-
 
 
 
@@ -365,10 +376,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -376,7 +387,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -409,12 +420,18 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-parameters">Macro parameters</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-growth-and-production">Economic growth and production</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-production">Firm production</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#international-finance">International finance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fiscal-policy">Fiscal policy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-production-functions">Firm Production Functions</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#earnings-processes">Earnings Processes</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>
 </li>
 </ul>
@@ -431,12 +448,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="calibrating-the-og-core-model">
 <span id="chap-ogcalibration"></span><h1>Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model<a class="headerlink" href="#calibrating-the-og-core-model" title="Permalink to this heading">#</a></h1>
-<p>As noted in the introduction, the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model must be parametrized to represent a specific country. We refer tot he process of finding parameter values that represent a specific economy as “calibration”.  Because data sources for country-specific data differ, there’s not a single way to calibrate all economies. We there for have created country-specific calibration packages.   Some examples of these include the <a class="reference external" href="https://github.com/PSLmodels/OG-USA">United States</a>, the <a class="reference external" href="https://github.com/PSLmodels/OG-UK">United Kingdom</a>, <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF">South Africa</a>, <a class="reference external" href="https://github.com/Revenue-Academy/OG-IND">India</a>, and <a class="reference external" href="https://github.com/Revenue-Academy/OG-MYS">Malaysia</a>.</p>
-<p>In this chapter, we describe the process of creating a country-specific calibration and provide exercises related to certain components of that calibration.  We will use as an example the calibraiton of <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> to South Africa, in the <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF"><code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code></a> package.</p>
+<p>As noted in the introduction, the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model must be parametrized to represent a specific country. We refer to the process of finding parameter values that represent a specific economy as “calibration”.  Because data sources for country-specific data differ, there’s not a single way to calibrate all economies. We have therefor have created country-specific calibration packages.   Some examples of these include the <a class="reference external" href="https://github.com/PSLmodels/OG-USA">United States</a>, the <a class="reference external" href="https://github.com/PSLmodels/OG-UK">United Kingdom</a>, <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF">South Africa</a>, <a class="reference external" href="https://github.com/Revenue-Academy/OG-IND">India</a>, and <a class="reference external" href="https://github.com/Revenue-Academy/OG-MYS">Malaysia</a>.</p>
+<p>In this chapter, we describe the process of creating a country-specific calibration and provide exercises related to certain components of that calibration.  We will use as an example the calibration of <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> to South Africa, in the <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF"><code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code></a> package.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="demographics">
-<h1>Demographics<a class="headerlink" href="#demographics" title="Permalink to this heading">#</a></h1>
-<p>A key feature of OG models is the ability to model the impacts of economic shocks or policy changes across generations. Because they capture generations of finitely-lived agents, OG models can be made to reflect realistic demographics.  Demographic trends are of massive importance to economic trends [add CITATIONS here]. And there is a tremendous amount of variation in these trend across countries.  Consider Figure \ref{fig:pop_growth}, which shows the population distributions, and their evolution over time, for three countries: South Africa, India, and the United States. In each figure, we plot the 2023 population distribution (according to data from the <a class="reference external" href="https://population.un.org/wpp/">UN World Population Prospects</a>) and then the evolution of the population as we age it forward two, 40, and 80 years and then to it’s steady state distribution using the <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> model from the relevant country calibration (i.e., <code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code>, <code class="docutils literal notranslate"><span class="pre">OG-IND</span></code>, <code class="docutils literal notranslate"><span class="pre">OG-USA</span></code>). Comparing the 2023 distributions first, we see that South African distribution has humps, which reflect the initial wave of the HIV epsidemic and then it’s echo on the next generation.  India also has more young adults than most other countries, but show a relatively flat gradient as the number of individuals decline quickly with age, reflecting relatively high mortality rates in that country.  The United States has a more right skewed distribution than South Africa and India, with more individuals of high age, reflecting relatively low mortality rates for adults. As each population is simulated forward in time, we see the age distribution move to the right, with more older individuals.  After just about 40 years, these populations are very close to their steady-state. Since older individuals make significantly different labor supply and savings decisions than young individuals, these evolutions of the population will have profound effects on wages, interest rates, and thus the macroeconomy.</p>
+<span id="secdemographics"></span><h1>Demographics<a class="headerlink" href="#demographics" title="Permalink to this heading">#</a></h1>
+<p>A key feature of OG models is the ability to model the impacts of economic shocks or policy changes across generations. Because they capture generations of finitely-lived agents, OG models can be made to reflect realistic demographics.  Demographic trends are of massive importance to economic trends [TODO: add CITATIONS here]. Furthermore, there is a tremendous amount of variation in demographic trends across countries.  Consider Figure \ref{fig:pop_growth}, which shows the population distributions, and their evolution over time, for three countries: South Africa, India, and the United States. In each figure, we plot the 2023 population distribution (according to data from the <a class="reference external" href="https://population.un.org/wpp/">UN World Population Prospects</a>) and then the evolution of the population as we age it forward two, 40, and 80 years and then to it’s steady state distribution using the <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> module from the relevant country calibration (i.e., <code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code>, <code class="docutils literal notranslate"><span class="pre">OG-IND</span></code>, <code class="docutils literal notranslate"><span class="pre">OG-USA</span></code>). Comparing the 2023 distributions first, we see that South African distribution has humps, which reflect the initial wave of the HIV epidemic and then it’s echo on the next generation.  We see also that India has more young adults than the two other countries, but displays a relatively flat gradient as the number of individuals decline quickly with age, reflecting relatively high mortality rates in that country.  The United States has a more right skewed distribution than South Africa and India, with more individuals of advanced age, reflecting relatively low mortality rates for adults. As each population is simulated forward in time, we see the age distribution move to the right, with older individuals representing a larger share of the population in each country.  After about 40 years, these populations are very close to their steady-state. Since older individuals make significantly different labor supply and savings decisions than young individuals, these evolutions of the population will have profound effects on wages, interest rates, and economic growth.</p>
 <p>HOW TO MAKE ONE FIGURE WITH 3 PANELS?</p>
 <figure class="align-default" id="zaf-pop-fig">
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/ZAF_pop_distribution.png"><img alt="ZAF_demog" class="bg-primary mb-1" src="../_images/ZAF_pop_distribution.png" style="width: 200px;" /></a>
@@ -456,38 +473,61 @@ document.write(`
 <p><span class="caption-number">Fig. 3 </span><span class="caption-text">United States</span><a class="headerlink" href="#usa-pop-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Figure \ref{} plots population growth rates over time for the three countries illustrated above.  The growth rates are determined by the same mortality and fertility trends that drive the evolution of the population in Figure \ref{}. DESCRIBE the trends here</p>
-<!-- :::{figure-md} markdown-fig
-<img src="../images/pop_growth_rates.png" alt="ZAF_demog" class="bg-primary mb-1" width="200px">
-
-Population Growth Rates in South Africa, India, and the United States
-::: -->
+<p>Figure \ref{} plots population growth rates over time for the three countries illustrated above.  The growth rates are determined by the same mortality, fertility, and immigration trends that drive the evolution of the population in Figure \ref{}. In terms of population growth, we see that in all countries the population growth rate is declining in each of the three counties over the next 60 years.  This is consistent with what we saw in the evolution of the population distribution in the three countries above: each economy is aging and with relatively more older individuals, total fertility will be declining.  Looking at the level of population growth in the long run in Figure \ref{figure-md}, we see that India and the United States will have negative population growth, which will put downward pressure on their long run economic growth rates.  In contract, South Africa will have positive population growth, owing to it’s relatively high fertility rates, which will contribute positively to that economy in the long run.</p>
+<figure class="align-default" id="markdown-fig">
+<a class="bg-primary mb-1 reference internal image-reference" href="images/pop_growth_rates.png"><img alt="ZAF_demog" class="bg-primary mb-1" src="images/pop_growth_rates.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Population Growth Rates in South Africa, India, and the United States</span><a class="headerlink" href="#markdown-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The population distribution and growth rates in the plots above were created using the <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> module from the relevant country calibration repository. Each of these country calibrations utilizes population data from the <a class="reference external" href="https://population.un.org/wpp/">UN World Population Prospects</a> database, which provides consistent data on the population distribution and age-specific mortality, fertility, and immigration rates by country for many countries.  Note that although immigration rates are provided, the <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> module imputes them as the residual between the population counts by age and what would be expected given the measured fertility and mortality rates.  This is done for two reasons.  First, it ensures that the evolution of the distribution of population by age is consistent with the three forces affecting it: fertility, mortality, and immigration. Second, it is difficult to accurately measure immigration since not all immigrants are documented (with substantial variation in this across country).  Using the residual method to identify immigration may therefore be more accurate than official statistics.</p>
+<p><code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> has several functions with the module. For the South Africa version of <code class="docutils literal notranslate"><span class="pre">demographics,py</span></code> you can find a summary of those functions in the API documentation <a class="reference external" href="https://eapd-drb.github.io/OG-ZAF/content/api/public_api.html">here</a>.  Below we offer several exercise that have you interact with this module help you learn better understand its inputs and outputs.</p>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Make a copy of <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> and modify to get UN data for specific country.</p></li>
-<li><p>Plot fert rates.  Do again with alternative forecast?</p></li>
-<li><p>Plot mort rates</p></li>
-<li><p>Plot pop distribution over different years</p></li>
+<li><p>First, let’s create a utility to get population data from the UN Population Prospects for a country of interest to you.  Start by making a copy of <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF/blob/main/ogzaf/demographics.py"><code class="docutils literal notranslate"><span class="pre">demographics.py</span></code></a> from the <code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code> repository.  Next, modify the <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> you just copied to gather population data for another country (i.e., not South Africa).  Each country in the UN database has a two or three digit code.  You can find a list of these <a class="reference external" href="https://unstats.un.org/unsd/methodology/m49/">here</a></p></li>
+<li><p>Using your modified <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code>, plot the fertility rates in this country.  Note that you can do this directly from the <code class="docutils literal notranslate"><span class="pre">demographics.get_fert()</span></code> function.</p></li>
+<li><p>Let’s to the same for mortality rates.  In this case, you will want interact with the <code class="docutils literal notranslate"><span class="pre">demographics.get_mort</span></code> function.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> module uses current fertility and mortality rates (and the implied immigration rates) to project the population forward.  This ensures a population distribution in each year of the model that is consistent with the fertility, mortality, and immigration rates.  Use the <code class="docutils literal notranslate"><span class="pre">demographics.get_pop_objs</span></code> function to return a dictionary with the population object that are inputs to calibrating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code>.  From this dictionary, extract the population distribution object (the key for this is <code class="docutils literal notranslate"><span class="pre">omega</span></code> and it is an array with shape <code class="docutils literal notranslate"><span class="pre">TxS</span></code>, where <code class="docutils literal notranslate"><span class="pre">T</span></code> are the number of time periods and <code class="docutils literal notranslate"><span class="pre">S</span></code> is the number of age groups in the model).  Create a line plot of the population distribution in the first year, the 20th year, the 100th year, and the last year in the <code class="docutils literal notranslate"><span class="pre">omega</span></code> object.  Describe what you see happening to the distribution of people across age as you more forward in time?</p></li>
+<li><p>Also in the dictionary returned from <code class="docutils literal notranslate"><span class="pre">demographics.get_pop_objs</span></code>, is the population growth rate. This is a NumPy array object with key <code class="docutils literal notranslate"><span class="pre">g_n</span></code>.  Plot <code class="docutils literal notranslate"><span class="pre">g_n</span></code>.  How does the population growth rate change over time?  Given what you’ve seen in the plots you’ve created, what can you say about the driver(s) of population growth (i.e., how are fertility and mortality rates contributing?  What about immigration (something we haven’t yet plotted, but about which you might be able to infer something given fertility and mortality rates and the change in the age distribution over time…))</p></li>
 <li><p>Get pop objects and sim model SS with OG-Core defaults then your new pop objects.  Compare SS macro vars using <code class="docutils literal notranslate"><span class="pre">ogcore.output_tables.macro_table_SS</span></code>.</p></li>
 </ol>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="macro-parameters">
 <h1>Macro parameters<a class="headerlink" href="#macro-parameters" title="Permalink to this heading">#</a></h1>
+<p>There are a number of parameters of the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model that are calibrated using macroeconomic data from national accounts or national government reports.  In general, we’ve tended to read in data that inform these values in a single module, such as the <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF/blob/main/ogzaf/macro_params.py"><code class="docutils literal notranslate"><span class="pre">macro_params.py</span></code></a> module in <code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code>.  We break the discussion of the parameters calibrated from macro data into separate groupings based in what they represent in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code>.</p>
+<section id="economic-growth-and-production">
+<h2>Economic growth and production<a class="headerlink" href="#economic-growth-and-production" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model needs to be stationary in order to employ traditional solution methods.  This means that in the model solution, there cannot be underlying growth in the model objects.  However, the model is able to allow for such underlying growth, which may be driven by population growth rates (as discussed above) or underlying changes in productivity.  In order to solve the model, then, trend growth from these sources are removed.[^stationary_note].  However, since different variables grow at different rates, we need to know both the underlying growth rates of the population and of technological growth.  The population growth rate was determined from the demographic data and described in Section <a class="reference internal" href="#secdemographics"><span class="std std-ref">Demographics</span></a>. We use macroeconomic data, namely the growth rate in gross domestic product per capita to pin down the rate of growth in (labor-augmenting) technological change, <code class="docutils literal notranslate"><span class="pre">g_y_annual</span></code> in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code>.  Let <span class="math notranslate nohighlight">\(\hat{y}_t\)</span> represent the growth rate in GDP per capital from year <span class="math notranslate nohighlight">\(t-1\)</span> to year <span class="math notranslate nohighlight">\(t\)</span>.  We find the value of <code class="docutils literal notranslate"><span class="pre">g_y_annual</span></code> as equal to the long-run average of <span class="math notranslate nohighlight">\(\hat{y}_t\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-g-y-calib">
+<span class="eqno">(3)<a class="headerlink" href="#equation-g-y-calib" title="Permalink to this equation">#</a></span>\[ g_y = \sum_{t = \text{First year of data}}^{\text{Most recent year of data}} \hat{y}_t\]</div>
+<p>Note that you will want to use some judgement in what is the appropriate time period for the “first year of data”. For example, if the economy in question is now a market economy, but your data extend back to a time when it was not a market economy, you will probably want to exclude those data from the non-market economy period.  In addition, you might alter the calibration of <code class="docutils literal notranslate"><span class="pre">g_y</span></code> to be more forward looking and, rather than base future growth on recent history, you may use long run economic forecasts for GDP per capita.  But in either case the important thing is to be sure you are correctly mapping the data to the theoretical concept of <code class="docutils literal notranslate"><span class="pre">g_y</span></code>, which is measuring the constant rate of growth in output per person in the long run.</p>
+<section id="firm-production">
+<h3>Firm production<a class="headerlink" href="#firm-production" title="Permalink to this heading">#</a></h3>
+<p>Changes in productivity in the short run are accounted for by changes in total factor productivity (TFP).  This parameter is denoted as <code class="docutils literal notranslate"><span class="pre">Z</span></code> in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> and is represented by a 2-dimensional array that is <code class="docutils literal notranslate"><span class="pre">TxM</span></code> in size, where <code class="docutils literal notranslate"><span class="pre">T</span></code> is the number of time periods over the transition path and <code class="docutils literal notranslate"><span class="pre">M</span></code> is the number of industries.  Thus, you may have total factor productivity, that changes over time and varies across production industry. Values of <code class="docutils literal notranslate"><span class="pre">Z</span></code> are found through <a class="reference external" href="https://www.imf.org/external/pubs/ft/wp/1999/wp9977.pdf">growth accounting</a> techniques. However, you may not want to (or easily be able to) do the accounting yourself because it is often difficult to find the necessary data to do such accounting, which requires industry specific capital stocks.  You might find research on sectoral TFP from central banks or other sources.  For the calibration of sectoral TFP from South Africa, we used data published by the central bank. You can find a nice discussion of the process used in that case in <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF/issues/29">this GitHub Issue</a>.</p>
+<p>In addition to the level of TFP, the production functions of firms are determined by the shares of income attributable to capital, labor, and infrastructure (public capital) and the elasticity of substitution between these inputs. Factor shares can be determined through national accounts data.  The share out output paid to labor is found from the ration of labor income (wages and salaries) to GDP, while capital’s share of income can be found through the payments to capital (interest, dividends, profits) divided by GDP.  The share of output attributed to infrastructure will then be found as a residual (= 1 - labor share - capital share), as the OG-Core model requires a constant returns to scale production function.  Determining the elasticity of substitution between inputs is more involved and would require detailed panel with prices and quantities.  We therefore recommend using a default calibration with a unit elasticity (<span class="math notranslate nohighlight">\(\epsilon_m = 1\)</span>) for each industry – or finding other research from your economy of interest where this parameter has been estimated.</p>
+<p>Finally, we need to map the <span class="math notranslate nohighlight">\(M\)</span> output goods to the <span class="math notranslate nohighlight">\(I\)</span> consumption goods.  The <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model assumes what is called a “fixed coefficient” matrix for the mapping between producer outputs and consumption goods.  That is, a fixed share of each output good is required to produce each consumption good.  This is represented by an <code class="docutils literal notranslate"><span class="pre">MxI</span></code> matrix denoted as <span class="math notranslate nohighlight">\(\Pi\)</span>, which has elements <span class="math notranslate nohighlight">\(\pi_{m,i}\)</span> that is the share out consumption good <span class="math notranslate nohighlight">\(i\)</span> that is from output good <span class="math notranslate nohighlight">\(m\)</span>.  Note that the columns of this matrix must sum to one (i.e., we need to fully account for the output goods that go into each input good).  The <span class="math notranslate nohighlight">\(\Pi\)</span> matrix can be calibrated directly from a input-output tables that are typically produced through national accounts.  In the <code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code> project, there is a nice example of calibrating the <span class="math notranslate nohighlight">\(\Pi\)</span> matrix using input-output data in detailed producer outputs and consumer goods categories available in the social accounting matrix files available from <a class="reference external" href="https://www.wider.unu.edu/social-accounting-matrices">UNU Wider</a>.</p>
+</section>
+</section>
+<section id="international-finance">
+<h2>International finance<a class="headerlink" href="#international-finance" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">zeta_K</span></code>, <code class="docutils literal notranslate"><span class="pre">zeta_D</span></code></p>
+</section>
+<section id="fiscal-policy">
+<h2>Fiscal policy<a class="headerlink" href="#fiscal-policy" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">alpha_G</span></code>, <code class="docutils literal notranslate"><span class="pre">alpha_I</span></code>, <code class="docutils literal notranslate"><span class="pre">alpha_T</span></code>, <code class="docutils literal notranslate"><span class="pre">debt_to_GDP_initial</span></code>, <code class="docutils literal notranslate"><span class="pre">r_gov_scale</span></code>, <code class="docutils literal notranslate"><span class="pre">r_gov_shift</span></code></p>
+</section>
 <section id="id1">
 <h2>Exercises<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Use pandas datareader to get GDP series from country XXX from FRED</p></li>
+<li><p>Use pandas datareader to get GDP series from South Africe from FRED</p></li>
 <li><p>Collapse quarterly data to make annual</p></li>
 <li><p>Compute average growth rate</p></li>
+<li><p>Estimate a regression model (e.g., with bond market data)</p></li>
 <li><p>Other??</p></li>
 </ol>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="firm-production-functions">
-<h1>Firm Production Functions<a class="headerlink" href="#firm-production-functions" title="Permalink to this heading">#</a></h1>
-<p>Describe industry models, types of sources of data, etc.  SAM files… (UNU Wider)</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="earnings-processes">
 <h1>Earnings Processes<a class="headerlink" href="#earnings-processes" title="Permalink to this heading">#</a></h1>
@@ -498,6 +538,10 @@ Population Growth Rates in South Africa, India, and the United States
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">income.py</span></code> from OG-USA to retrieve e matrix.  Plot it.</p></li>
 <li><p>Do approximation method of Marcelo to match a specific gini coefficient</p></li>
 </ol>
+</section>
+<section id="footnotes">
+<span id="secogcalibrationfootnotes"></span><h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
+<p>[^stationary_note]For specifics on how this is done, please see the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> <a class="reference external" href="https://pslmodels.github.io/OG-Core/content/theory/stationarization.html">Stationarization Chapter</a>.</p>
 </section>
 </section>
 
@@ -526,11 +570,10 @@ Population Growth Rates in South Africa, India, and the United States
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="Output.html"
@@ -550,10 +593,7 @@ Population Growth Rates in South Africa, India, and the United States
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -574,12 +614,18 @@ Population Growth Rates in South Africa, India, and the United States
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#macro-parameters">Macro parameters</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-growth-and-production">Economic growth and production</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-production">Firm production</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#international-finance">International finance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fiscal-policy">Fiscal policy</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-production-functions">Firm Production Functions</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#earnings-processes">Earnings Processes</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>
 </li>
 </ul>
@@ -630,8 +676,8 @@ By Jason DeBacker and Richard W. Evans
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>

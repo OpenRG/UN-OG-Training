@@ -8,7 +8,7 @@ ACME materials link...
 
 # Exercises
 
-1. Define a class called `Specifications` with an attribute that is the rate of time preference, $\beta$.  Create instances of this class called `p` for $\beta=0.96$ and $\beta=0.99$.
+1. Define a class called `Specifications` with an attribute that is the rate of time preference, $\beta$.  Create instances of this class called `p1` for $\beta=0.96$ and `p2` $\beta=0.99$.
 2. Update the `Specifications` class so that allows one to specify the value of $\beta$ upon initialization of the class and checks that $\beta$ is between 0 and 1.
 3. Modify the `Specifications` class so that it has a method that prints the value of $\beta$.
 4. Change the input of $\beta$ to the class so that it is input at an annual rate.  Allow another attribute of the class called `S` that is the number of periods in an economic agent's life.  Include a method in the `Specifications` class that adjusts the value  the value of $\beta$ to represent the discount rate applied per model period, which will be equivalent to `S/80` years.

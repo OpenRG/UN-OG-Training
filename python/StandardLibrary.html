@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -39,8 +39,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Object Oriented Programming" href="OOP.html" />
+    <link rel="next" title="Exception Handling and File Input/Output" href="ExceptionsIO.html" />
     <link rel="prev" title="Introduction to Python" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -79,6 +80,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -163,7 +173,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to Python</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Python Standard Library</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="ExceptionsIO.html">Exception Handling and File Input/Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OOP.html">Object Oriented Programming</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="NumPy.html">NumPy</a></li>
@@ -197,7 +207,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1"><a class="reference internal" href="../OG/Calibration.html">Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a></li>
-
 
 
 
@@ -365,10 +374,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -376,7 +385,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -403,10 +412,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Standard Library</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-exercises">Other exercises</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -419,17 +426,23 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="python-standard-library">
 <span id="chap-stdlib"></span><h1>Python Standard Library<a class="headerlink" href="#python-standard-library" title="Permalink to this heading">#</a></h1>
-<p>ACME materials link…</p>
+<p>The Python online documentation has an <a class="reference external" href="https://docs.python.org/3/library/index.html">excellent page</a> describing the standard library, which a large set of standard functionalities that come with any full Python distribution. These functionalities include built-in <a class="reference external" href="https://docs.python.org/3/library/functions.html">functions</a>, <a class="reference external" href="https://docs.python.org/3/library/constants.html">constants</a>, and <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html">object types</a>, and <a class="reference external" href="https://docs.python.org/3/library/datatypes.html">data types</a>. We recommend that you read these sections in the Python documentation. In <a class="reference internal" href="#ExerStandardLibrary"><span class="std std-numref">Exercise 2</span></a> below, you will read through the ACME open access lab on the <a class="reference external" href="https://acme.byu.edu/0000017c-ccff-da17-a5fd-cdff02690000/acmefiles-08-standardlibrary-2021-pdf">standard library</a>, which covers these topics. And you will complete five problems from that lab in the exercise.</p>
+<div class="exercise admonition" id="ExerStandardLibrary">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2 </span></p>
+<section id="exercise-content">
+<p>Read the BYU ACME “<a class="reference external" href="https://acme.byu.edu/0000017c-ccff-da17-a5fd-cdff02690000/acmefiles-08-standardlibrary-2021-pdf">Standard Library</a>” lab and complete Problems 1 through 5 in the lab. <span id="id1">[<a class="reference internal" href="../UN-OG-Training_references.html#id14" title="BYU ACME. Standard library. Open access lab, Brigham Young University Applied and Computational Mathematics Emphasis, 2021. URL: https://acme.byu.edu/0000017c-ccff-da17-a5fd-cdff02690000/acmefiles-08-standardlibrary-2021-pdf.">ACME, 2021</a>]</span></p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercises">
-<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
+</div>
+<section id="other-exercises">
+<h2>Other exercises<a class="headerlink" href="#other-exercises" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Determining which of Python’s build in objects (string, dict, list, tuple, set, int) are mutable and which are immutable.</p></li>
-<li><p>Create a python module and run it from the command line</p></li>
-<li><p>Create a python notebook and run it from VS Code</p></li>
-<li><p>Write a function in the notebook and run it</p></li>
-<li><p>Use the <code class="docutils literal notranslate"><span class="pre">sys</span></code> module to create a relative path from a Python module, print that path</p></li>
+<li><p>Create a python module that prints something (e.g. <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World!</span></code>) and run it from the command line using <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">module_name.py</span></code>.</p></li>
+<li><p>Create a python notebook and run it in VS Code</p></li>
+<li><p>Write a function that finds the Fibonacci sequence up to an integer <code class="docutils literal notranslate"><span class="pre">N</span></code> &gt; 0 in the notebook.  Now call this function for <code class="docutils literal notranslate"><span class="pre">N</span> <span class="pre">=</span> <span class="pre">10</span></code> and <code class="docutils literal notranslate"><span class="pre">N=100</span></code>.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">sys</span></code> module to create a relative path from a Python module, print that path.</p></li>
 </ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -457,11 +470,10 @@ document.write(`
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="intro.html"
@@ -473,18 +485,15 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="OOP.html"
+       href="ExceptionsIO.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Object Oriented Programming</p>
+        <p class="prev-next-title">Exception Handling and File Input/Output</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -499,10 +508,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Python Standard Library</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-exercises">Other exercises</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
@@ -549,8 +556,8 @@ By Jason DeBacker and Richard W. Evans
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
   <footer class="bd-footer">
   </footer>
