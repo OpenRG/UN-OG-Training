@@ -109,12 +109,40 @@ TODO: glue table dataframe below that is produced from the cell above
 
 # Excercises:
 
-1. Run SS of baseline and reform and plot lifecycle profile diffs in levels and pct changes
-2. Take TPI output from XXX and convert to constant units of local currency
-3. Example where pass a baseline forecast to `ogcore.parameter_plots.plot_aggregates` to get diff
-4. Create macro table with TPI output from XXX
-5. Plot macro aggregates from TPI output from XXX
+```{exercise-start}
+:label: ExerOGoutput-life_cycle
+```
+Run SS of baseline and reform and plot lifecycle profile diffs in levels and pct changes
+```{exercise-end}
+```
 
+```{exercise-start}
+:label: ExerOGoutput-change_units
+```
+Take TPI output from XXX and convert to constant units of local currency
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerOGoutput-baseline
+```
+Example where pass a baseline forecast to `ogcore.parameter_plots.plot_aggregates` to get diff
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerOGoutput-TPI_table
+```
+Create macro table with TPI output from XXX
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerOGoutput-plot_aggregates
+```
+Plot macro aggregates from TPI output from XXX
+```{exercise-end}
+```
 
 [^SJMI_def]: Recall that `S` refers to the maximum number of model periods an individual may be economically active and `J` refers to the number of ability types.  The number of production industries is given by `M` and the number of consumption goods by `I`.
 [^T_def]: The number of periods in the transition path is given by `T`.

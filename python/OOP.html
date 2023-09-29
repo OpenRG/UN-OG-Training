@@ -434,13 +434,41 @@ document.write(`
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
-<ol class="arabic simple">
-<li><p>Define a class called <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> with an attribute that is the rate of time preference, <span class="math notranslate nohighlight">\(\beta\)</span>.  Create instances of this class called <code class="docutils literal notranslate"><span class="pre">p1</span></code> for <span class="math notranslate nohighlight">\(\beta=0.96\)</span> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> <span class="math notranslate nohighlight">\(\beta=0.99\)</span>.</p></li>
-<li><p>Update the <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> class so that allows one to specify the value of <span class="math notranslate nohighlight">\(\beta\)</span> upon initialization of the class and checks that <span class="math notranslate nohighlight">\(\beta\)</span> is between 0 and 1.</p></li>
-<li><p>Modify the <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> class so that it has a method that prints the value of <span class="math notranslate nohighlight">\(\beta\)</span>.</p></li>
-<li><p>Change the input of <span class="math notranslate nohighlight">\(\beta\)</span> to the class so that it is input at an annual rate.  Allow another attribute of the class called <code class="docutils literal notranslate"><span class="pre">S</span></code> that is the number of periods in an economic agent’s life.  Include a method in the <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> class that adjusts the value  the value of <span class="math notranslate nohighlight">\(\beta\)</span> to represent the discount rate applied per model period, which will be equivalent to <code class="docutils literal notranslate"><span class="pre">S/80</span></code> years.</p></li>
-<li><p>Add a method to the <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> class that allows one to update the values of the class attributes <code class="docutils literal notranslate"><span class="pre">S</span></code> and <code class="docutils literal notranslate"><span class="pre">beta_annual</span></code> by providing a dictionary of the form <code class="docutils literal notranslate"><span class="pre">{&quot;S&quot;:</span> <span class="pre">40,</span> <span class="pre">&quot;beta_annual&quot;:</span> <span class="pre">0.8}</span></code>.  Ensure that when the instance is updated, the new <code class="docutils literal notranslate"><span class="pre">beta</span></code> attribute is consistent with the new <code class="docutils literal notranslate"><span class="pre">S</span></code> and <code class="docutils literal notranslate"><span class="pre">beta_annual</span></code>.</p></li>
-</ol>
+<div class="exercise admonition" id="ExerOOP-defclass">
+
+<p class="admonition-title"><span class="caption-number">Exercise 8 </span></p>
+<section id="exercise-content">
+<p>Define a class called <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> with an attribute that is the rate of time preference, <span class="math notranslate nohighlight">\(\beta\)</span>.  Create instances of this class called <code class="docutils literal notranslate"><span class="pre">p1</span></code> for <span class="math notranslate nohighlight">\(\beta=0.96\)</span> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> <span class="math notranslate nohighlight">\(\beta=0.99\)</span>.</p>
+</section>
+</div>
+<div class="exercise admonition" id="ExerOOP-attr">
+
+<p class="admonition-title"><span class="caption-number">Exercise 9 </span></p>
+<section id="exercise-content">
+<p>Update the <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> class so that allows one to specify the value of <span class="math notranslate nohighlight">\(\beta\)</span> upon initialization of the class and checks that <span class="math notranslate nohighlight">\(\beta\)</span> is between 0 and 1.</p>
+</section>
+</div>
+<div class="exercise admonition" id="ExerOOP-method">
+
+<p class="admonition-title"><span class="caption-number">Exercise 10 </span></p>
+<section id="exercise-content">
+<p>Modify the <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> class so that it has a method that prints the value of <span class="math notranslate nohighlight">\(\beta\)</span>.</p>
+</section>
+</div>
+<div class="exercise admonition" id="ExerOOP-adjust">
+
+<p class="admonition-title"><span class="caption-number">Exercise 11 </span></p>
+<section id="exercise-content">
+<p>Change the input of <span class="math notranslate nohighlight">\(\beta\)</span> to the class so that it is input at an annual rate.  Allow another attribute of the class called <code class="docutils literal notranslate"><span class="pre">S</span></code> that is the number of periods in an economic agent’s life.  Include a method in the <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> class that adjusts the value  the value of <span class="math notranslate nohighlight">\(\beta\)</span> to represent the discount rate applied per model period, which will be equivalent to <code class="docutils literal notranslate"><span class="pre">S/80</span></code> years.</p>
+</section>
+</div>
+<div class="exercise admonition" id="ExerOOP-update">
+
+<p class="admonition-title"><span class="caption-number">Exercise 12 </span></p>
+<section id="exercise-content">
+<p>Add a method to the <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> class that allows one to update the values of the class attributes <code class="docutils literal notranslate"><span class="pre">S</span></code> and <code class="docutils literal notranslate"><span class="pre">beta_annual</span></code> by providing a dictionary of the form <code class="docutils literal notranslate"><span class="pre">{&quot;S&quot;:</span> <span class="pre">40,</span> <span class="pre">&quot;beta_annual&quot;:</span> <span class="pre">0.8}</span></code>.  Ensure that when the instance is updated, the new <code class="docutils literal notranslate"><span class="pre">beta</span></code> attribute is consistent with the new <code class="docutils literal notranslate"><span class="pre">S</span></code> and <code class="docutils literal notranslate"><span class="pre">beta_annual</span></code>.</p>
+</section>
+</div>
 </section>
 
     <script type="text/x-thebe-config">

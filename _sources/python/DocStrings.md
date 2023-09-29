@@ -14,7 +14,30 @@ Docstrings also have the power to help with automatric documentation of your cod
 
 ## Exercises
 
-1. Inline comment excercise
-2. Use Google docstring style to format a function that is the FOC_savings function (worked with in SciPy exercises)
-3. Create auto documentation of (2) with Sphinx?
-4. Other??
+```{exercise-start}
+:label: ExerDoc-inline
+```
+Inline comment excercise
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerDoc-google
+```
+Use Google docstring style to format a function that is the FOC_savings function (worked with in SciPy exercises)
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerDoc-sphinx
+```
+Create auto documentation of (2) with Sphinx?
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerDoc-??
+```
+Other??
+```{exercise-end}
+```

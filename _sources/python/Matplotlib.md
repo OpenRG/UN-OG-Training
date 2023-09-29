@@ -10,8 +10,38 @@ ACME materials link...
 
 # Exercises
 
-1. Take UN pop data, create line plot
-2. Format it - title, font, legened, etc
-3. Collapse data and create bar plot
-4. Plot mulitple series
-5. Grouped bar plot
+```{exercise-start}
+:label: ExerMatplot-line
+```
+Take UN pop data, create line plot
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerMatplot-line_multiple
+```
+Plot mulitple series
+```{exercise-end}
+```
+
+
+```{exercise-start}
+:label: ExerMatplot-styling
+```
+Format it - title, font, legend, etc
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerMatplot-bar
+```
+Collapse data and create bar plot
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerMatplot-grouped_bar
+```
+Grouped bar plot
+```{exercise-end}
+```

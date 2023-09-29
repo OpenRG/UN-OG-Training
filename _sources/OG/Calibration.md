@@ -34,7 +34,7 @@ United States
 Figure \ref{} plots population growth rates over time for the three countries illustrated above.  The growth rates are determined by the same mortality, fertility, and immigration trends that drive the evolution of the population in Figure \ref{}. In terms of population growth, we see that in all countries the population growth rate is declining in each of the three counties over the next 60 years.  This is consistent with what we saw in the evolution of the population distribution in the three countries above: each economy is aging and with relatively more older individuals, total fertility will be declining.  Looking at the level of population growth in the long run in Figure \ref{figure-md}, we see that India and the United States will have negative population growth, which will put downward pressure on their long run economic growth rates.  In contract, South Africa will have positive population growth, owing to it's relatively high fertility rates, which will contribute positively to that economy in the long run.
 
 :::{figure-md} markdown-fig
-<img src="../images/pop_growth_rates.png" alt="ZAF_demog" class="bg-primary mb-1" width="200px">
+<img src="./images/pop_growth_rates.png" alt="ZAF_demog" class="bg-primary mb-1" width="200px">
 
 Population Growth Rates in South Africa, India, and the United States
 :::
@@ -44,12 +44,48 @@ The population distribution and growth rates in the plots above were created usi
 `demographics.py` has several functions with the module. For the South Africa version of `demographics,py` you can find a summary of those functions in the API documentation [here](https://eapd-drb.github.io/OG-ZAF/content/api/public_api.html).  Below we offer several exercise that have you interact with this module help you learn better understand its inputs and outputs.
 
 ## Exercises
-1. First, let's create a utility to get population data from the UN Population Prospects for a country of interest to you.  Start by making a copy of [`demographics.py`](https://github.com/EAPD-DRB/OG-ZAF/blob/main/ogzaf/demographics.py) from the `OG-ZAF` repository.  Next, modify the `demographics.py` you just copied to gather population data for another country (i.e., not South Africa).  Each country in the UN database has a two or three digit code.  You can find a list of these [here](https://unstats.un.org/unsd/methodology/m49/)
-2. Using your modified `demographics.py`, plot the fertility rates in this country.  Note that you can do this directly from the `demographics.get_fert()` function.
-3. Let's to the same for mortality rates.  In this case, you will want interact with the `demographics.get_mort` function.
-4. The `demographics.py` module uses current fertility and mortality rates (and the implied immigration rates) to project the population forward.  This ensures a population distribution in each year of the model that is consistent with the fertility, mortality, and immigration rates.  Use the `demographics.get_pop_objs` function to return a dictionary with the population object that are inputs to calibrating `OG-Core`.  From this dictionary, extract the population distribution object (the key for this is `omega` and it is an array with shape `TxS`, where `T` are the number of time periods and `S` is the number of age groups in the model).  Create a line plot of the population distribution in the first year, the 20th year, the 100th year, and the last year in the `omega` object.  Describe what you see happening to the distribution of people across age as you more forward in time?
-5. Also in the dictionary returned from `demographics.get_pop_objs`, is the population growth rate. This is a NumPy array object with key `g_n`.  Plot `g_n`.  How does the population growth rate change over time?  Given what you've seen in the plots you've created, what can you say about the driver(s) of population growth (i.e., how are fertility and mortality rates contributing?  What about immigration (something we haven't yet plotted, but about which you might be able to infer something given fertility and mortality rates and the change in the age distribution over time...))
-6. Get pop objects and sim model SS with OG-Core defaults then your new pop objects.  Compare SS macro vars using `ogcore.output_tables.macro_table_SS`.
+
+```{exercise-start}
+:label: ExerCalib-demo_country
+```
+First, let's create a utility to get population data from the UN Population Prospects for a country of interest to you.  Start by making a copy of [`demographics.py`](https://github.com/EAPD-DRB/OG-ZAF/blob/main/ogzaf/demographics.py) from the `OG-ZAF` repository.  Next, modify the `demographics.py` you just copied to gather population data for another country (i.e., not South Africa).  Each country in the UN database has a two or three digit code.  You can find a list of these [here](https://unstats.un.org/unsd/methodology/m49/)
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerCalib-demo_fert
+```
+Using your modified `demographics.py`, plot the fertility rates in this country.  Note that you can do this directly from the `demographics.get_fert()` function.
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerCalib-demo_mort
+```
+Let's to the same for mortality rates.  In this case, you will want interact with the `demographics.get_mort` function.
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerCalib-demo_pop_dist
+```
+The `demographics.py` module uses current fertility and mortality rates (and the implied immigration rates) to project the population forward.  This ensures a population distribution in each year of the model that is consistent with the fertility, mortality, and immigration rates.  Use the `demographics.get_pop_objs` function to return a dictionary with the population object that are inputs to calibrating `OG-Core`.  From this dictionary, extract the population distribution object (the key for this is `omega` and it is an array with shape `TxS`, where `T` are the number of time periods and `S` is the number of age groups in the model).  Create a line plot of the population distribution in the first year, the 20th year, the 100th year, and the last year in the `omega` object.  Describe what you see happening to the distribution of people across age as you more forward in time?
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerCalib-demo_pop_growth
+```
+Also in the dictionary returned from `demographics.get_pop_objs`, is the population growth rate. This is a NumPy array object with key `g_n`.  Plot `g_n`.  How does the population growth rate change over time?  Given what you've seen in the plots you've created, what can you say about the driver(s) of population growth (i.e., how are fertility and mortality rates contributing?  What about immigration (something we haven't yet plotted, but about which you might be able to infer something given fertility and mortality rates and the change in the age distribution over time...))
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerCalib-demo_sims
+```
+Get pop objects and sim model SS with OG-Core defaults then your new pop objects.  Compare SS macro vars using `ogcore.output_tables.macro_table_SS`.
+```{exercise-end}
+```
 
 # Macro parameters
 
@@ -85,21 +121,59 @@ Finally, we need to map the $M$ output goods to the $I$ consumption goods.  The 
 
 
 ## Exercises
-1. Use pandas datareader to get GDP series from South Africe from FRED
-2. Collapse quarterly data to make annual
-3. Compute average growth rate
-4. Estimate a regression model (e.g., with bond market data)
-5. Other??
+```{exercise-start}
+:label: ExerCalib-macro_datareader
+```
+Use pandas datareader to get GDP series from South Africe from FRED
+```{exercise-end}
+```
 
+```{exercise-start}
+:label: ExerCalib-macro_freq
+```
+Collapse quarterly data to make annual
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerCalib-macro_gy
+```
+Compute average growth rate
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerCalib-macro_reg
+```
+Estimate a regression model (e.g., with bond market data)
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerCalib-macro_???
+```
+Other??
+```{exercise-end}
+```
 
 # Earnings Processes
 
 Earnings processes
 
 ## Exercises
-1. Use `income.py` from OG-USA to retrieve e matrix.  Plot it.
-2. Do approximation method of Marcelo to match a specific gini coefficient
+```{exercise-start}
+:label: ExerCalib-earn_plot
+```
+Use `income.py` from OG-USA to retrieve e matrix.  Plot it.
+```{exercise-end}
+```
 
+```{exercise-start}
+:label: ExerCalib-earn_approx
+```
+1. Do approximation method of Marcelo to match a specific gini coefficient
+```{exercise-end}
+```
 
 
 (SecOGCalibrationFootnotes)=

@@ -12,7 +12,30 @@ Read the BYU ACME "[Standard Library](https://acme.byu.edu/0000017c-ccff-da17-a5
 
 ## Other exercises
 
-1. Create a python module that prints something (e.g. `Hello World!`) and run it from the command line using `python module_name.py`.
-2. Create a python notebook and run it in VS Code
-3. Write a function that finds the Fibonacci sequence up to an integer `N` > 0 in the notebook.  Now call this function for `N = 10` and `N=100`.
-4. Use the `sys` module to create a relative path from a Python module, print that path.
+```{exercise-start}
+:label: ExerStd-module_run
+```
+Create a python module that prints something (e.g. `Hello World!`) and run it from the command line using `python module_name.py`.
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerStd-notebook_run
+```
+Create a python notebook and run it in VS Code
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerStd-def_function
+```
+Write a function that finds the Fibonacci sequence up to an integer `N` > 0 in the notebook.  Now call this function for `N = 10` and `N=100`.
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerStd-sys
+```
+Use the `sys` module to create a relative path from a Python module, print that path.
+```{exercise-end}
+```

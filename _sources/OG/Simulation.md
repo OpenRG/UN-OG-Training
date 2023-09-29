@@ -9,6 +9,9 @@ Terminology: we refer to the baseline as the economy before the change, and the 
 
 # Exercises:
 
-* Changing parameters and running the model (exercises here where change various parameters, just with SS)
-
-1. Change...
+```{exercise-start}
+:label: ExerSim
+```
+Some exercises where change parameters and run the model (just with SS)
+```{exercise-end}
+```
