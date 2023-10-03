@@ -45,6 +45,16 @@ Some extensions that we recommend installing into your VS Code:
 
 In addition, [GitHub Copilot](https://github.com/features/copilot) is an amazing resource and can be added as an extension to VS Code. However, this service is not free of charge and does require an internet connection to work.
 
+
+<div>
+  <iframe id="inlineFrameExample"
+      title="Inline Frame Example"
+      width="100%"
+      height="700"
+      src="https://acme.byu.edu/00000181-448a-d778-a18f-dfcae22f0001/intro-to-python">
+  </iframe>
+</div>
+
 ```{exercise-start}
 :label: ExerPythonIntro
 ```

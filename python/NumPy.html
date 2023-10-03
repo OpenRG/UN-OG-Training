@@ -430,7 +430,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="numpy">
 <span id="chap-numpy"></span><h1>NumPy<a class="headerlink" href="#numpy" title="Permalink to this heading">#</a></h1>
-<p>ACME materials link…</p>
+<div>
+  <iframe id="inlineFrameExample"
+      title="Inline Frame Example"
+      width="100%"
+      height="700"
+      src="https://acme.byu.edu/00000181-448a-d778-a18f-dfcae22f0001/intro-to-python">
+  </iframe>
+</div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
@@ -441,14 +448,14 @@ document.write(`
 <p>Create a Numpy array <code class="docutils literal notranslate"><span class="pre">b</span></code> (defined this as the savings of 2 agents (the rows) over 5 periods (the columns)):
 $$ [
 b=</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ac3e4494-430e-47c7-819d-96e2d88f7d6c">
-<span class="eqno">(1)<a class="headerlink" href="#equation-ac3e4494-430e-47c7-819d-96e2d88f7d6c" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-e563b44b-ffd9-406e-8a97-44cbe1ede58f">
+<span class="eqno">(1)<a class="headerlink" href="#equation-e563b44b-ffd9-406e-8a97-44cbe1ede58f" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
     1.1 &amp; 2.2 &amp; 3.0 &amp; 2.0 &amp; 1.0 \\
     3.3 &amp; 4.4 &amp; 5.0 &amp; 3.7 &amp; 2.0
   \end{bmatrix}\]</div>
 <p>].
 $$
-Use the <code class="docutils literal notranslate"><span class="pre">shape</span></code> method of Numpy arrays to print the shape of this matrix.  Use array slicing to print the first row of <code class="docutils literal notranslate"><span class="pre">b</span></code>, which represents the lifecycle savings decisions of the first agent (i.e., the amount they choose to save in each of their 5 periods of life).  Use array slicing to print the second column of <code class="docutils literal notranslate"><span class="pre">b</span></code>, which is the saves of both agents when they are in their second period of life.  Finally, use array slicing to print the first two rows and the last three columns of <code class="docutils literal notranslate"><span class="pre">b</span></code> (i.e., the savings of both agents from middle age onwards).</p>
+Use the <code class="docutils literal notranslate"><span class="pre">shape</span></code> method of NumPy arrays to print the shape of this matrix.  Use array slicing to print the first row of <code class="docutils literal notranslate"><span class="pre">b</span></code>, which represents the lifecycle savings decisions of the first agent (i.e., the amount they choose to save in each of their 5 periods of life).  Use array slicing to print the second column of <code class="docutils literal notranslate"><span class="pre">b</span></code>, which is the saves of both agents when they are in their second period of life.  Finally, use array slicing to print the first two rows and the last three columns of <code class="docutils literal notranslate"><span class="pre">b</span></code> (i.e., the savings of both agents from middle age onwards).</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerNumpy-dotproduct">
@@ -458,8 +465,8 @@ Use the <code class="docutils literal notranslate"><span class="pre">shape</span
 <p>Now let’s think about the matrix <code class="docutils literal notranslate"><span class="pre">b</span></code> are representing not two individual agents, but two types of agents who live for five periods.  In this way, we will interpret the values in <code class="docutils literal notranslate"><span class="pre">b</span></code> as the total savings of different cohorts of these two types of agents who are all living together at a point in time.  Now, define a matrix <code class="docutils literal notranslate"><span class="pre">\Omega</span></code>:
 $$ [
 \Omega=</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5855706c-9187-4379-a5b4-4ad7d8cdb3c3">
-<span class="eqno">(2)<a class="headerlink" href="#equation-5855706c-9187-4379-a5b4-4ad7d8cdb3c3" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-18a429d7-0ab2-4278-958b-c249ac4fb698">
+<span class="eqno">(2)<a class="headerlink" href="#equation-18a429d7-0ab2-4278-958b-c249ac4fb698" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
     0.05 &amp; 0.05 &amp; 0.08 &amp; 0.06 &amp; 0.2 \\
     0.12 &amp; 0.16 &amp; 0.03 &amp; 0.2 &amp; 0.05
   \end{bmatrix}\]</div>
