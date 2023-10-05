@@ -45,7 +45,7 @@ Some extensions that we recommend installing into your VS Code:
 
 In addition, [GitHub Copilot](https://github.com/features/copilot) is an amazing resource and can be added as an extension to VS Code. However, this service is not free of charge and does require an internet connection to work.
 
-In the iframe below is a PDF of the BYU ACME open-access lab entitled, "Python Intro". You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See {cite}`BYUACME_PythonIntro`. {numref}`ExerPythonIntro` below has you work through the problems in this BYU ACME lab.
+In the iframe below is a PDF of the BYU ACME open-access lab entitled, "Python Intro". You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See {cite}`BYUACME_PythonIntro`. {numref}`ExerPythonIntro` below has you work through the problems in this BYU ACME lab. The Python code file ([`python_intro.py`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/PythonIntro/python_intro.py)) used in the lab is stored in the [`./code/PythonIntro/`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/PythonIntro) directory.
 
 <div>
   <iframe id="inlineFrameExample"
@@ -92,7 +92,7 @@ All of these will be included as part of your installation of Anaconda.  Anacond
 
 Unix is an old operating system that is the basis for the Linux and Mac operating systems. Many Python users with Mac or Linux operating systems follow a workflow that includes working in the terminal and using Unix commands. This section is optional because Windows terminals do not have the same Unix commands. For those interested, feel free to work through the Unix lab below from BYU ACME. This lab features great examples and instruction, and also has seven good exercises for you to practice on.
 
-In the iframe below is a PDF of the BYU ACME open-access lab entitled, "Unix Shell 1: Introduction". You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See {cite}`BYUACME_Unix1`. {numref}`ExerUnix1` below has you work through the problems in this BYU ACME lab.
+In the iframe below is a PDF of the BYU ACME open-access lab entitled, "Unix Shell 1: Introduction". You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See {cite}`BYUACME_Unix1`. {numref}`ExerUnix1` below has you work through the problems in this BYU ACME lab. The shell script file ([`unixshell1.sh`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/UnixShell1/unixshell1.sh)) used in the lab, along with the associated zip file ([`Shell1.zip`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/UnixShell1/Shell1.zip)), are stored in the [`./code/UnixShell1/`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/UnixShell1) directory.
 
 <div>
   <iframe id="inlineFrameExample"
