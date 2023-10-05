@@ -36,6 +36,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -417,7 +419,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-python">Working with Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-packages">Python Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-training-topics">Python Training Topics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-using-the-unix-shell">(Optional: Using the Unix Shell)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-using-the-unix-shell">(Optional): Using the Unix Shell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -467,23 +470,16 @@ document.write(`
 <li><p>Pylance</p></li>
 </ul>
 <p>In addition, <a class="reference external" href="https://github.com/features/copilot">GitHub Copilot</a> is an amazing resource and can be added as an extension to VS Code. However, this service is not free of charge and does require an internet connection to work.</p>
-<p>In the iframe below is a PDF of the BYU ACME open-access lab entitled, “Python Intro”. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See <span id="id1">[<a class="reference internal" href="../UN-OG-Training_references.html#id16" title="BYU ACME. Introduction to python. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 2. 2023. URL: https://acme.byu.edu/2023-2024-materials.">ACME, 2023</a>]</span>.</p>
+<p>In the iframe below is a PDF of the BYU ACME open-access lab entitled, “Python Intro”. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See <span id="id1">[<a class="reference internal" href="../UN-OG-Training_references.html#id16" title="BYU ACME. Introduction to python. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 2. 2023. URL: https://acme.byu.edu/2023-2024-materials.">ACME, 2023</a>]</span>. <a class="reference internal" href="#ExerPythonIntro"><span class="std std-numref">Exercise 1</span></a> below has you work through the problems in this BYU ACME lab.</p>
 <div>
   <iframe id="inlineFrameExample"
       title="Inline Frame Example"
       width="100%"
       height="700"
-      src="https://drive.google.com/file/d/1CHl8C-QKgs8jHzsRfJSMWkVqq0elzP1F/view?usp=sharing">
+      src="https://drive.google.com/file/d/1CHl8C-QKgs8jHzsRfJSMWkVqq0elzP1F/preview?usp=sharing">
   </iframe>
 </div>
-<div class="exercise admonition" id="ExerPythonIntro">
-
-<p class="admonition-title"><span class="caption-number">Exercise 1 </span></p>
-<section id="exercise-content">
-<p>Read the BYU ACME “<a class="reference external" href="https://acme.byu.edu/00000181-448a-d778-a18f-dfcae22f0001/intro-to-python">Introduction to Python</a>” lab and complete Problems 1 through 8 in the lab. <span id="id2">[<a class="reference internal" href="../UN-OG-Training_references.html#id16" title="BYU ACME. Introduction to python. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 2. 2023. URL: https://acme.byu.edu/2023-2024-materials.">ACME, 2023</a>]</span></p>
-</section>
-</div>
-<p>We cover Python’s built-in functions, constants, and data types and their properties in <a class="reference internal" href="StandardLibrary.html#ExerStandardLibrary"><span class="std std-numref">Exercise 2</span></a> of the <a class="reference internal" href="StandardLibrary.html#chap-stdlib"><span class="std std-ref">Python Standard Library</span></a> chapter. We also introduce different commonly used objects like Numpy arrays and operations in chapter <a class="reference internal" href="NumPy.html#chap-numpy"><span class="std std-ref">NumPy</span></a> and Pandas DataFrames and operations in chapter <a class="reference internal" href="Pandas.html#chap-pandas"><span class="std std-ref">Pandas</span></a>.</p>
+<p>We cover Python’s built-in functions, constants, and data types and their properties in <a class="reference internal" href="StandardLibrary.html#ExerStandardLibrary"><span class="std std-numref">Exercise 3</span></a> of the <a class="reference internal" href="StandardLibrary.html#chap-stdlib"><span class="std std-ref">Python Standard Library</span></a> chapter. We also introduce different commonly used objects like Numpy arrays and operations in chapter <a class="reference internal" href="NumPy.html#chap-numpy"><span class="std std-ref">NumPy</span></a> and Pandas DataFrames and operations in chapter <a class="reference internal" href="Pandas.html#chap-pandas"><span class="std std-ref">Pandas</span></a>.</p>
 </section>
 <section id="python-packages">
 <span id="secpythonintropackages"></span><h2>Python Packages<a class="headerlink" href="#python-packages" title="Permalink to this heading">#</a></h2>
@@ -512,16 +508,33 @@ document.write(`
 </ol>
 </section>
 <section id="optional-using-the-unix-shell">
-<span id="secpythonintrounix"></span><h2>(Optional: Using the Unix Shell)<a class="headerlink" href="#optional-using-the-unix-shell" title="Permalink to this heading">#</a></h2>
+<span id="secpythonintrounix"></span><h2>(Optional): Using the Unix Shell<a class="headerlink" href="#optional-using-the-unix-shell" title="Permalink to this heading">#</a></h2>
 <p>Unix is an old operating system that is the basis for the Linux and Mac operating systems. Many Python users with Mac or Linux operating systems follow a workflow that includes working in the terminal and using Unix commands. This section is optional because Windows terminals do not have the same Unix commands. For those interested, feel free to work through the Unix lab below from BYU ACME. This lab features great examples and instruction, and also has seven good exercises for you to practice on.</p>
-<p>In the iframe below is a PDF of the BYU ACME open-access lab entitled, “Unix Shell 1: Introduction”. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See <span id="id3">[<a class="reference internal" href="../UN-OG-Training_references.html#id19" title="BYU ACME. Unix shell 1: introduction. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 1. 2023. URL: https://acme.byu.edu/2023-2024-materials.">ACME, 2023</a>]</span>.</p>
+<p>In the iframe below is a PDF of the BYU ACME open-access lab entitled, “Unix Shell 1: Introduction”. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See <span id="id2">[<a class="reference internal" href="../UN-OG-Training_references.html#id19" title="BYU ACME. Unix shell 1: introduction. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 1. 2023. URL: https://acme.byu.edu/2023-2024-materials.">ACME, 2023</a>]</span>. <a class="reference internal" href="#ExerUnix1"><span class="std std-numref">Exercise 2</span></a> below has you work through the problems in this BYU ACME lab.</p>
 <div>
   <iframe id="inlineFrameExample"
       title="Inline Frame Example"
       width="100%"
       height="700"
-      src="https://drive.google.com/file/d/18eTLp_FhWFYgAItIZnX6gesIvg91rXW5/view?usp=sharing">
+      src="https://drive.google.com/file/d/18eTLp_FhWFYgAItIZnX6gesIvg91rXW5/preview?usp=sharing">
   </iframe>
+</div>
+</section>
+<section id="exercises">
+<span id="secpythonintroexercises"></span><h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise green admonition" id="ExerPythonIntro">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1 </span> (Python introduction)</p>
+<section id="exercise-content">
+<p>Read the BYU ACME “<a class="reference external" href="https://drive.google.com/file/d/1CHl8C-QKgs8jHzsRfJSMWkVqq0elzP1F/view?usp=sharing">Introduction to Python</a>” lab and complete Problems 1 through 8 in the lab. <span id="id3">[<a class="reference internal" href="../UN-OG-Training_references.html#id16" title="BYU ACME. Introduction to python. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 2. 2023. URL: https://acme.byu.edu/2023-2024-materials.">ACME, 2023</a>]</span></p>
+</section>
+</div>
+<div class="exercise green admonition" id="ExerUnix1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2 </span> (OPTIONAL: Unix shell commands)</p>
+<section id="exercise-content">
+<p>Read the BYU ACME “<a class="reference external" href="https://drive.google.com/file/d/18eTLp_FhWFYgAItIZnX6gesIvg91rXW5/view?usp=sharing">Unix Shell 1: Introduction</a>” lab and complete Problems 1 through 7 in the lab. <span id="id4">[<a class="reference internal" href="../UN-OG-Training_references.html#id19" title="BYU ACME. Unix shell 1: introduction. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 1. 2023. URL: https://acme.byu.edu/2023-2024-materials.">ACME, 2023</a>]</span></p>
+</section>
 </div>
 </section>
 </section>
@@ -594,7 +607,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-python">Working with Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-packages">Python Packages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-training-topics">Python Training Topics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-using-the-unix-shell">(Optional: Using the Unix Shell)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-using-the-unix-shell">(Optional): Using the Unix Shell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 
