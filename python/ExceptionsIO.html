@@ -177,7 +177,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="StandardLibrary.html">Python Standard Library</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Exception Handling and File Input/Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OOP.html">Object Oriented Programming</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="NumPy.html">NumPy</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Pandas.html">Pandas</a></li>
@@ -391,7 +390,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -407,6 +408,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -418,14 +427,27 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exception-handling-and-file-input-output">
 <span id="chap-exceptio"></span><h1>Exception Handling and File Input/Output<a class="headerlink" href="#exception-handling-and-file-input-output" title="Permalink to this heading">#</a></h1>
-<p>Python stops the computation process when it encounters an error. Sometimes you want to describe certain errors with descriptive error messages. And sometimes you want your code to move past errors while saving them and including descriptive error messages.</p>
-<div class="exercise admonition" id="ExerExceptionIO">
+<p>Python stops the computation process when it encounters an error. Sometimes you want to describe certain errors with descriptive error messages. And sometimes you want your code to move past errors while saving them and including descriptive error messages. Other times, you want to ensure that no errors occur and that your program stops and informs you in the case of an error.</p>
+<p>Python’s error handling, assertion functionality, traceback capability, and type hinting are powerful methods to make sure your code does what you expect it to do, breaks when you expect it to break, and moves past issues when you don’t want the computation to stop.</p>
+<p>The iframe below contains a PDF of the BYU ACME open-access lab entitled, “Exceptions and File Input/Output”. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See <span id="id1">[<a class="reference internal" href="../UN-OG-Training_references.html#id12" title="BYU ACME. Exceptions and file input/output. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 7. 2023. URL: https://acme.byu.edu/2023-2024-materials.">ACME, 2023</a>]</span>. <a class="reference internal" href="#ExerExceptionIO"><span class="std std-numref">Exercise 8</span></a> below has you work through the problems in this BYU ACME lab.</p>
+<div>
+  <iframe id="inlineFrameExample"
+      title="Inline Frame Example"
+      width="100%"
+      height="700"
+      src="https://drive.google.com/file/d/1gAam1i1Gy0YgULT92ul72DUqRCb4q2fA/preview?usp=sharing">
+  </iframe>
+</div>
+<section id="exercises">
+<span id="secexceptioexercises"></span><h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise green admonition" id="ExerExceptionIO">
 
 <p class="admonition-title"><span class="caption-number">Exercise 8 </span></p>
 <section id="exercise-content">
-<p>Read the BYU ACME “<a class="reference external" href="https://acme.byu.edu/0000017c-ccfe-da17-a5fd-cdfeff8a0000/acmefiles-08-exceptions-fileio-2021-pdf">Exceptions and file input/output</a>” lab and complete Problems 1 through 4 in the lab. <span id="id1">[<a class="reference internal" href="../UN-OG-Training_references.html#id12" title="BYU ACME. Exceptions and file input/output. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 7. 2023. URL: https://acme.byu.edu/2023-2024-materials.">ACME, 2023</a>]</span></p>
+<p>Read the BYU ACME “<a class="reference external" href="https://drive.google.com/file/d/1gAam1i1Gy0YgULT92ul72DUqRCb4q2fA/view?usp=sharing">Exceptions and file input/output</a>” lab and complete Problems 1 through 4 in the lab. <span id="id2">[<a class="reference internal" href="../UN-OG-Training_references.html#id12" title="BYU ACME. Exceptions and file input/output. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 7. 2023. URL: https://acme.byu.edu/2023-2024-materials.">ACME, 2023</a>]</span></p>
 </section>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -482,6 +504,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

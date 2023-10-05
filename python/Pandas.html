@@ -177,7 +177,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="StandardLibrary.html">Python Standard Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ExceptionsIO.html">Exception Handling and File Input/Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OOP.html">Object Oriented Programming</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="NumPy.html">NumPy</a></li>
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Pandas</a></li>
@@ -436,7 +435,7 @@ document.write(`
 <h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
 <div class="exercise admonition" id="ExerPandas-make_df">
 
-<p class="admonition-title"><span class="caption-number">Exercise 20 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 21 </span></p>
 <section id="exercise-content">
 <p>Consider the following GDP per capita data (in constant 2011$, source: <a class="reference external" href="https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2020?lang=en">Maddison Project Database</a>):</p>
 <table class="table">
@@ -480,77 +479,77 @@ document.write(`
 </div>
 <div class="exercise admonition" id="ExerPandas-inspect">
 
-<p class="admonition-title"><span class="caption-number">Exercise 21 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 22 </span></p>
 <section id="exercise-content">
 <p>Inspect this data frame.  Print <code class="docutils literal notranslate"><span class="pre">df.head(3)</span></code>.  Print <code class="docutils literal notranslate"><span class="pre">df.tail(3)</span></code>.  Get a list of column names with the <code class="docutils literal notranslate"><span class="pre">keys</span></code> method.  Finally, use the  <code class="docutils literal notranslate"><span class="pre">describe</span></code> method to print descriptive statistics.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerPandas-index">
 
-<p class="admonition-title"><span class="caption-number">Exercise 22 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 23 </span></p>
 <section id="exercise-content">
 <p>Pandas DataFrames use an index to keep track of rows.  Not the default index in <code class="docutils literal notranslate"><span class="pre">df</span></code> are integers for each row.  Let’s change the index so the year is the index value. Print the updated DataFrame.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerPandas-reshape">
 
-<p class="admonition-title"><span class="caption-number">Exercise 23 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 24 </span></p>
 <section id="exercise-content">
 <p>Let’s reshape this into a long panel format with a <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/advanced.html"><code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code></a> for the columns.  The first level of the <code class="docutils literal notranslate"><span class="pre">MultiIndex</span></code> should be the country name and the second level should be the year.  The values should be the GDP per capita.  To do this, use the <code class="docutils literal notranslate"><span class="pre">pivottable</span></code> or <code class="docutils literal notranslate"><span class="pre">stack</span></code> methods of the DataFrame class. Please print the resulting DataFrame.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerPandas-groupby">
 
-<p class="admonition-title"><span class="caption-number">Exercise 24 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 25 </span></p>
 <section id="exercise-content">
 <p>Create a new variable that is the growth rate in GDP  period capita from the prior period measure. To do this,  you will use <code class="docutils literal notranslate"><span class="pre">groupby</span></code> to find growth rate for each country over the sample.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerPandas-print_tables">
 
-<p class="admonition-title"><span class="caption-number">Exercise 25 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 26 </span></p>
 <section id="exercise-content">
 <p>The DataFrame object has several methods to help output a formatted table suitable for reports or presentations. Use one of these methods to print a DataFrame formatted as a <a class="reference external" href="https://www.markdownguide.org/basic-syntax/">markdown</a> table.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerPandas-read">
 
-<p class="admonition-title"><span class="caption-number">Exercise 26 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 27 </span></p>
 <section id="exercise-content">
 <p>In most cases, you are likely to use a DataFrame as a container for a large dataset, not something simple that you can enter by manually as we did above.  Pandas has <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/io.html">several methods</a> to read in data from files are various formats.  Let’s use one of these methods to read in some population data extracted from the <a class="reference external" href="https://population.un.org/wpp/">United Nations’ World Population Prospects</a>.  Note that Pandas will download these data for you if you have a URL to the data file.  The URL for these data on South Africa’s population is: <a class="reference external" href="https://raw.githubusercontent.com/EAPD-DRB/OG-ZAF/main/ogzaf/data/demographic/un_zaf_pop.csv">https://raw.githubusercontent.com/EAPD-DRB/OG-ZAF/main/ogzaf/data/demographic/un_zaf_pop.csv</a>.  Please read in these data (Note: the separator is the verical bar (“|”) and the header is on the second line (in Python this has index 1, so you’ll want to use the argument <code class="docutils literal notranslate"><span class="pre">header=1</span></code>)).  Print the first 5 rows of the DataFrame.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerPandas-subset">
 
-<p class="admonition-title"><span class="caption-number">Exercise 27 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 28 </span></p>
 <section id="exercise-content">
 <p>Now we’ll select a subset of this DataFrame.  Please create a new DataFrame called <code class="docutils literal notranslate"><span class="pre">zaf_pop</span></code> that contains only the columns <code class="docutils literal notranslate"><span class="pre">AgeId</span></code>, <code class="docutils literal notranslate"><span class="pre">Value</span></code> and only rows where <code class="docutils literal notranslate"><span class="pre">SexId=3</span></code> (i.e., both sexes are included), <code class="docutils literal notranslate"><span class="pre">TimeLabel=2021</span></code> (i.e., only values for the year 2021). Print the first 5 rows of the DataFrame.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerPandas-new_var">
 
-<p class="admonition-title"><span class="caption-number">Exercise 28 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 29 </span></p>
 <section id="exercise-content">
 <p>With your new <code class="docutils literal notranslate"><span class="pre">zaf_pop</span></code> DataFrame, rename the column <code class="docutils literal notranslate"><span class="pre">Value</span></code> to <code class="docutils literal notranslate"><span class="pre">Count</span></code>. Create a new variable in the DataFrame called <code class="docutils literal notranslate"><span class="pre">Density</span></code> that is the fraction of the total population for each age. Print the first 5 rows of the DataFrame.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerPandas-plot">
 
-<p class="admonition-title"><span class="caption-number">Exercise 29 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 30 </span></p>
 <section id="exercise-content">
 <p>Use the <code class="docutils literal notranslate"><span class="pre">plot</span></code> method to plot the population density across age for South Africa.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerPandas-merge">
 
-<p class="admonition-title"><span class="caption-number">Exercise 30 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 31 </span></p>
 <section id="exercise-content">
 <p>It’s often the case that we need to combine more than one dataset.  Pandas offers a few options to do this, including the [<code class="docutils literal notranslate"><span class="pre">merge</span></code>] and <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.join.html"><code class="docutils literal notranslate"><span class="pre">join</span></code></a> methods of the DataFrame class. Let’s test this, but reading in the original data again, and finding the population of women in 2021.  Then use <code class="docutils literal notranslate"><span class="pre">merge</span></code> or <code class="docutils literal notranslate"><span class="pre">join</span></code> to combine the <code class="docutils literal notranslate"><span class="pre">zaf_pop</span></code> and <code class="docutils literal notranslate"><span class="pre">zaf_female_pop</span></code> DataFrames.  Plot the density of women and the overall population together.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerPandas-save">
 
-<p class="admonition-title"><span class="caption-number">Exercise 31 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 32 </span></p>
 <section id="exercise-content">
 <p>Save your final DataFrame to disk as a csv file.</p>
 </section>

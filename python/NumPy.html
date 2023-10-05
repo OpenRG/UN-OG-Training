@@ -179,7 +179,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="StandardLibrary.html">Python Standard Library</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ExceptionsIO.html">Exception Handling and File Input/Output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="OOP.html">Object Oriented Programming</a></li>
-
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">NumPy</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Pandas.html">Pandas</a></li>
@@ -445,13 +444,13 @@ document.write(`
 <h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
 <div class="exercise admonition" id="ExerNumpy-array">
 
-<p class="admonition-title"><span class="caption-number">Exercise 14 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 15 </span></p>
 <section id="exercise-content">
 <p>Create a Numpy array <code class="docutils literal notranslate"><span class="pre">b</span></code> (defined this as the savings of 2 agents (the rows) over 5 periods (the columns)):
 $$ [
 b=</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ed78ab3a-b981-4ec1-99bc-4ac7dc117df3">
-<span class="eqno">(1)<a class="headerlink" href="#equation-ed78ab3a-b981-4ec1-99bc-4ac7dc117df3" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-e818689f-0dd8-471e-8d8c-b458a9e8ecc7">
+<span class="eqno">(1)<a class="headerlink" href="#equation-e818689f-0dd8-471e-8d8c-b458a9e8ecc7" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
     1.1 &amp; 2.2 &amp; 3.0 &amp; 2.0 &amp; 1.0 \\
     3.3 &amp; 4.4 &amp; 5.0 &amp; 3.7 &amp; 2.0
   \end{bmatrix}\]</div>
@@ -462,13 +461,13 @@ Use the <code class="docutils literal notranslate"><span class="pre">shape</span
 </div>
 <div class="exercise admonition" id="ExerNumpy-dotproduct">
 
-<p class="admonition-title"><span class="caption-number">Exercise 15 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 16 </span></p>
 <section id="exercise-content">
 <p>Now let’s think about the matrix <code class="docutils literal notranslate"><span class="pre">b</span></code> are representing not two individual agents, but two types of agents who live for five periods.  In this way, we will interpret the values in <code class="docutils literal notranslate"><span class="pre">b</span></code> as the total savings of different cohorts of these two types of agents who are all living together at a point in time.  Now, define a matrix <code class="docutils literal notranslate"><span class="pre">\Omega</span></code>:
 $$ [
 \Omega=</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f60c6d28-6d97-43a8-96d2-dc1870277101">
-<span class="eqno">(2)<a class="headerlink" href="#equation-f60c6d28-6d97-43a8-96d2-dc1870277101" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
+<div class="amsmath math notranslate nohighlight" id="equation-d2f46374-db24-4409-86bd-70e870e1c8a5">
+<span class="eqno">(2)<a class="headerlink" href="#equation-d2f46374-db24-4409-86bd-70e870e1c8a5" title="Permalink to this equation">#</a></span>\[\begin{bmatrix}
     0.05 &amp; 0.05 &amp; 0.08 &amp; 0.06 &amp; 0.2 \\
     0.12 &amp; 0.16 &amp; 0.03 &amp; 0.2 &amp; 0.05
   \end{bmatrix}\]</div>
@@ -479,28 +478,28 @@ $$
 </div>
 <div class="exercise admonition" id="ExerNumpy-mult">
 
-<p class="admonition-title"><span class="caption-number">Exercise 16 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 17 </span></p>
 <section id="exercise-content">
 <p>Multiply the matrix <code class="docutils literal notranslate"><span class="pre">b</span></code> by the matrix <code class="docutils literal notranslate"><span class="pre">Omega</span></code> element-wise (Hadamard product).  Use the <code class="docutils literal notranslate"><span class="pre">np.array.sum()</span></code> method on the resulting matrix to find the total savings of each cohort.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerNumpy-zeros">
 
-<p class="admonition-title"><span class="caption-number">Exercise 17 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 18 </span></p>
 <section id="exercise-content">
 <p>In one line, create a matrix of zeros that is the same size as <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerNumpy-where">
 
-<p class="admonition-title"><span class="caption-number">Exercise 18 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 19 </span></p>
 <section id="exercise-content">
 <p>Use <code class="docutils literal notranslate"><span class="pre">np.where</span></code> to return the elements of <code class="docutils literal notranslate"><span class="pre">b</span></code> that are greater than 2.0 and zero elsewhere.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerNumpy-stack">
 
-<p class="admonition-title"><span class="caption-number">Exercise 19 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 20 </span></p>
 <section id="exercise-content">
 <p>Now suppose a 3rd type of agent.  This agent has savings <span class="math notranslate nohighlight">\(b_3 = \[4.1, 5.1, 7.1, 4.5, 0.9]\)</span>.  Use <code class="docutils literal notranslate"><span class="pre">np.vstack</span></code> to stack <code class="docutils literal notranslate"><span class="pre">b</span></code> on top of <code class="docutils literal notranslate"><span class="pre">b_3</span></code> to create a new matrix <code class="docutils literal notranslate"><span class="pre">b_new</span></code>.</p>
 </section>

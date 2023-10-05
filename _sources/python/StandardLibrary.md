@@ -3,7 +3,7 @@
 
 The **standard library** of Python is all the built-in functions of the programming language as well as the modules included with the most common Python distributions. The Python online documentation has an [excellent page](https://docs.python.org/3/library/index.html) describing the standard library. These functionalities include built-in [functions](https://docs.python.org/3/library/functions.html), [constants](https://docs.python.org/3/library/constants.html), and [object types](https://docs.python.org/3/library/stdtypes.html), and [data types](https://docs.python.org/3/library/datatypes.html). We recommend that you read these sections in the Python documentation.
 
-In addition,the iframe below contains a PDF of the BYU ACME open-access lab entitled, "The Standard Library". You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See {cite}`BYUACME_StandardLibrary`. {numref}`ExerStandardLibrary` below has you work through the problems in this BYU ACME lab.
+In addition, the iframe below contains a PDF of the BYU ACME open-access lab entitled, "The Standard Library". You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See {cite}`BYUACME_StandardLibrary`. {numref}`ExerStandardLibrary` below has you work through the problems in this BYU ACME lab.
 
 <div>
   <iframe id="inlineFrameExample"
@@ -15,6 +15,7 @@ In addition,the iframe below contains a PDF of the BYU ACME open-access lab enti
 </div>
 
 
+(SecStdLibExercises)=
 ## Exercises
 
 ```{exercise-start}
