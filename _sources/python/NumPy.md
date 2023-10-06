@@ -7,7 +7,7 @@ Oliphant was a mathematics and electrical engineering student who came up throug
 
 The fundamental object of the NumPy package is the NumPy array [`numpy.array`](https://numpy.org/doc/stable/reference/generated/numpy.array.html). Python's native objects---such as lists, tuples, and dictionaries---can hold numbers and perform operations on those numbers. But the NumPy array allows for storing high-dimensional arrays of numbers on which linear algebra and tensor functions can be operated. These linear algebra operations are more effecient than working with lists and tuples, and they form the foundation of modern optimization and machine learning. Learning to use Python's NumPy package is an essential skill for many numerical computations and other operations.
 
-The iframe below contains a PDF of the BYU ACME open-access lab entitled, "Introduction to NumPy". You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See {cite}`BYUACME_NumPy1`. {numref}`ExerNumPy-acme` below has you work through the problems in this BYU ACME lab. A Python file template ([`numpy_intro.py`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/NumPyIntro/numpy_intro.py)) and a matrix data file ([`grid.npy`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/NumPyIntro/grid.npy)) used in the lab are stored in the [`./code/NumPyIntro/`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/NumPyIntro) directory.
+The iframe below contains a PDF of the BYU ACME open-access lab entitled, "Introduction to NumPy". You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See {cite}`BYUACME_NumPy1`. {numref}`ExerNumPy-acme1` below has you work through the problems in this BYU ACME lab. A Python file template ([`numpy_intro.py`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/NumPyIntro/numpy_intro.py)) and a matrix data file ([`grid.npy`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/NumPyIntro/grid.npy)) used in the lab are stored in the [`./code/NumPyIntro/`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/NumPyIntro) directory.
 
 <div>
   <iframe id="inlineFrameExample"
@@ -18,15 +18,45 @@ The iframe below contains a PDF of the BYU ACME open-access lab entitled, "Intro
   </iframe>
 </div>
 
+The following iframe contains a PDF of the BYU ACME open-access lab entitled, "Advanced NumPy", which contains content and exercises that build off of the previous BYU ACME NumPy lab. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See {cite}`BYUACME_NumPy2`. {numref}`ExerNumPy-acme2` below has you work through the problems in this BYU ACME lab. A Python file template ([`advanced_numpy.py`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/AdvancedNumPy/_advanced_numpy.py)) used in the lab are stored in the [`./code/AdvancedNumPy/`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/AdvancedNumPy) directory.
+
+<div>
+  <iframe id="inlineFrameExample"
+      title="Inline Frame Example"
+      width="100%"
+      height="700"
+      src="https://drive.google.com/file/d/15KxliSp0C_mLf7TrLQbnC0wO4YaK7ePi/preview?usp=sharing">
+  </iframe>
+</div>
+
+
+(SecNumPyExtensions)=
+## Extensions and future paths
+
+One of the drawbacks to the degree to which NumPy arrays are fundamental to Python's numerical computing is that the format of those arrays is a requirement in Python's most highly used scientific computing and machine learning packages ({ref}`Chap_SciPy` and scikit-learn). However, advances in hardware, large data methods, and optimization algorithms now take much more advantage of parallel computing algorithms, hybrid architectures across multiple traditional processors and GPU's. All of these innovations have been difficult to incorporate into Python's scientific computing stack because NumPy arrays have been difficult to make flexible to these architectures.
+
+Below are three areas that have been working to make Python better on these dimentions.
+* Dask arrays
+* QuantSight development and support of array API's in SciPy and in scikit-learn. See here for the [scikit-learn blog post](https://labs.quansight.org/blog/array-api-support-scikit-learn). And see here for the [SciPy blog post](https://labs.quansight.org/blog/scipy-array-api).
+* Modular's development of the Mojo programming language.
+
 
 (SecNumPyExercises)=
 ## Exercises
 
 ```{exercise-start}
-:label: ExerNumPy-acme
+:label: ExerNumPy-acme1
 :class: green
 ```
 Read the BYU ACME "[Introduction to NumPy](https://drive.google.com/file/d/1Hj3ok81gJAxcUTHh_8BrxX-B4belupPN/view?usp=sharing)" lab and complete Problems 1 through 7 in the lab. {cite}`BYUACME_NumPy1`
+```{exercise-end}
+```
+
+```{exercise-start}
+:label: ExerNumPy-acme2
+:class: green
+```
+Read the BYU ACME "[Advanced NumPy](https://drive.google.com/file/d/15KxliSp0C_mLf7TrLQbnC0wO4YaK7ePi/view?usp=sharing)" lab and complete Problems 1 through 7 in the lab. {cite}`BYUACME_NumPy2`
 ```{exercise-end}
 ```
 
