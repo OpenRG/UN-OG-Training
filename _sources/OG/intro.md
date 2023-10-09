@@ -10,7 +10,7 @@ To further describe `OG-Core`, it is a dynamic, general equilibrium, overlapping
 There are two types of equilibria we solve for when solving the `OG-Core` model.  One is the steady-state equilibrium, which represents the economy in the vary long run, when policy has been stabilized and all variables are growing at the same rate.  The other is the transition path equilibrium, which represents the economy from the short run up to the long-run steady state.  Over the transition path, policy may vary and variables may be growing at different rates.  We refer the reader to the detailed [`OG-Core` documentation](https://pslmodels.github.io/OG-Core/content/intro/intro.html) for a full characterization of these equilibria.  But it is important to note that the `OG-Core` model is a general equilibrium model that solves for both the steady-state equilibrium and the transition path equilibrium.  And in the model solution algorthim, one much work backwards in time - solving for the steady-state equilibrium first and then solving for the transition path equilibrium.
 
 
-# A Comparison to Other Macro Models
+## A Comparison to Other Macro Models
 
 There are essentially six types of macroeconomic models that are used for policy analysis.  These are: (1) Econometric macroeconomic models, (2) Solow growth models, (3) DSGE models, (4) CGE models, (5) Hybrid macro models, and (6) Overlapping generations models.  We briefly describe each of these models and their strengths and weaknesses.
 
@@ -26,7 +26,7 @@ Hybrid macroeconomic models are not commonly used, but some important policy ins
 
 OG models typically feature some of the best components from each of these: forward looking agents, finitely-lived agents allowing for intergenerational analysis, heterogeneous agents, a modeling of the economy's general equilibrium in the short and long run.  The code these features impose is a more complex and computationally costly solution algorithm.  However, the solution algorithm is global and therefore can accommodate large policy changes.  This makes OG models well suited for policy analysis.  And in the design of OG-Core, we've leveraged tools of high performance computing to make the solution algorithm as efficient as possible.
 
-# An Overview of OG-Core
+## An Overview of OG-Core
 
 Details of the OG-Core model are available in its [online documentation](https://pslmodels.github.io/OG-Core/content/intro/intro.html).  Here we provide a brief overview of the model and its solution algorithm.
 
@@ -41,7 +41,7 @@ The rest of the world is modeled simply.  Individuals migrate in and out based o
 The market clearing conditions ensure that in each period, the supply of labor from the `SxJ` household is equal to the total demand from labor from the `M` firms.  Total supply of savings from households must match the total demand for savings from the government's borrowing and from the firms use of capital. Finally, the total demand for consumption goods from households must equal the total supply of consumption goods as determined from the firms' production of the `M` output goods and their mapping into the `I` consumption goods.
 
 
-# Country Calibrations of OG-Core
+## Country Calibrations of OG-Core
 
 As described above, `OG-Core` is a foundational and general model.  It has all the pieces, but it doesn't represent any specific economy.  To represent a specific economy, one must calibrate the model to that economy.  This involves setting the values of the parameters of the model to so that the model output matches that of the economy you wish to model.  `OG-Core` has thousands of parameters, so this can be a significant task.  Some current country-specific calibrations (with varying degrees of detail) have been done for the [United States](https://github.com/PSLmodels/OG-USA), the [United Kingdom](https://github.com/PSLmodels/OG-UK), [South Africa](https://github.com/EAPD-DRB/OG-ZAF), [India](https://github.com/Revenue-Academy/OG-IND), and [Malaysia](https://github.com/Revenue-Academy/OG-MYS).
 
@@ -52,5 +52,7 @@ What comes out of these calibration packages is a `Calibration` class object tha
 
 (SecOGintroFootnotes)=
 ## Footnotes
+
+The footnotes from this chapter.
 
 [^citation_note]: For examples of OG modesl used for policy analysis, see {cite}`AuerbachEtAl:1981,AuerbachEtAl:1983`, {cite}`AuerbachKotlikoff:1983a,AuerbachKotlikoff:1983b,AuerbachKotlikoff:1983c`, and {cite}`AuerbachKotlikoff:1985`.

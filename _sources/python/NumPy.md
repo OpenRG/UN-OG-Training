@@ -130,6 +130,8 @@ Now suppose a third type of agent. This agent has savings $b_3 = \left[4.1, 5.1,
 (SecNumPyFootnotes)=
 ## Footnotes
 
+The footnotes from this chapter.
+
 [^NumPy]: The website for NumPy is https://numpy.org.
 
 [^Oliphant]: Travis Oliphant has a [Wikipedia page](https://en.wikipedia.org/wiki/Travis_Oliphant) {cite}`OliphantWiki`. We highly recommend [Oliphant's interview](https://youtu.be/gFEE3w7F0ww?si=XKcRlcw7FXkA9oxB) on the Lex Fridman Podcast from September 22, 2021 {cite}`Fridman:2021`.

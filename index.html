@@ -179,8 +179,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="python/NumPy.html">NumPy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python/Pandas.html">Pandas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python/Matplotlib.html">Matplotlib</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="python/SciPy.html">SciPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python/SciPy.html">SciPy: Root finding, minimizing, interpolation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python/DocStrings.html">Docstrings and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python/UnitTesting.html">Unit Testing</a></li>
 
@@ -192,9 +191,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">OG Macro Model</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="OG/intro.html">Overlapping Generations Macro Model</a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="OG/Install.html">Installing <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="OG/Simulation.html">Simulating a change in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
@@ -424,13 +420,31 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="united-nations-og-core-overlapping-generations-model-training">
 <h1>United Nations OG-Core Overlapping Generations Model Training<a class="headerlink" href="#united-nations-og-core-overlapping-generations-model-training" title="Permalink to this heading">#</a></h1>
-<p>This site contains open access tutorial materials and exercises for learning, using, and maintaining open source macroeconomic model country calibrations of the open source <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> large scale overlapping generations macroeconomic modeling platform for fiscal analysis. This tutorial was created by a partnership between the United Nations Department of Economic and Social Affairs (DESA) and Open Research Group, Inc. The core maintainers of this project are the following:</p>
+<p>This site contains open access tutorial materials and exercises for learning, using, and maintaining open source macroeconomic model country calibrations of the open source <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> large scale overlapping generations macroeconomic modeling platform for fiscal analysis. This tutorial was created by a partnership between the United Nations Department of Economic and Social Affairs (DESA) and Open Research Group, Inc. All the source materials for these training materials are available in the GitHub repository <a class="github reference external" href="https://github.com/OpenRG/UN-OG-Training">OpenRG/UN-OG-Training</a>. The core maintainers of this project are the following:</p>
 <ul class="simple">
 <li><p><strong>Marcelo LaFleur</strong>, Senior Economist, Department of Economic and Social Affairs, United Nations (GitHub handle: <a class="reference external" href="https://github.com/SeaCelo">&#64;SeaCelo</a>)</p></li>
 <li><p><a class="reference external" href="https://jasondebacker.com/"><strong>Jason DeBacker</strong></a>, Associate Professor, Department of Economics, University of South Carolina; Vice President and Co-founder, Open Research Group, Inc. (GitHub handle: <a class="reference external" href="https://github.com/jdebacker">&#64;jdebacker</a>)</p></li>
 <li><p><a class="reference external" href="https://sites.google.com/site/rickecon"><strong>Richard W. Evans</strong></a>, Senior Research Fellow and Director of Open Policy, Center for Growth and Opportunity at Utah State University; President and Co-founder, Open Research Group, Inc. (GitHub handle: <a class="reference external" href="https://github.com/rickecon">&#64;rickecon</a>)</p></li>
 </ul>
 <p>We welcome collaboration on the maintenance and improvement of this tutorial. If you have changes you would like to see or errors that you find, please open <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/issues">an issue</a> in the GitHub repository or submit a <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/pulls">pull request</a>.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Org</p></td>
+<td><p><a class="reference external" href="https://www.un.org/en/desa"><img alt="United Nations DESA" src="https://img.shields.io/badge/United%20Nations%20DESA-blue" /></a> <a class="reference external" href="https://github.com/OpenSourceEcon"><img alt="OSE Lab cataloged" src="https://img.shields.io/badge/OSE%20Lab-catalogued-critical" /></a> <a class="reference external" href="https://github.com/OpenRG/UN-OT-Training/blob/main/LICENSE"><img alt="OS License: AGPL-3.0" src="https://img.shields.io/badge/OS%20License-AGPL%203.0-yellow" /></a> <a class="reference external" href="https://www.openrg.com/UN-OG-Training/"><img alt="Jupyter Book Badge" src="https://jupyterbook.org/badge.svg" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Package</p></td>
+<td><p><a class="reference external" href="https://www.python.org/downloads/release/python-31013/"><img alt="Python 3.10" src="https://img.shields.io/badge/python-3.10-blue.svg" /></a> <a class="reference external" href="https://www.python.org/downloads/release/python-3115/"><img alt="Python 3.11" src="https://img.shields.io/badge/python-3.11-blue.svg" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Testing</p></td>
+<td><p><img alt="example event parameter" src="https://github.com/OpenRG/UN-OG-Training/actions/workflows/build_and_test.yml/badge.svg?branch=main" /> <img alt="example event parameter" src="https://github.com/OpenRG/UN-OG-Training/actions/workflows/deploy_docs.yml/badge.svg?branch=main" /> <img alt="example event parameter" src="https://github.com/OpenRG/UN-OG-Training/actions/workflows/check_format.yml/badge.svg?branch=main" /> <a class="reference external" href="https://codecov.io/gh/OpenRG/UN-OG-Training"><img alt="Codecov" src="https://codecov.io/gh/OpenRG/UN-OG-Training/branch/main/graph/badge.svg" /></a></p></td>
+</tr>
+</tbody>
+</table>
 <section id="tutorial-site-functionality">
 <h2>Tutorial site functionality<a class="headerlink" href="#tutorial-site-functionality" title="Permalink to this heading">#</a></h2>
 <p>This site was created using the <a class="reference external" href="https://executablebooks.org/">Executable Books</a> <a class="reference external" href="https://jupyterbook.org/">Jupyter Book</a> platform. All of the content for this tutorial material is publicly accessible, available, and version controlled in the GitHub repository (<a class="github reference external" href="https://github.com/OpenRG/UN-OG-Training">OpenRG/UN-OG-Training</a>) associated with this book. Some of the functionality of this tutorial site includes the following:</p>

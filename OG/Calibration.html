@@ -182,8 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../python/NumPy.html">NumPy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/Pandas.html">Pandas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/Matplotlib.html">Matplotlib</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../python/SciPy.html">SciPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/SciPy.html">SciPy: Root finding, minimizing, interpolation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/DocStrings.html">Docstrings and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python/UnitTesting.html">Unit Testing</a></li>
 
@@ -195,9 +194,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">OG Macro Model</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Overlapping Generations Macro Model</a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="Install.html">Installing <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Simulation.html">Simulating a change in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
@@ -462,26 +458,26 @@ document.write(`
 <figure class="align-default" id="zaf-pop-fig">
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/ZAF_pop_distribution.png"><img alt="ZAF_demog" class="bg-primary mb-1" src="../_images/ZAF_pop_distribution.png" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">South Africa</span><a class="headerlink" href="#zaf-pop-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">South Africa</span><a class="headerlink" href="#zaf-pop-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="ind-pop-fig">
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/IND_pop_distribution.png"><img alt="ZAF_demog" class="bg-primary mb-1" src="../_images/IND_pop_distribution.png" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">India</span><a class="headerlink" href="#ind-pop-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">India</span><a class="headerlink" href="#ind-pop-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="usa-pop-fig">
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/USA_pop_distribution.png"><img alt="ZAF_demog" class="bg-primary mb-1" src="../_images/USA_pop_distribution.png" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">United States</span><a class="headerlink" href="#usa-pop-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">United States</span><a class="headerlink" href="#usa-pop-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Figure \ref{TODO: add reference to 3 panel figure} plots population growth rates over time for the three countries illustrated above.  The growth rates are determined by the same mortality, fertility, and immigration trends that drive the evolution of the population in Figure \ref{}. In terms of population growth, we see that in all countries the population growth rate is declining in each of the three counties over the next 60 years.  This is consistent with what we saw in the evolution of the population distribution in the three countries above: each economy is aging and with relatively more older individuals, total fertility will be declining.  Looking at the level of population growth in the long run in Figure \ref{figure-md}, we see that India and the United States will have negative population growth, which will put downward pressure on their long run economic growth rates.  In contract, South Africa will have positive population growth, owing to it’s relatively high fertility rates, which will contribute positively to that economy in the long run.</p>
 <figure class="align-default" id="markdown-fig">
 <a class="bg-primary mb-1 reference internal image-reference" href="OG/images/pop_growth_rates.png"><img alt="ZAF_demog" class="bg-primary mb-1" src="OG/images/pop_growth_rates.png" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Population Growth Rates in South Africa, India, and the United States</span><a class="headerlink" href="#markdown-fig" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Population Growth Rates in South Africa, India, and the United States</span><a class="headerlink" href="#markdown-fig" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The population distribution and growth rates in the plots above were created using the <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> module from the relevant country calibration repository. Each of these country calibrations utilizes population data from the <a class="reference external" href="https://population.un.org/wpp/">UN World Population Prospects</a> database, which provides consistent data on the population distribution and age-specific mortality, fertility, and immigration rates by country for many countries.  Note that although immigration rates are provided, the <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> module imputes them as the residual between the population counts by age and what would be expected given the measured fertility and mortality rates.  This is done for two reasons.  First, it ensures that the evolution of the distribution of population by age is consistent with the three forces affecting it: fertility, mortality, and immigration. Second, it is difficult to accurately measure immigration since not all immigrants are documented (with substantial variation in this across country).  Using the residual method to identify immigration may therefore be more accurate than official statistics.</p>
@@ -490,42 +486,42 @@ document.write(`
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise admonition" id="ExerCalib-demo_country">
 
-<p class="admonition-title"><span class="caption-number">Exercise 62 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 67 </span></p>
 <section id="exercise-content">
 <p>First, let’s create a utility to get population data from the UN Population Prospects for a country of interest to you.  Start by making a copy of <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF/blob/main/ogzaf/demographics.py"><code class="docutils literal notranslate"><span class="pre">demographics.py</span></code></a> from the <code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code> repository.  Next, modify the <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> you just copied to gather population data for another country (i.e., not South Africa).  Each country in the UN database has a two or three digit code.  You can find a list of these <a class="reference external" href="https://unstats.un.org/unsd/methodology/m49/">here</a></p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerCalib-demo_fert">
 
-<p class="admonition-title"><span class="caption-number">Exercise 63 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 68 </span></p>
 <section id="exercise-content">
 <p>Using your modified <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code>, plot the fertility rates in this country.  Note that you can do this directly from the <code class="docutils literal notranslate"><span class="pre">demographics.get_fert()</span></code> function.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerCalib-demo_mort">
 
-<p class="admonition-title"><span class="caption-number">Exercise 64 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 69 </span></p>
 <section id="exercise-content">
 <p>Let’s to the same for mortality rates.  In this case, you will want interact with the <code class="docutils literal notranslate"><span class="pre">demographics.get_mort</span></code> function.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerCalib-demo_pop_dist">
 
-<p class="admonition-title"><span class="caption-number">Exercise 65 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 70 </span></p>
 <section id="exercise-content">
 <p>The <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> module uses current fertility and mortality rates (and the implied immigration rates) to project the population forward.  This ensures a population distribution in each year of the model that is consistent with the fertility, mortality, and immigration rates.  Use the <code class="docutils literal notranslate"><span class="pre">demographics.get_pop_objs</span></code> function to return a dictionary with the population object that are inputs to calibrating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code>.  From this dictionary, extract the population distribution object (the key for this is <code class="docutils literal notranslate"><span class="pre">omega</span></code> and it is an array with shape <code class="docutils literal notranslate"><span class="pre">TxS</span></code>, where <code class="docutils literal notranslate"><span class="pre">T</span></code> are the number of time periods and <code class="docutils literal notranslate"><span class="pre">S</span></code> is the number of age groups in the model).  Create a line plot of the population distribution in the first year, the 20th year, the 100th year, and the last year in the <code class="docutils literal notranslate"><span class="pre">omega</span></code> object.  Describe what you see happening to the distribution of people across age as you more forward in time?</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerCalib-demo_pop_growth">
 
-<p class="admonition-title"><span class="caption-number">Exercise 66 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 71 </span></p>
 <section id="exercise-content">
 <p>Also in the dictionary returned from <code class="docutils literal notranslate"><span class="pre">demographics.get_pop_objs</span></code>, is the population growth rate. This is a NumPy array object with key <code class="docutils literal notranslate"><span class="pre">g_n</span></code>.  Plot <code class="docutils literal notranslate"><span class="pre">g_n</span></code>.  How does the population growth rate change over time?  Given what you’ve seen in the plots you’ve created, what can you say about the driver(s) of population growth (i.e., how are fertility and mortality rates contributing?  What about immigration (something we haven’t yet plotted, but about which you might be able to infer something given fertility and mortality rates and the change in the age distribution over time…))</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerCalib-demo_sims">
 
-<p class="admonition-title"><span class="caption-number">Exercise 67 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 72 </span></p>
 <section id="exercise-content">
 <p>Get pop objects and sim model SS with OG-Core defaults then your new pop objects.  Compare SS macro vars using <code class="docutils literal notranslate"><span class="pre">ogcore.output_tables.macro_table_SS</span></code>.</p>
 </section>
@@ -539,7 +535,7 @@ document.write(`
 <h2>Economic growth and production<a class="headerlink" href="#economic-growth-and-production" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model needs to be stationary in order to employ traditional solution methods.  This means that in the model solution, there cannot be underlying growth in the model objects.  However, the model is able to allow for such underlying growth, which may be driven by population growth rates (as discussed above) or underlying changes in productivity.  In order to solve the model, then, trend growth from these sources are removed.[^stationary_note].  However, since different variables grow at different rates, we need to know both the underlying growth rates of the population and of technological growth.  The population growth rate was determined from the demographic data and described in Section <a class="reference internal" href="#secdemographics"><span class="std std-ref">Demographics</span></a>. We use macroeconomic data, namely the growth rate in gross domestic product per capita to pin down the rate of growth in (labor-augmenting) technological change, <code class="docutils literal notranslate"><span class="pre">g_y_annual</span></code> in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code>.  Let <span class="math notranslate nohighlight">\(\hat{y}_t\)</span> represent the growth rate in GDP per capital from year <span class="math notranslate nohighlight">\(t-1\)</span> to year <span class="math notranslate nohighlight">\(t\)</span>.  We find the value of <code class="docutils literal notranslate"><span class="pre">g_y_annual</span></code> as equal to the long-run average of <span class="math notranslate nohighlight">\(\hat{y}_t\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-g-y-calib">
-<span class="eqno">(1)<a class="headerlink" href="#equation-g-y-calib" title="Permalink to this equation">#</a></span>\[ g_y = \sum_{t = \text{First year of data}}^{\text{Most recent year of data}} \hat{y}_t\]</div>
+<span class="eqno">(7)<a class="headerlink" href="#equation-g-y-calib" title="Permalink to this equation">#</a></span>\[ g_y = \sum_{t = \text{First year of data}}^{\text{Most recent year of data}} \hat{y}_t\]</div>
 <p>Note that you will want to use some judgement in what is the appropriate time period for the “first year of data”. For example, if the economy in question is now a market economy, but your data extend back to a time when it was not a market economy, you will probably want to exclude those data from the non-market economy period.  In addition, you might alter the calibration of <code class="docutils literal notranslate"><span class="pre">g_y</span></code> to be more forward looking and, rather than base future growth on recent history, you may use long run economic forecasts for GDP per capita.  But in either case the important thing is to be sure you are correctly mapping the data to the theoretical concept of <code class="docutils literal notranslate"><span class="pre">g_y</span></code>, which is measuring the constant rate of growth in output per person in the long run.</p>
 <section id="firm-production">
 <h3>Firm production<a class="headerlink" href="#firm-production" title="Permalink to this heading">#</a></h3>
@@ -581,35 +577,35 @@ document.write(`
 <h2>Exercises<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <div class="exercise admonition" id="ExerCalib-macro_datareader">
 
-<p class="admonition-title"><span class="caption-number">Exercise 68 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 73 </span></p>
 <section id="exercise-content">
 <p>Use pandas datareader to get GDP series from South Africe from FRED</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerCalib-macro_freq">
 
-<p class="admonition-title"><span class="caption-number">Exercise 69 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 74 </span></p>
 <section id="exercise-content">
 <p>Collapse quarterly data to make annual</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerCalib-macro_gy">
 
-<p class="admonition-title"><span class="caption-number">Exercise 70 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 75 </span></p>
 <section id="exercise-content">
 <p>Compute average growth rate</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerCalib-macro_reg">
 
-<p class="admonition-title"><span class="caption-number">Exercise 71 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 76 </span></p>
 <section id="exercise-content">
 <p>Estimate a regression model (e.g., with bond market data)</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerCalib-macro_???">
 
-<p class="admonition-title"><span class="caption-number">Exercise 72 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 77 </span></p>
 <section id="exercise-content">
 <p>Other??</p>
 </section>
@@ -622,7 +618,7 @@ document.write(`
 <figure class="align-default" id="id2">
 <a class="bg-primary mb-1 reference internal image-reference" href="OG/images/USA_ability_profiles.png"><img alt="USA_earn" class="bg-primary mb-1" src="OG/images/USA_ability_profiles.png" style="width: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Log Effective Labor Units by Lifetime Income Group, Estimated in the United States</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Log Effective Labor Units by Lifetime Income Group, Estimated in the United States</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code>, these earnings processes are described by <code class="docutils literal notranslate"><span class="pre">SxJ</span></code> matrix, with each cell representing the effective labor units for a given age and lifetime income group.  Note that this matrix is normalized such that the average value of earnings ability is one.  It is assumed that these processes remain constant over time, so despite growth in the level of productivity through the exogenous technological growth,</p>
@@ -632,14 +628,14 @@ document.write(`
 <h2>Exercises<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
 <div class="exercise admonition" id="ExerCalib-earn_plot">
 
-<p class="admonition-title"><span class="caption-number">Exercise 73 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 78 </span></p>
 <section id="exercise-content">
 <p>Use <code class="docutils literal notranslate"><span class="pre">income.py</span></code> from OG-USA to retrieve e matrix.  Plot it.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerCalib-earn_approx">
 
-<p class="admonition-title"><span class="caption-number">Exercise 74 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 79 </span></p>
 <section id="exercise-content">
 <ol class="arabic simple">
 <li><p>Do approximation method of Marcelo to match a specific gini coefficient</p></li>

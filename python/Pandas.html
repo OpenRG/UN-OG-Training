@@ -180,8 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="NumPy.html">NumPy</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Pandas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Matplotlib.html">Matplotlib</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="SciPy.html">SciPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SciPy.html">SciPy: Root finding, minimizing, interpolation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="DocStrings.html">Docstrings and Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UnitTesting.html">Unit Testing</a></li>
 
@@ -193,9 +192,6 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">OG Macro Model</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../OG/intro.html">Overlapping Generations Macro Model</a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="../OG/Install.html">Installing <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../OG/Simulation.html">Simulating a change in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
@@ -428,7 +424,7 @@ document.write(`
 <p>Pandas is to data wrangling and analysis in Python what <a class="reference internal" href="NumPy.html#chap-numpy"><span class="std std-ref">NumPy</span></a> is to numerical methods in Python. Pandas is Python’s primary data analysis package.<a class="footnote-reference brackets" href="#pandas1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> Its name is derived from the econometric term, “panel data”. The Pandas package was originially developed in 2008 by Wes McKinney while at global investment firm AQR Capital Management.<a class="footnote-reference brackets" href="#pandas2" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> The Python Pandas package became open source in 2009, and Pandas became a NumFOCUS sponsored project in 2015.</p>
 <p>The primary Python object in Pandas is the DataFrame (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html"><code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a>). A Pandas DataFrame is similar to the R programming language’s dataframe.<a class="footnote-reference brackets" href="#pandasr" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> The dataframe is a two-dimensional data object that often include rows that serve as observations, columns that serve as variables, advanced date functions, and rich multi-layered indexing capability. Pandas also includes rich functionality for reading in data, saving and exporting data, data cleaning and munging, data description, and data manipulation, selection, and grouping.</p>
 <p>Pandas also has a Series object (<a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html"><code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code></a>), that represents a single data series, often a single variable from a DataFrame. The operations on and attributes of a Pandas Series object are similar to those of the DataFrame.</p>
-<p>The iframe below contains a PDF of the BYU ACME open-access lab entitled, “Pandas 1: Introduction”. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See <span id="id4">[<a class="reference internal" href="../UN-OG-Training_references.html#id17" title="BYU ACME. Pandas 1: introduction. In BYU ACME 2023-2024 Incoming Senior Materials, chapter 2. 2023. URL: https://acme.byu.edu/2023-2024-materials.">BYU ACME, 2023</a>]</span>. <a class="reference internal" href="#ExerPandas-acme1"><span class="std std-numref">Exercise 23</span></a> below has you work through the problems in this BYU ACME lab. The data files used in this lab are stored in the <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/data/Pandas1"><code class="docutils literal notranslate"><span class="pre">./data/Pandas1/</span></code></a> directory. A Jupyter notebook file template (<a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/Pandas1/pandas1.ipynb"><code class="docutils literal notranslate"><span class="pre">pandas1.ipynb</span></code></a>) used in the lab is stored in the <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/Pandas1"><code class="docutils literal notranslate"><span class="pre">./code/Pandas1/</span></code></a> directory.</p>
+<p>The iframe below contains a PDF of the BYU ACME open-access lab entitled, “Pandas 1: Introduction”. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See <span id="id4">[<a class="reference internal" href="../UN-OG-Training_references.html#id20" title="BYU ACME. Pandas 1: introduction. In BYU ACME 2023-2024 Incoming Senior Materials, chapter 2. 2023. URL: https://acme.byu.edu/2023-2024-materials.">BYU ACME, 2023</a>]</span>. <a class="reference internal" href="#ExerPandas-acme1"><span class="std std-numref">Exercise 23</span></a> below has you work through the problems in this BYU ACME lab. The data files used in this lab are stored in the <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/data/Pandas1"><code class="docutils literal notranslate"><span class="pre">./data/Pandas1/</span></code></a> directory. A Jupyter notebook file template (<a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/Pandas1/pandas1.ipynb"><code class="docutils literal notranslate"><span class="pre">pandas1.ipynb</span></code></a>) used in the lab is stored in the <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/Pandas1"><code class="docutils literal notranslate"><span class="pre">./code/Pandas1/</span></code></a> directory.</p>
 <div>
   <iframe id="inlineFrameExample"
       title="Inline Frame Example"
@@ -437,7 +433,7 @@ document.write(`
       src="https://drive.google.com/file/d/1t5fjjQXBSIYekZUZIDRvMQOcfCpy8edh/preview?usp=sharing">
   </iframe>
 </div>
-<p>The iframe below contains a PDF of the BYU ACME open-access lab entitled, “Pandas 3: Grouping”. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See <span id="id5">[<a class="reference internal" href="../UN-OG-Training_references.html#id18" title="BYU ACME. Pandas 3: grouping. In BYU ACME 2023-2024 Incoming Senior Materials, chapter 4. 2023. URL: https://acme.byu.edu/2023-2024-materials.">BYU ACME, 2023</a>]</span>. <a class="reference internal" href="#ExerPandas-acme2"><span class="std std-numref">Exercise 24</span></a> below has you work through the problems in this BYU ACME lab. The data files used in this lab are stored in the <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/data/Pandas3"><code class="docutils literal notranslate"><span class="pre">./data/Pandas3/</span></code></a> directory. A Jupyter notebook file template (<a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/Pandas3/pandas3.ipynb"><code class="docutils literal notranslate"><span class="pre">pandas3.ipynb</span></code></a>) used in the lab is stored in the <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/Pandas3"><code class="docutils literal notranslate"><span class="pre">./code/Pandas3/</span></code></a> directory.</p>
+<p>The iframe below contains a PDF of the BYU ACME open-access lab entitled, “Pandas 3: Grouping”. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See <span id="id5">[<a class="reference internal" href="../UN-OG-Training_references.html#id21" title="BYU ACME. Pandas 3: grouping. In BYU ACME 2023-2024 Incoming Senior Materials, chapter 4. 2023. URL: https://acme.byu.edu/2023-2024-materials.">BYU ACME, 2023</a>]</span>. <a class="reference internal" href="#ExerPandas-acme2"><span class="std std-numref">Exercise 24</span></a> below has you work through the problems in this BYU ACME lab. The data files used in this lab are stored in the <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/data/Pandas3"><code class="docutils literal notranslate"><span class="pre">./data/Pandas3/</span></code></a> directory. A Jupyter notebook file template (<a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/Pandas3/pandas3.ipynb"><code class="docutils literal notranslate"><span class="pre">pandas3.ipynb</span></code></a>) used in the lab is stored in the <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/Pandas3"><code class="docutils literal notranslate"><span class="pre">./code/Pandas3/</span></code></a> directory.</p>
 <div>
   <iframe id="inlineFrameExample"
       title="Inline Frame Example"
@@ -452,14 +448,14 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">Exercise 23 </span></p>
 <section id="exercise-content">
-<p>Read the BYU ACME “<a class="reference external" href="https://drive.google.com/file/d/1t5fjjQXBSIYekZUZIDRvMQOcfCpy8edh/view?usp=sharing">Pandas 1: Introduction</a>” lab and complete Problems 1 through 6 in the lab. <span id="id6">[<a class="reference internal" href="../UN-OG-Training_references.html#id17" title="BYU ACME. Pandas 1: introduction. In BYU ACME 2023-2024 Incoming Senior Materials, chapter 2. 2023. URL: https://acme.byu.edu/2023-2024-materials.">BYU ACME, 2023</a>]</span></p>
+<p>Read the BYU ACME “<a class="reference external" href="https://drive.google.com/file/d/1t5fjjQXBSIYekZUZIDRvMQOcfCpy8edh/view?usp=sharing">Pandas 1: Introduction</a>” lab and complete Problems 1 through 6 in the lab. <span id="id6">[<a class="reference internal" href="../UN-OG-Training_references.html#id20" title="BYU ACME. Pandas 1: introduction. In BYU ACME 2023-2024 Incoming Senior Materials, chapter 2. 2023. URL: https://acme.byu.edu/2023-2024-materials.">BYU ACME, 2023</a>]</span></p>
 </section>
 </div>
 <div class="exercise green admonition" id="ExerPandas-acme2">
 
 <p class="admonition-title"><span class="caption-number">Exercise 24 </span></p>
 <section id="exercise-content">
-<p>Read the BYU ACME “<a class="reference external" href="https://drive.google.com/file/d/13DoapcC2whPxSzQQCRaOKv6jow4AkeuZ/view?usp=sharing">Pandas 3: Grouping</a>” lab and complete Problems 1 through 5 in the lab. <span id="id7">[<a class="reference internal" href="../UN-OG-Training_references.html#id18" title="BYU ACME. Pandas 3: grouping. In BYU ACME 2023-2024 Incoming Senior Materials, chapter 4. 2023. URL: https://acme.byu.edu/2023-2024-materials.">BYU ACME, 2023</a>]</span></p>
+<p>Read the BYU ACME “<a class="reference external" href="https://drive.google.com/file/d/13DoapcC2whPxSzQQCRaOKv6jow4AkeuZ/view?usp=sharing">Pandas 3: Grouping</a>” lab and complete Problems 1 through 5 in the lab. <span id="id7">[<a class="reference internal" href="../UN-OG-Training_references.html#id21" title="BYU ACME. Pandas 3: grouping. In BYU ACME 2023-2024 Incoming Senior Materials, chapter 4. 2023. URL: https://acme.byu.edu/2023-2024-materials.">BYU ACME, 2023</a>]</span></p>
 </section>
 </div>
 <div class="exercise green admonition" id="ExerPandas-make_df">
@@ -586,6 +582,7 @@ document.write(`
 </section>
 <section id="footnotes">
 <span id="secpandasfootnotes"></span><h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
+<p>The footnotes from this chapter.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="pandas1" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
@@ -593,7 +590,7 @@ document.write(`
 </aside>
 <aside class="footnote brackets" id="pandas2" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p>See the “About” page on the Pandas website (<a class="reference external" href="https://pandas.pydata.org/about/">https://pandas.pydata.org/about/</a>) as well as the Pandas Wikipedia article <span id="id8">[<a class="reference internal" href="../UN-OG-Training_references.html#id40" title="Wikipedia Contributors. &quot;pandas (software)&quot;. Wikipedia, The Free Encyclopedia, 2023. [Online; accessed 5-October-2023]. URL: https://en.wikipedia.org/wiki/Pandas_(software).">Wikipedia Contributors, 2023</a>]</span>.</p>
+<p>See the “About” page on the Pandas website (<a class="reference external" href="https://pandas.pydata.org/about/">https://pandas.pydata.org/about/</a>) as well as the Pandas Wikipedia article <span id="id8">[<a class="reference internal" href="../UN-OG-Training_references.html#id44" title="Wikipedia Contributors. &quot;pandas (software)&quot;. Wikipedia, The Free Encyclopedia, 2023. [Online; accessed 5-October-2023]. URL: https://en.wikipedia.org/wiki/Pandas_(software).">Wikipedia Contributors, 2023</a>]</span>.</p>
 </aside>
 <aside class="footnote brackets" id="pandasr" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>

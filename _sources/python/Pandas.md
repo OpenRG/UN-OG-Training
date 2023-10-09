@@ -157,6 +157,8 @@ Save your final DataFrame to your hard drive as a comma separated values `.csv` 
 (SecPandasFootnotes)=
 ## Footnotes
 
+The footnotes from this chapter.
+
 [^Pandas1]: The website for Pandas is https://pandas.pydata.org/.
 
 [^Pandas2]: See the "About" page on the Pandas website (https://pandas.pydata.org/about/) as well as the Pandas Wikipedia article {cite}`PandasWiki`.
