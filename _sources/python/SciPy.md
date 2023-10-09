@@ -281,6 +281,10 @@ In the `OG-Core` macroeconomic model, every age-$s$ individual in the model choo
 (SecSciPyMin)=
 ## Minimization
 
+Minimization problems are a more general type of problem than root finding problems. Any root finding problem can be reformulated as a minimization problem. But it is not the case that any minimization problem can be reformulated as a root finding problem. Furthermore, if a minimization problem can be reformulated as a root finding problem, it is often much faster to compute the root finding problem. But the minimization problem allows for more generality and often more robustness.
+
+{numref}`ExerSciPy-root-min` has you compute the solution to a problem using minimization and root finding, respectively, and to compare the corresponding computation times. One of our favorite books and resources on the mathematics behind minimization problems is {cite}`HumpherysJarvis:2020` (section IV, pp.519-760).
+
 
 (SecSciPyInterp)=
 ## Interpolation
@@ -344,7 +348,7 @@ Use SciPy's root finder to solve for each age agent's optimal labor supply decis
 :label: ExerScipy-root_save
 :class: green
 ```
-In a four-period-lived agent overlapping generations model, let $s=\{1,2,3,4\}$ represent the age of an individual. Assume that labor supply over the lifetime of an individual is exogenously supplied. Let $n_s$ be the amount of labor supplied by the age-$s$ individual in any period $t$. Then assume the lifetime labor supply of an individual is exogenously $(n_1,n_2,n_3,n_4)=(0.3, 0.5, 0.6, 0.2)$. The consumption-savings Euler equation for each age-$s$ agent represents the optimal savings decision $b_{s+1,t+1}$ that balances benefit of consumption in the current period $c_t$ with discounted consumption in the next period $c_{t+1}$, given preference parameter values and exogenous labor supply $n_s$.
+In a four-period-lived agent overlapping generations model, let $s=\{1,2,3,4\}$ represent the age of an individual. Assume that labor supply over the lifetime of an individual is exogenously supplied. Let $n_s$ be the amount of labor supplied by the age-$s$ individual in any period $t$. Then assume the lifetime labor supply of an individual is exogenously $(n_1,n_2,n_3,n_4)=(0.3, 0.5, 0.6, 0.2)$. The consumption-savings Euler equation for each of the youngest three age-$s$ agents represents the optimal savings decision $b_{s+1,t+1}$ that balances benefit of consumption in the current period $c_t$ with discounted consumption in the next period $c_{t+1}$, given preference parameter values and exogenous labor supply $n_s$. The oldest agent $s=4$ has no savings decision because they die at the end of the period.
 \begin{equation*}
   \begin{split}
     &(c_{s,t})^{-1.5} = \beta\left(1 + r_{t+1}\right)(c_{s+1,t+1})^{-1.5} \quad\text{for}\quad s=1,2,3 \\
@@ -367,7 +371,7 @@ Use SciPy's root finder to solve for the three optimal lifetime savings amounts 
 :label: ExerScipy-BM72_ss
 :class: green
 ```
-{cite}`BrockMirman:1972` is a simple two-period-lived overlapping generations model, the stochastic equilibrium of which is characterized by six dynamic equations (equations the variables of which are changing over time). The deterministic steady-state of the model is characterized by the variables reaching constant values that do not change over time. The deterministic steady state of the {cite}`BrockMirman:1972` is characterized by the following five equations and five unknown variables $(c, k, y, w, r)$,
+{cite}`BrockMirman:1972` is a simple two-period-lived overlapping generations model, the stochastic equilibrium of which is characterized by six dynamic equations (equations in which the variables are changing over time). The deterministic steady-state of the model is characterized by the variables reaching constant values that do not change over time. The deterministic steady state of the {cite}`BrockMirman:1972` is characterized by the following five equations and five unknown variables $(c, k, y, w, r)$,
 \begin{equation*}
   \begin{split}
     \frac{1}{c} &= \beta\frac{r}{c} \\
@@ -377,15 +381,16 @@ Use SciPy's root finder to solve for the three optimal lifetime savings amounts 
     y &= k^\alpha
   \end{split}
 \end{equation*}
-where $c$ is consumption, $k$ is capital investment/savings, $y$ is GDP, $w$ is the wage, and $r$ is the interest rate. Assume $\beta=0.7$ and $\apha=0.35$. Solve for the steady-state variables $(c, k, y, w, r)$ using the above five equations and SciPy's root finder.
+where $c$ is consumption, $k$ is capital investment/savings, $y$ is GDP, $w$ is the wage, and $r$ is the interest rate. Assume $\beta=0.7$ and $\alpha=0.35$. Solve for the steady-state variables $(c, k, y, w, r)$ using the above five equations and SciPy's root finder.
 
 ```{exercise-end}
 ```
 
-```{exercise-start}
-:label: ExerScipy-min
+```{exercise-start} Root finder vs. minimizer
+:label: ExerScipy-root-min
+:class: green
 ```
-Use `scipy.optimize.minimize` to minimize the function $f(x) = x^2 + 2x + 1$ (or some other function).
+Characterize a minimization problem that can also be solved using a root finder. Write code to solve the problem both ways. Record the respective computation times of both solution methods. How does the minimization method computation time compare to the root finder computation time?
 ```{exercise-end}
 ```
 
