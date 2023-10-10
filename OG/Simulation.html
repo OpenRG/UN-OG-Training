@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Simulating a change in OG-Core &#8212; UN OG-Core Overlapping Generations Model Training</title>
+    <title>Simulating OG-Core &#8212; UN OG-Core Overlapping Generations Model Training</title>
   
   
   
@@ -193,7 +193,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Overlapping Generations Macro Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install.html">Installing <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Simulating a change in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Output.html">Loading <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> output</a></li>
 
@@ -395,7 +395,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Simulating a change in OG-Core</h1>
+    <h1>Simulating OG-Core</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -405,7 +405,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Simulating a change in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises:</a></li>
 </ul>
 
@@ -419,18 +419,41 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="simulating-a-change-in-og-core">
-<span id="chap-ogsimulation"></span><h1>Simulating a change in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code><a class="headerlink" href="#simulating-a-change-in-og-core" title="Permalink to this heading">#</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> doesn’t represent any economy in particular, we here we change some parameter as an example of how to simulate a change in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code>.</p>
-<p>Terminology: we refer to the baseline as the economy before the change, and the reform as the economy after the change.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="simulating-og-core">
+<span id="chap-ogsimulation"></span><h1>Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code><a class="headerlink" href="#simulating-og-core" title="Permalink to this heading">#</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> provides the model of the economy. That is, it specifies the different economic actors (firms, households, government governments), how they interact with each other (e.g., in a competitive market with perfect information), and defines the equilibrium conditions (i.e, supply is equal to demand in all markets, households act to maximize their utility, and firms act to maximize their profits).  A particular model solution combines this structure with a given parameterization of the economy (e.g., what exactly are consumers maximizing?  How do firms produce output? What are tax rates?).</p>
+<p>Therefore, to simulate the model, we will combine the structure with a given parameterization.  The key programming interface for simulating the model is the <a class="reference external" href="https://pslmodels.github.io/OG-Core/content/api/execute.html"><code class="docutils literal notranslate"><span class="pre">ogcore.execute.runner</span></code></a> function, which has one necessary argument, <code class="docutils literal notranslate"><span class="pre">p</span></code>, an instance of the <code class="docutils literal notranslate"><span class="pre">ogcore.parameters.Specifications</span></code> class object.  This <code class="docutils literal notranslate"><span class="pre">p</span></code> object is what carries the model parameters.  Thus this function is the key to simulating the model with different parameterizations.</p>
+<p><code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> comes with a default set of parameters.  Thus, to simulation the model with this baseline set of parameters, we can do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ogcore</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">ogcore</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">Specifications</span><span class="p">()</span>
+<span class="n">ogcore</span><span class="o">.</span><span class="n">execute</span><span class="o">.</span><span class="n">runner</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>This will simulate the model and save pickle files with dictionaries of results to a directory on your computer (you can modify the <code class="docutils literal notranslate"><span class="pre">Specifications</span></code> object to change this directory).</p>
+<p>Oftentimes, we want to see how the economy changes if we change one of the parameters. This allows our model to speak to counterfactuals through simulation. For example, we can ask questions such as “what would happen to personal incomes if we cut taxes by 20%?” or “what is the effects on interest rates of an two percentage point increase in the ratio of government debt to GDP?” or “what happens to wages if fertility rates decline by 10%?”.  In the terminology we use for <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> we refer to the baseline as the economy before the change, and the reform as the economy after the change.</p>
+<p>To simulate a reform, we’d simply change the parameterization of the economy and then re-run the model.  For example, to simulate a change in the corporate income tax rate to 15%, we could do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ogcore</span>
+
+<span class="n">p_reform</span> <span class="o">=</span> <span class="n">ogcore</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">Specifications</span><span class="p">(</span>
+    <span class="n">output_base</span> <span class="o">=</span> <span class="s1">&#39;./OUTPUT_REFORM&#39;</span><span class="p">,</span>
+    <span class="n">baseline</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">p_reform</span><span class="o">.</span><span class="n">update_specifications</span><span class="p">({</span><span class="s1">&#39;CIT_rate&#39;</span><span class="p">:</span> <span class="p">[[</span><span class="mf">0.15</span><span class="p">]]})</span>
+<span class="n">ogcore</span><span class="o">.</span><span class="n">execute</span><span class="o">.</span><span class="n">runner</span><span class="p">(</span><span class="n">p_reform</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>This above will simulate the model and save pickle files dictionaries of results to the <code class="docutils literal notranslate"><span class="pre">'./OUTPUT_REFORM'</span></code> directory on your computer.  The output of this run can then be compared to that in the <code class="docutils literal notranslate"><span class="pre">'./OUTPUT_BASELINE'</span></code> directory to see the effects of the reform on the economy.  <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> has some built in functions for creating tables and figures that are helpful in comparing these results.  We discuss those in the next chapter, <a class="reference internal" href="Output.html#chap-ogoutput"><span class="std std-ref">Loading OG-Core output</span></a>.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exercises">
 <h1>Exercises:<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
-<div class="exercise admonition" id="ExerSim">
+<div class="exercise admonition" id="ExerSim_cit">
 
 <p class="admonition-title"><span class="caption-number">Exercise 62 </span></p>
 <section id="exercise-content">
-<p>Some exercises where change parameters and run the model (just with SS)</p>
+<p>Using the above code blocks as an example, simulate the effects of a change in the corporate income tax rate (note the default in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> is 21%). Just simulate the effects on the steady state (see the keyword arguments to the <code class="docutils literal notranslate"><span class="pre">runner</span></code> function).  Warning: <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> allows the corporate income tax rate to vary over time and across industries, so you will need to enter it as a list of lists (even if it’s just a scalar that applies to all industries and time).</p>
 </section>
 </div>
 </section>
@@ -498,7 +521,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Simulating a change in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises:</a></li>
 </ul>
 

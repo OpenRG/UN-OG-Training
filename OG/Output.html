@@ -73,7 +73,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Calibrating the OG-Core model" href="Calibration.html" />
-    <link rel="prev" title="Simulating a change in OG-Core" href="Simulation.html" />
+    <link rel="prev" title="Simulating OG-Core" href="Simulation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -195,7 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Overlapping Generations Macro Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install.html">Installing <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="Simulation.html">Simulating a change in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Simulation.html">Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Loading <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> output</a></li>
 
@@ -522,35 +522,42 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">Exercise 63 </span></p>
 <section id="exercise-content">
-<p>Run SS of baseline and reform and plot lifecycle profile diffs in levels and pct changes</p>
+<p>Solve for the steady state of the model with the default value for the rate of time preferences (this is <span class="math notranslate nohighlight">\(\beta =0.96\)</span>). Then solve for the steady-state solution with <span class="math notranslate nohighlight">\(\beta=0.90\)</span> (remembering to save the output in a different location than your baseline simulation).  Use the <code class="docutils literal notranslate"><span class="pre">ogcore.output_plots.ss_profiles</span></code> function to plot savings by age over agents lifetimes before and after the change in the rate of time preference.  What do you notice happens to savings?</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerOGoutput-change_units">
 
 <p class="admonition-title"><span class="caption-number">Exercise 64 </span></p>
 <section id="exercise-content">
-<p>Take TPI output from XXX and convert to constant units of local currency</p>
+<p>Take TPI output from <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_baseline.pkl</span></code> and convert the GDP series to constant units of local currency using the <code class="docutils literal notranslate"><span class="pre">factor_ss</span></code> and the growth rates, <code class="docutils literal notranslate"><span class="pre">g_n</span></code> and <code class="docutils literal notranslate"><span class="pre">g_y</span></code>.  You can find the <code class="docutils literal notranslate"><span class="pre">factor_ss</span></code> in the steady state output at <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/SS_vars_baseline.pkl</span></code> and the growth rates in the parameters file at <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline.pkl</span></code> Hint: you can look at the <a class="reference external" href="https://pslmodels.github.io/OG-Core/content/theory/stationarization.html"><code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> chapter on stationarizing the model</a> to help see how to get back to non-stationary measures.</p>
 </section>
 </div>
-<div class="exercise admonition" id="ExerOGoutput-baseline">
+<p>For the next three exercises, you are going to need to use time path output from a baseline and reform run and the corresponding parameters.  You can download these from the following links:</p>
+<ul class="simple">
+<li><p>Baseline TPI output: <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_baseline.pkl</span></code></p></li>
+<li><p>Baseline parameters: <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline.pkl</span></code></p></li>
+<li><p>Reform TPI output: <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_reform.pkl</span></code></p></li>
+<li><p>Reform parameters: <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_reform.pkl</span></code></p></li>
+</ul>
+<div class="exercise admonition" id="ExerOGoutput-TPI_table">
 
 <p class="admonition-title"><span class="caption-number">Exercise 65 </span></p>
 <section id="exercise-content">
-<p>Example where pass a baseline forecast to <code class="docutils literal notranslate"><span class="pre">ogcore.parameter_plots.plot_aggregates</span></code> to get diff</p>
-</section>
-</div>
-<div class="exercise admonition" id="ExerOGoutput-TPI_table">
-
-<p class="admonition-title"><span class="caption-number">Exercise 66 </span></p>
-<section id="exercise-content">
-<p>Create macro table with TPI output from XXX</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">ogcore.output_tables.macro_table</span></code> function to create a table that shows differences by year between macro variables in the baseline and reform model solutions.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerOGoutput-plot_aggregates">
 
+<p class="admonition-title"><span class="caption-number">Exercise 66 </span></p>
+<section id="exercise-content">
+<p>Use the <code class="docutils literal notranslate"><span class="pre">ogcore.output_plots.plot_aggregates</span></code> function to create a figure showing the percentage changes in GDP and consumption over the transition path between the baseline and reform simulations.</p>
+</section>
+</div>
+<div class="exercise admonition" id="ExerOGoutput-baseline">
+
 <p class="admonition-title"><span class="caption-number">Exercise 67 </span></p>
 <section id="exercise-content">
-<p>Plot macro aggregates from TPI output from XXX</p>
+<p>Now use the <code class="docutils literal notranslate"><span class="pre">ogcore.output_plots.plot_aggregates</span></code> function to plot the baseline GDP forecast and the what that forecast (in levels) would look like under the reform scenario.  This will involve setting the <code class="docutils literal notranslate"><span class="pre">plot_type=&quot;forecast&quot;</span></code> and passing in an array that is the baseline GDP forecast (you can make this up or find a real forecast online - just note that the length of this array needs to be equalt to the argument for <code class="docutils literal notranslate"><span class="pre">num_years_to_plot</span></code>, which defaults to 50 but can be adjusted).</p>
 </section>
 </div>
 <hr class="footnotes docutils" />
@@ -601,7 +608,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Simulating a change in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></p>
+        <p class="prev-next-title">Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></p>
       </div>
     </a>
     <a class="right-next"
