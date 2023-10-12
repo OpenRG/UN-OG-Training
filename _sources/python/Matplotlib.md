@@ -70,39 +70,18 @@ Read the BYU ACME "[Animations and 3D Plotting in Matplotlib](https://drive.goog
 ```{exercise-end}
 ```
 
-```{exercise-start}
-:label: ExerMatplot-line
-```
-Take UN pop data, create line plot
-```{exercise-end}
-```
-
-```{exercise-start}
-:label: ExerMatplot-line_multiple
-```
-Plot mulitple series
-```{exercise-end}
-```
-
-
-```{exercise-start}
-:label: ExerMatplot-styling
-```
-Format it - title, font, legend, etc
-```{exercise-end}
-```
 
 ```{exercise-start}
 :label: ExerMatplot-bar
 ```
-Collapse data and create bar plot
+Using the country GDP DataFrame you created in Exercise {numref}`ExerPandas-make_df`, collapse these data to find mean GDP per capita by country.  Create a bar plot that shows the means for each of the four countries.
 ```{exercise-end}
 ```
 
 ```{exercise-start}
 :label: ExerMatplot-grouped_bar
 ```
-Grouped bar plot
+Using same DataFrame as above, create a grouped bar plot that represents the full DataFrame and shows GDP per capita for each country and year.  Group the bar plot so that there is a grouping for each decade and within each group, all four countries are represented.
 ```{exercise-end}
 ```
 

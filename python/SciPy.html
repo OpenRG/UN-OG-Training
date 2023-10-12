@@ -683,18 +683,18 @@ The error values for eq1 and eq2 at the solution are: [-1.2390089e-13 -1.0125234
 </div>
 </div>
 </div>
-<p>As we saw in <a class="reference internal" href="#figscipyroot-examp1"><span class="std std-numref">Figure 1</span></a>, the solution is <span class="math notranslate nohighlight">\((\hat{x},\hat{y})=(0.846, 2.331)\)</span> and the zero functions are solved to <span class="math notranslate nohighlight">\(1e-12\)</span> precision. <a class="reference internal" href="#ExerScipy-root-lin"><span class="std std-numref">Exercise 45</span></a> has you test the linear algebra solution to a system of linear equations to the SciPy root finder solution.</p>
+<p>As we saw in <a class="reference internal" href="#figscipyroot-examp1"><span class="std std-numref">Figure 1</span></a>, the solution is <span class="math notranslate nohighlight">\((\hat{x},\hat{y})=(0.846, 2.331)\)</span> and the zero functions are solved to <span class="math notranslate nohighlight">\(1e-12\)</span> precision. <a class="reference internal" href="#ExerScipy-root-lin"><span class="std std-numref">Exercise 42</span></a> has you test the linear algebra solution to a system of linear equations to the SciPy root finder solution.</p>
 </section>
 <section id="og-core-equations-example">
 <span id="secscipyroot-examp2"></span><h4>OG-Core equations example<a class="headerlink" href="#og-core-equations-example" title="Permalink to this heading">#</a></h4>
-<p>In the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> macroeconomic model, every age-<span class="math notranslate nohighlight">\(s\)</span> individual in the model chooses how much to consume <span class="math notranslate nohighlight">\(c_{s,t}\)</span>, save <span class="math notranslate nohighlight">\(b_{s+1,t+1}\)</span>, and work <span class="math notranslate nohighlight">\(n_{s,t}\)</span> in each period <span class="math notranslate nohighlight">\(t\)</span>.<a class="footnote-reference brackets" href="#og-core-indiv" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> In this model, each individual’s decision problem can be reduced to choosing consumption <span class="math notranslate nohighlight">\(c_{s,t}\)</span> and labor supply <span class="math notranslate nohighlight">\(n_{s,t}\)</span> each period. In <a class="reference internal" href="#ExerScipy-root_labor"><span class="std std-numref">Exercise 46</span></a> and <a class="reference internal" href="#ExerScipy-root_save"><span class="std std-numref">Exercise 47</span></a>, you will use SciPy’s root finder to solve for optimal labor supply decisions for three different households and optimal consumption decisions over the lifetime of a household, respectively.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> macroeconomic model, every age-<span class="math notranslate nohighlight">\(s\)</span> individual in the model chooses how much to consume <span class="math notranslate nohighlight">\(c_{s,t}\)</span>, save <span class="math notranslate nohighlight">\(b_{s+1,t+1}\)</span>, and work <span class="math notranslate nohighlight">\(n_{s,t}\)</span> in each period <span class="math notranslate nohighlight">\(t\)</span>.<a class="footnote-reference brackets" href="#og-core-indiv" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> In this model, each individual’s decision problem can be reduced to choosing consumption <span class="math notranslate nohighlight">\(c_{s,t}\)</span> and labor supply <span class="math notranslate nohighlight">\(n_{s,t}\)</span> each period. In <a class="reference internal" href="#ExerScipy-root_labor"><span class="std std-numref">Exercise 43</span></a> and <a class="reference internal" href="#ExerScipy-root_save"><span class="std std-numref">Exercise 44</span></a>, you will use SciPy’s root finder to solve for optimal labor supply decisions for three different households and optimal consumption decisions over the lifetime of a household, respectively.</p>
 </section>
 </section>
 </section>
 <section id="minimization">
 <span id="secscipymin"></span><h2>Minimization<a class="headerlink" href="#minimization" title="Permalink to this heading">#</a></h2>
 <p>Minimization problems are a more general type of problem than root finding problems. Any root finding problem can be reformulated as a minimization problem. But it is not the case that any minimization problem can be reformulated as a root finding problem. Furthermore, if a minimization problem can be reformulated as a root finding problem, it is often much faster to compute the root finding problem. But the minimization problem allows for more generality and often more robustness.</p>
-<p><a class="reference internal" href="#ExerScipy-root-min"><span class="std std-numref">Exercise 49</span></a> has you compute the solution to a problem using minimization and root finding, respectively, and to compare the corresponding computation times. One of our favorite books and resources on the mathematics behind minimization problems is <span id="id5">[<a class="reference internal" href="../UN-OG-Training_references.html#id39" title="Jeffrey Humpherys and Tyler J. Jarvis. Foundations of Applied Mathematics: Algorithms, Approximation, Optimization. Volume 2. SIAM, Society for Industrial and Applied Mathematics, 2020.">Humpherys and Jarvis, 2020</a>]</span> (section IV, pp.519-760).</p>
+<p><a class="reference internal" href="#ExerScipy-root-min"><span class="std std-numref">Exercise 46</span></a> has you compute the solution to a problem using minimization and root finding, respectively, and to compare the corresponding computation times. One of our favorite books and resources on the mathematics behind minimization problems is <span id="id5">[<a class="reference internal" href="../UN-OG-Training_references.html#id39" title="Jeffrey Humpherys and Tyler J. Jarvis. Foundations of Applied Mathematics: Algorithms, Approximation, Optimization. Volume 2. SIAM, Society for Industrial and Applied Mathematics, 2020.">Humpherys and Jarvis, 2020</a>]</span> (section IV, pp.519-760).</p>
 </section>
 <section id="interpolation">
 <span id="secscipyinterp"></span><h2>Interpolation<a class="headerlink" href="#interpolation" title="Permalink to this heading">#</a></h2>
@@ -703,7 +703,7 @@ The error values for eq1 and eq2 at the solution are: [-1.2390089e-13 -1.0125234
 <span id="secscipyexercises"></span><h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise green admonition" id="ExerScipy-root-lin">
 
-<p class="admonition-title"><span class="caption-number">Exercise 45 </span> (Linear algebra vs. root finder)</p>
+<p class="admonition-title"><span class="caption-number">Exercise 42 </span> (Linear algebra vs. root finder)</p>
 <section id="exercise-content">
 <p>Define an exactly identified linear system of three equations and three unknown variables <span class="math notranslate nohighlight">\(R=R^*=3=K\)</span>.</p>
 <div class="amsmath math notranslate nohighlight">
@@ -734,7 +734,7 @@ The error values for eq1 and eq2 at the solution are: [-1.2390089e-13 -1.0125234
 </div>
 <div class="exercise green admonition" id="ExerScipy-root_labor">
 
-<p class="admonition-title"><span class="caption-number">Exercise 46 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 43 </span></p>
 <section id="exercise-content">
 <p>In a three-period-lived agent overlapping generations model, let <span class="math notranslate nohighlight">\(s=\{1,2,3\}\)</span> represent the age of an individual. In every period, a young agent <span class="math notranslate nohighlight">\(s=1\)</span>, a middle-aged agent <span class="math notranslate nohighlight">\(s=2\)</span>, and an old agent <span class="math notranslate nohighlight">\(s=3\)</span> exist in the economy together. The consumption-labor Euler equation for each age-<span class="math notranslate nohighlight">\(s\)</span> agent represents the optimal labor supply decision <span class="math notranslate nohighlight">\(n_s\)</span> that balances benefit of extra consumption from labor income with the disutility of working, given the consumption amount <span class="math notranslate nohighlight">\(c_s\)</span> and the current wage <span class="math notranslate nohighlight">\(w\)</span>.<a class="footnote-reference brackets" href="#evansphillips" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
 <div class="amsmath math notranslate nohighlight">
@@ -755,7 +755,7 @@ The error values for eq1 and eq2 at the solution are: [-1.2390089e-13 -1.0125234
 </div>
 <div class="exercise green admonition" id="ExerScipy-root_save">
 
-<p class="admonition-title"><span class="caption-number">Exercise 47 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 44 </span></p>
 <section id="exercise-content">
 <p>In a four-period-lived agent overlapping generations model, let <span class="math notranslate nohighlight">\(s=\{1,2,3,4\}\)</span> represent the age of an individual. Assume that labor supply over the lifetime of an individual is exogenously supplied. Let <span class="math notranslate nohighlight">\(n_s\)</span> be the amount of labor supplied by the age-<span class="math notranslate nohighlight">\(s\)</span> individual in any period <span class="math notranslate nohighlight">\(t\)</span>. Then assume the lifetime labor supply of an individual is exogenously <span class="math notranslate nohighlight">\((n_1,n_2,n_3,n_4)=(0.3, 0.5, 0.6, 0.2)\)</span>. The consumption-savings Euler equation for each of the youngest three age-<span class="math notranslate nohighlight">\(s\)</span> agents represents the optimal savings decision <span class="math notranslate nohighlight">\(b_{s+1,t+1}\)</span> that balances benefit of consumption in the current period <span class="math notranslate nohighlight">\(c_t\)</span> with discounted consumption in the next period <span class="math notranslate nohighlight">\(c_{t+1}\)</span>, given preference parameter values and exogenous labor supply <span class="math notranslate nohighlight">\(n_s\)</span>. The oldest agent <span class="math notranslate nohighlight">\(s=4\)</span> has no savings decision because they die at the end of the period.</p>
 <div class="amsmath math notranslate nohighlight">
@@ -779,7 +779,7 @@ The error values for eq1 and eq2 at the solution are: [-1.2390089e-13 -1.0125234
 </div>
 <div class="exercise green admonition" id="ExerScipy-BM72_ss">
 
-<p class="admonition-title"><span class="caption-number">Exercise 48 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 45 </span></p>
 <section id="exercise-content">
 <p><span id="id7">[<a class="reference internal" href="../UN-OG-Training_references.html#id11" title="William A. Brock and Leonard J. Mirman. Optimal economic growth and uncertainty: the discounted case. Journal of Economic Theory, 4(3):479-513, June 1972.">Brock and Mirman, 1972</a>]</span> is a simple two-period-lived overlapping generations model, the stochastic equilibrium of which is characterized by six dynamic equations (equations in which the variables are changing over time). The deterministic steady-state of the model is characterized by the variables reaching constant values that do not change over time. The deterministic steady state of the <span id="id8">[<a class="reference internal" href="../UN-OG-Training_references.html#id11" title="William A. Brock and Leonard J. Mirman. Optimal economic growth and uncertainty: the discounted case. Journal of Economic Theory, 4(3):479-513, June 1972.">Brock and Mirman, 1972</a>]</span> is characterized by the following five equations and five unknown variables <span class="math notranslate nohighlight">\((c, k, y, w, r)\)</span>,</p>
 <div class="amsmath math notranslate nohighlight">
@@ -797,23 +797,50 @@ The error values for eq1 and eq2 at the solution are: [-1.2390089e-13 -1.0125234
 </div>
 <div class="exercise green admonition" id="ExerScipy-root-min">
 
-<p class="admonition-title"><span class="caption-number">Exercise 49 </span> (Root finder vs. minimizer)</p>
+<p class="admonition-title"><span class="caption-number">Exercise 46 </span> (Root finder vs. minimizer)</p>
 <section id="exercise-content">
 <p>Characterize a minimization problem that can also be solved using a root finder. Write code to solve the problem both ways. Record the respective computation times of both solution methods. How does the minimization method computation time compare to the root finder computation time?</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerScipy-min_constraint">
 
-<p class="admonition-title"><span class="caption-number">Exercise 50 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 47 </span></p>
 <section id="exercise-content">
-<p>Use <code class="docutils literal notranslate"><span class="pre">scipy.optimize.minimize</span></code> to minimize the function <span class="math notranslate nohighlight">\(f(x) = x^2 + 2x + 1\)</span> (or some other function) subject to the constraint that <span class="math notranslate nohighlight">\(x \geq 2\)</span>.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">scipy.optimize.minimize</span></code> to minimize the function <span class="math notranslate nohighlight">\(f(x,y)=x^2y\)</span> on the unit circle, i.e., subject to <span class="math notranslate nohighlight">\(x^2 + y^2 = 1\)</span>.  Use the <code class="docutils literal notranslate"><span class="pre">constraints</span></code> keyword argument to specify the constraint.  What is the minimum value of <span class="math notranslate nohighlight">\(f(x,y)\)</span> subject to this constraint?  Can you confirm this by doing the problem by hand using calculus?</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerScipy-interp">
 
-<p class="admonition-title"><span class="caption-number">Exercise 51 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 48 </span></p>
 <section id="exercise-content">
-<p>Use <code class="docutils literal notranslate"><span class="pre">scipy.interpolate</span></code>…</p>
+<p>Consider the following <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> vectors, which represent some functional relationship, <code class="docutils literal notranslate"><span class="pre">y=f(x)</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+  <span class="mf">5.15151515</span><span class="p">,</span>   <span class="mf">3.13131313</span><span class="p">,</span>  <span class="o">-</span><span class="mf">6.36363636</span><span class="p">,</span>   <span class="mf">9.39393939</span><span class="p">,</span>
+  <span class="o">-</span><span class="mf">1.31313131</span><span class="p">,</span>   <span class="mf">0.50505051</span><span class="p">,</span>  <span class="o">-</span><span class="mf">0.50505051</span><span class="p">,</span>  <span class="o">-</span><span class="mf">2.12121212</span><span class="p">,</span>
+  <span class="o">-</span><span class="mf">7.37373737</span><span class="p">,</span>  <span class="o">-</span><span class="mf">0.1010101</span> <span class="p">,</span>   <span class="mf">3.73737374</span><span class="p">,</span>   <span class="mf">2.52525253</span><span class="p">,</span>
+  <span class="mf">2.12121212</span><span class="p">,</span> <span class="o">-</span><span class="mf">10.</span>        <span class="p">,</span>  <span class="o">-</span><span class="mf">9.5959596</span> <span class="p">,</span>   <span class="mf">6.36363636</span><span class="p">,</span>
+  <span class="mf">3.53535354</span><span class="p">,</span>  <span class="o">-</span><span class="mf">5.75757576</span><span class="p">,</span>  <span class="o">-</span><span class="mf">4.34343434</span><span class="p">,</span>  <span class="o">-</span><span class="mf">8.18181818</span><span class="p">,</span>
+  <span class="mf">8.18181818</span><span class="p">,</span>  <span class="o">-</span><span class="mf">3.13131313</span><span class="p">,</span>   <span class="mf">2.92929293</span><span class="p">,</span>   <span class="mf">4.74747475</span><span class="p">,</span>
+  <span class="o">-</span><span class="mf">6.56565657</span><span class="p">,</span>  <span class="o">-</span><span class="mf">0.3030303</span> <span class="p">,</span>  <span class="o">-</span><span class="mf">2.32323232</span><span class="p">,</span>   <span class="mf">1.11111111</span><span class="p">,</span>
+  <span class="o">-</span><span class="mf">7.17171717</span><span class="p">,</span>  <span class="o">-</span><span class="mf">5.55555556</span><span class="p">,</span>  <span class="o">-</span><span class="mf">3.73737374</span><span class="p">,</span>  <span class="o">-</span><span class="mf">4.14141414</span><span class="p">,</span>
+  <span class="mf">8.38383838</span><span class="p">,</span>   <span class="mf">4.94949495</span><span class="p">,</span>   <span class="mf">0.70707071</span><span class="p">,</span>  <span class="o">-</span><span class="mf">3.33333333</span><span class="p">,</span>
+  <span class="mf">6.96969697</span><span class="p">,</span>  <span class="o">-</span><span class="mf">2.72727273</span><span class="p">,</span>   <span class="mf">5.55555556</span><span class="p">,</span>  <span class="o">-</span><span class="mf">7.77777778</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+  <span class="o">-</span><span class="mf">0.90512352</span><span class="p">,</span>  <span class="mf">0.01027934</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0803643</span> <span class="p">,</span>  <span class="mf">0.03083368</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.96698762</span><span class="p">,</span>
+  <span class="mf">0.48385164</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.48385164</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.85230712</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.8868821</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.10083842</span><span class="p">,</span>
+  <span class="o">-</span><span class="mf">0.56115544</span><span class="p">,</span>  <span class="mf">0.57805259</span><span class="p">,</span>  <span class="mf">0.85230712</span><span class="p">,</span>  <span class="mf">0.54402111</span><span class="p">,</span>  <span class="mf">0.17034683</span><span class="p">,</span>
+  <span class="mf">0.0803643</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.38366419</span><span class="p">,</span>  <span class="mf">0.50174037</span><span class="p">,</span>  <span class="mf">0.93270486</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.94674118</span><span class="p">,</span>
+  <span class="mf">0.94674118</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01027934</span><span class="p">,</span>  <span class="mf">0.21070855</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.99938456</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.27872982</span><span class="p">,</span>
+  <span class="o">-</span><span class="mf">0.2984138</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.73002623</span><span class="p">,</span>  <span class="mf">0.8961922</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.77614685</span><span class="p">,</span>  <span class="mf">0.66510151</span><span class="p">,</span>
+  <span class="mf">0.56115544</span><span class="p">,</span>  <span class="mf">0.84137452</span><span class="p">,</span>  <span class="mf">0.86287948</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.97202182</span><span class="p">,</span>  <span class="mf">0.64960951</span><span class="p">,</span>
+  <span class="mf">0.19056796</span><span class="p">,</span>  <span class="mf">0.63384295</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.40256749</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.66510151</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.99709789</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Create a scatter plot of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> to see their relationship.  Is it hard to tell what this function looks like?</p>
+<p>Now use <code class="docutils literal notranslate"><span class="pre">scipy.interpolate.interp1d</span></code> to interpolate the function <span class="math notranslate nohighlight">\(f(x)\)</span> using <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.  Use the keyword argument <code class="docutils literal notranslate"><span class="pre">kind='cubic'</span></code> to specify that you want to use cubic splines to interpolate the function and <code class="docutils literal notranslate"><span class="pre">fill_value=extrapolate</span></code> to note that you want to extrapolate beyond the values in the original <code class="docutils literal notranslate"><span class="pre">x</span></code> vector.</p>
+<p>Create a plot of this interpolated function over the domain <span class="math notranslate nohighlight">\(x \in [-10, 10]\)</span>.  Can you now see what this function is?</p>
 </section>
 </div>
 </section>

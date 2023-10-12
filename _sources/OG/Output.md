@@ -134,7 +134,7 @@ output_dict = {
 for key in path_dict.keys():
     for path in path_dict[key]:
         r = requests.get(path)
-        output_dict[key].append(pickle.loads(BytesIO(r.content).getvalue()))
+        output_dict[key].append(pickle.load(BytesIO(r.content)))
 # make table
 table = ot.macro_table(output_dict["TPI"][0], output_dict["Params"][0], output_dict["TPI"][1], output_dict["Params"][1], output_type="pct_diff", num_years=10, start_year= output_dict["Params"][0].start_year)
 glue(table.to_markdown())

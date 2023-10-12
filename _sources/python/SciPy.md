@@ -397,14 +397,46 @@ Characterize a minimization problem that can also be solved using a root finder.
 ```{exercise-start}
 :label: ExerScipy-min_constraint
 ```
-Use `scipy.optimize.minimize` to minimize the function $f(x) = x^2 + 2x + 1$ (or some other function) subject to the constraint that $x \geq 2$.
+Use `scipy.optimize.minimize` to minimize the function $f(x,y)=x^2y$ on the unit circle, i.e., subject to $x^2 + y^2 = 1$.  Use the `constraints` keyword argument to specify the constraint.  What is the minimum value of $f(x,y)$ subject to this constraint?  Can you confirm this by doing the problem by hand using calculus?
 ```{exercise-end}
 ```
 
 ```{exercise-start}
 :label: ExerScipy-interp
 ```
-Use `scipy.interpolate`...
+Consider the following `x` and `y` vectors, which represent some functional relationship, `y=f(x)`:
+
+```python
+x = np.array([
+  5.15151515,   3.13131313,  -6.36363636,   9.39393939,
+  -1.31313131,   0.50505051,  -0.50505051,  -2.12121212,
+  -7.37373737,  -0.1010101 ,   3.73737374,   2.52525253,
+  2.12121212, -10.        ,  -9.5959596 ,   6.36363636,
+  3.53535354,  -5.75757576,  -4.34343434,  -8.18181818,
+  8.18181818,  -3.13131313,   2.92929293,   4.74747475,
+  -6.56565657,  -0.3030303 ,  -2.32323232,   1.11111111,
+  -7.17171717,  -5.55555556,  -3.73737374,  -4.14141414,
+  8.38383838,   4.94949495,   0.70707071,  -3.33333333,
+  6.96969697,  -2.72727273,   5.55555556,  -7.77777778])
+```
+
+```python
+y = np.array([
+  -0.90512352,  0.01027934, -0.0803643 ,  0.03083368, -0.96698762,
+  0.48385164, -0.48385164, -0.85230712, -0.8868821 , -0.10083842,
+  -0.56115544,  0.57805259,  0.85230712,  0.54402111,  0.17034683,
+  0.0803643 , -0.38366419,  0.50174037,  0.93270486, -0.94674118,
+  0.94674118, -0.01027934,  0.21070855, -0.99938456, -0.27872982,
+  -0.2984138 , -0.73002623,  0.8961922 , -0.77614685,  0.66510151,
+  0.56115544,  0.84137452,  0.86287948, -0.97202182,  0.64960951,
+  0.19056796,  0.63384295, -0.40256749, -0.66510151, -0.99709789])
+```
+
+Create a scatter plot of `x` and `y` to see their relationship.  Is it hard to tell what this function looks like?
+
+Now use `scipy.interpolate.interp1d` to interpolate the function $f(x)$ using `x` and `y`.  Use the keyword argument `kind='cubic'` to specify that you want to use cubic splines to interpolate the function and `fill_value=extrapolate` to note that you want to extrapolate beyond the values in the original `x` vector.
+
+Create a plot of this interpolated function over the domain $x \in [-10, 10]$.  Can you now see what this function is?
 ```{exercise-end}
 ```
 

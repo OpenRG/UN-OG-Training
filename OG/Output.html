@@ -535,7 +535,7 @@ document.write(`
 <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">path_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">path_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]:</span>
         <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-        <span class="n">output_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()))</span>
+        <span class="n">output_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)))</span>
 <span class="c1"># make table</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">ot</span><span class="o">.</span><span class="n">macro_table</span><span class="p">(</span><span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;TPI&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;Params&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;TPI&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;Params&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">output_type</span><span class="o">=</span><span class="s2">&quot;pct_diff&quot;</span><span class="p">,</span> <span class="n">num_years</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;Params&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start_year</span><span class="p">)</span>
 <span class="n">glue</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
@@ -716,14 +716,14 @@ document.write(`
 <h1>Excercises:<a class="headerlink" href="#excercises" title="Permalink to this heading">#</a></h1>
 <div class="exercise admonition" id="ExerOGoutput-life_cycle">
 
-<p class="admonition-title"><span class="caption-number">Exercise 63 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 60 </span></p>
 <section id="exercise-content">
 <p>Solve for the steady state of the model with the default value for the rate of time preferences (this is <span class="math notranslate nohighlight">\(\beta =0.96\)</span>). Then solve for the steady-state solution with <span class="math notranslate nohighlight">\(\beta=0.90\)</span> (remembering to save the output in a different location than your baseline simulation).  Use the <code class="docutils literal notranslate"><span class="pre">ogcore.output_plots.ss_profiles</span></code> function to plot savings by age over agents lifetimes before and after the change in the rate of time preference.  What do you notice happens to savings?</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerOGoutput-change_units">
 
-<p class="admonition-title"><span class="caption-number">Exercise 64 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 61 </span></p>
 <section id="exercise-content">
 <p>Take TPI output from <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_baseline.pkl</span></code> and convert the GDP series to constant units of local currency using the <code class="docutils literal notranslate"><span class="pre">factor_ss</span></code> and the growth rates, <code class="docutils literal notranslate"><span class="pre">g_n</span></code> and <code class="docutils literal notranslate"><span class="pre">g_y</span></code>.  You can find the <code class="docutils literal notranslate"><span class="pre">factor_ss</span></code> in the steady state output at <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/SS_vars_baseline.pkl</span></code> and the growth rates in the parameters file at <code class="docutils literal notranslate"><span class="pre">https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline.pkl</span></code> Hint: you can look at the <a class="reference external" href="https://pslmodels.github.io/OG-Core/content/theory/stationarization.html"><code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> chapter on stationarizing the model</a> to help see how to get back to non-stationary measures.</p>
 </section>
@@ -737,21 +737,21 @@ document.write(`
 </ul>
 <div class="exercise admonition" id="ExerOGoutput-TPI_table">
 
-<p class="admonition-title"><span class="caption-number">Exercise 65 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 62 </span></p>
 <section id="exercise-content">
 <p>Use the <code class="docutils literal notranslate"><span class="pre">ogcore.output_tables.macro_table</span></code> function to create a table that shows differences by year between macro variables in the baseline and reform model solutions.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerOGoutput-plot_aggregates">
 
-<p class="admonition-title"><span class="caption-number">Exercise 66 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 63 </span></p>
 <section id="exercise-content">
 <p>Use the <code class="docutils literal notranslate"><span class="pre">ogcore.output_plots.plot_aggregates</span></code> function to create a figure showing the percentage changes in GDP and consumption over the transition path between the baseline and reform simulations.</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerOGoutput-baseline">
 
-<p class="admonition-title"><span class="caption-number">Exercise 67 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 64 </span></p>
 <section id="exercise-content">
 <p>Now use the <code class="docutils literal notranslate"><span class="pre">ogcore.output_plots.plot_aggregates</span></code> function to plot the baseline GDP forecast and the what that forecast (in levels) would look like under the reform scenario.  This will involve setting the <code class="docutils literal notranslate"><span class="pre">plot_type=&quot;forecast&quot;</span></code> and passing in an array that is the baseline GDP forecast (you can make this up or find a real forecast online - just note that the length of this array needs to be equalt to the argument for <code class="docutils literal notranslate"><span class="pre">num_years_to_plot</span></code>, which defaults to 50 but can be adjusted).</p>
 </section>
