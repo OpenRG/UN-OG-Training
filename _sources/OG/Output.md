@@ -1,3 +1,15 @@
+---
+jupytext:
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
 (Chap_OGoutput)=
 
 # Loading `OG-Core` output
@@ -44,17 +56,17 @@ If you absolutely need to translate model output into nominal or real values, th
 
 The first, and perhaps simplest, way to convert model output to nominal or real values is to find economics forecasts of the variables of interest and use these to scale the model output.  For example, if you are interested in the movement of GDP, you could find a forecast GDP over some horizon and use use the model output to create an alternative forecast under the counterfactual reform scenario. For example, suppose the 10-year baseline forecast (in real of nominal units of local currency) for GDP is:
 
-        ```
+        ```python
         GDP_baseline = [100, 102, 104, 106, 108, 110, 112, 114, 116, 118]
         ```
 And let's suppose that the percentage difference in GDP between the baseline and reform simulations is:
 
-        ```
+        ```python
         GDP_diff = [0.01, 0.02, 0.03, 0.04, 0.05, 0.06, -0.01, -0.02, -0.03, -0.04]
         ```
 Then the reform forecast for GDP would be:
 
-        ```
+        ```python
         GDP_reform = GDP_baseline * (1 + GDP_diff)
                    = [101.00, 104.04, 107.12, 110.24, 113.40, 116.60, 110.88, 111.72, 111.52, 113.28]
         ```
@@ -63,7 +75,7 @@ A limitation of the the above approach is that it requires a forecast of the var
 
 A second approach is to take the model very seriously and scale model outputs directly to real world units.  This involves two or three steps: (i) Add the trend back to the model output, (ii) convert the model output to units of local currency (in real terms), (iii - optional) turn the real units into nominal units by applying a price deflator.  Let's use GDP and an example again. The model output of GDP will be in `TPI_vars["Y"]`, which is a one-dimensional array of length `T`.  To add back the trend growth, one will need to multiple the series by the cumulative growth rates. What we want to get is:
 
-```math
+```{math}
     Y_{t} = \prod_{u=0}^{t} (1 + g_{n,t}) * \hat{Y}_t * \exp(g_y * t)
 ```
 
@@ -93,19 +105,95 @@ The advantage of this approach is that you can apply it to all the model outputs
 
 ## Tabular output
 
-TODO: make the below an executable cell
-```python
-    import ogcore.output_tables as ot
-    # Read pickle files cached on web for convenience
-    base_tpi = ogcore.utils.safe_read_pickle("C:\User\OG-Core\Simulation24\Baseline\TPI\TPI_vars.pkl")
-    base_params = ogcore.utils.safe_read_pickle("C:\User\OG-Core\Simulation24\Baseline\TPI\TPI_vars.pkl")
-    reform_tpi = ogcore.utils.safe_read_pickle("C:\User\OG-Core\Simulation24\Baseline\TPI\TPI_vars.pkl")
-    reform_params = ogcore.utils.safe_read_pickle("C:\User\OG-Core\Simulation24\Baseline\TPI\TPI_vars.pkl")
-    table = ot.macro_table(base_tpi, base_params, reform_tpi, reform_params, output_type="pct_diff", num_years=10)
+For some preset ways to view `OG-Core` output in a tabular format, see the [`ogcore.output_tables` module](https://pslmodels.github.io/OG-Core/content/api/output_tables.html). This module provides several table formats with options for output to be presented in different ways (e.g., as levels or percentage changes).  The cell below shows how to read output and them use the `ogcore.output_tables.macro_table` function to create a table of percentage changes in macroeconomic aggregates between the baseline and reform simulations.
+
+NOTE: the cell below runs in Python 3.10, but there's an error reading the parameters pickle files in Python 3.11 that I could not figure out.
+```{code-cell} ipython3
+:tags: ["hide-input"]
+
+import ogcore.output_tables as ot
+from io import BytesIO
+import pickle
+# import cloudpickle
+import requests
+path_dict = {
+    "TPI": [
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_baseline.pkl?raw=true",
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_reform.pkl?raw=true"
+            ],
+    "Params": [
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline.pkl?raw=true",
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_reform.pkl?raw=true"
+
+    ]
+}
+output_dict = {
+    "TPI": [],
+    "Params": []
+}
+for key in path_dict.keys():
+    for path in path_dict[key]:
+        r = requests.get(path)
+        output_dict[key].append(pickle.loads(BytesIO(r.content).getvalue()))
+# make table
+table = ot.macro_table(output_dict["TPI"][0], output_dict["Params"][0], output_dict["TPI"][1], output_dict["Params"][1], output_type="pct_diff", num_years=10, start_year= output_dict["Params"][0].start_year)
+glue(table.to_markdown())
 ```
 
-TODO: glue table dataframe below that is produced from the cell above
 
+| Variable                   |      2023 |       2024 |       2025 |       2026 |      2027 |       2028 |       2029 |       2030 |       2031 |       2032 |   2023-2032 |           SS |
+|:---------------------------|----------:|-----------:|-----------:|-----------:|----------:|-----------:|-----------:|-----------:|-----------:|-----------:|------------:|-------------:|
+| GDP ($Y_t$)                |  0.242293 |  0.25705   |  0.26452   |  0.271852  |  0.280428 |  0.291875  |  0.30325   |  0.33648   |  0.353121  |  0.372514  |   0.298945  |  0.15837     |
+| Consumption ($C_t$)        | -0.101546 | -0.0937955 | -0.0920275 | -0.0913839 | -0.090299 | -0.0887929 | -0.0859871 | -0.0884302 | -0.0850751 | -0.0814483 |  -0.0899271 | -0.325536    |
+| Capital Stock ($K_t$)      | -0.167744 | -0.159507  | -0.147283  | -0.130099  | -0.108928 | -0.0831552 | -0.0543115 | -0.0141228 |  0.0241502 |  0.0680466 |  -0.083661  | -0.499739    |
+| Labor ($L_t$)              |  0.095769 |  0.10457   |  0.109477  |  0.113299  |  0.116415 |  0.119352  |  0.121771  |  0.134597  |  0.138062  |  0.141778  |   0.119321  |  0.181081    |
+| Real interest rate ($r_t$) | -0.675776 | -0.48852   | -0.419442  | -0.389956  | -0.380167 | -0.386472  | -0.395494  | -0.455886  | -0.476269  | -0.504356  |  -0.446212  |  0.000497603 |
+| Wage rate                  |  0.143909 |  0.149049  |  0.150991  |  0.15375   |  0.158361 |  0.165692  |  0.173687  |  0.189133  |  0.200724  |  0.214481  |   0.17112   | -0.0431336   |
+
+
+## Plotting output
+
+`OG-Core` also offers functions for easily visualizing output. These functions are available in the [`ogcore.output_plots` module](https://pslmodels.github.io/OG-Core/content/api/output_plots.html). This module provides a number of different types of plots with can be used to visualize macroeconomic aggregates, household decisions, and customized to plot different variables in different units.  The cell below shows how to read output and them use the `ogcore.output_tables.plot_aggregates` function to create a table of percentage changes in macroeconomic aggregates between the baseline and reform simulations.
+
+
+NOTE: the cell below runs in Python 3.10, but there's an error reading the parameters pickle files in Python 3.11 that I could not figure out.
+```{code-cell} ipython3
+:tags: ["hide-input"]
+
+import ogcore.output_plots as op
+from io import BytesIO
+import pickle
+# import cloudpickle
+import requests
+path_dict = {
+    "TPI": [
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_baseline.pkl?raw=true",
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_reform.pkl?raw=true"
+            ],
+    "Params": [
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline.pkl?raw=true",
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_reform.pkl?raw=true"
+
+    ]
+}
+output_dict = {
+    "TPI": [],
+    "Params": []
+}
+for key in path_dict.keys():
+    for path in path_dict[key]:
+        r = requests.get(path)
+        output_dict[key].append(pickle.loads(BytesIO(r.content).getvalue()))
+# make table
+fig = op.plot_aggregates(output_dict["TPI"][0], output_dict["Params"][0], output_dict["TPI"][1], output_dict["Params"][1], plot_type="pct_diff", start_year= output_dict["Params"][0].start_year)
+glue(fig.show())
+```
+
+:::{figure-md} pct_change_plot
+<img src="./images/pct_change_plot.png" alt="pct_change_plot" class="bg-primary mb-1" width="80%">
+
+Percentage Changes in Macroeconomic Aggregates
+:::
 
 # Excercises:
 
