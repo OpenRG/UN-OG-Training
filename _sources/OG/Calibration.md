@@ -71,6 +71,7 @@ The population distribution and growth rates in the plots above were created usi
 
 ```{exercise-start}
 :label: ExerCalib-demo_country
+:class: green
 ```
 First, let's create a utility to get population data from the UN Population Prospects for a country of interest to you.  Start by making a copy of [`demographics.py`](https://github.com/EAPD-DRB/OG-ZAF/blob/main/ogzaf/demographics.py) from the `OG-ZAF` repository.  Next, modify the `demographics.py` you just copied to gather population data for another country (i.e., not South Africa).  Each country in the UN database has a two or three digit code.  You can find a list of these [here](https://unstats.un.org/unsd/methodology/m49/)
 ```{exercise-end}
@@ -78,6 +79,7 @@ First, let's create a utility to get population data from the UN Population Pros
 
 ```{exercise-start}
 :label: ExerCalib-demo_fert
+:class: green
 ```
 Using your modified `demographics.py`, plot the fertility rates in this country.  Note that you can do this directly from the `demographics.get_fert()` function.
 ```{exercise-end}
@@ -85,6 +87,7 @@ Using your modified `demographics.py`, plot the fertility rates in this country.
 
 ```{exercise-start}
 :label: ExerCalib-demo_mort
+:class: green
 ```
 Let's do the same for mortality rates.  In this case, you will want interact with the `demographics.get_mort` function.
 ```{exercise-end}
@@ -92,6 +95,7 @@ Let's do the same for mortality rates.  In this case, you will want interact wit
 
 ```{exercise-start}
 :label: ExerCalib-demo_pop_dist
+:class: green
 ```
 The `demographics.py` module uses current fertility and mortality rates (and the implied immigration rates) to project the population forward.  This ensures a population distribution in each year of the model that is consistent with the fertility, mortality, and immigration rates.  Use the `demographics.get_pop_objs` function to return a dictionary with the population object that are inputs to calibrating `OG-Core` (Use `E=20`, `S=80`, `T=320`, `curr_year=2023`).  From this dictionary, extract the population distribution object (the key for this is `omega` and it is an array with shape `TxS`, where `T` are the number of time periods and `S` is the number of age groups in the model).  Create a line plot of the population distribution in the first year, the 20th year, the 100th year, and the last year in the `omega` object.  Describe what you see happening to the distribution of people across age as you more forward in time?
 ```{exercise-end}
@@ -99,6 +103,7 @@ The `demographics.py` module uses current fertility and mortality rates (and the
 
 ```{exercise-start}
 :label: ExerCalib-demo_pop_growth
+:class: green
 ```
 Also in the dictionary returned from `demographics.get_pop_objs`, is the population growth rate. This is a NumPy array object with key `g_n`.  Plot `g_n`.  How does the population growth rate change over time?  Given what you've seen in the plots you've created, what can you say about the driver(s) of population growth (i.e., how are fertility and mortality rates contributing?  What about immigration (something we haven't yet plotted, but about which you might be able to infer something given fertility and mortality rates and the change in the age distribution over time...))
 ```{exercise-end}
@@ -106,6 +111,7 @@ Also in the dictionary returned from `demographics.get_pop_objs`, is the populat
 
 ```{exercise-start}
 :label: ExerCalib-demo_sims
+:class: green
 ```
 Now that you've visualized the different demographic trends in the country you've chosen, let's see how these affect the equilibrium in the OG model.  This will combine what you learned in {ref}`Chap_OGsimulation` with what you've learned here about population demographics objects for the model. You'll proceed with the following steps:
 
@@ -201,6 +207,7 @@ Finally, we need to calibrate the initial government debt to GDP ratio, `initial
 ## Exercises
 ```{exercise-start}
 :label: ExerCalib-macro_datareader
+:class: green
 ```
 The [Federal Reserve Economic Database](https://fred.stlouisfed.org) (FRED) contains macroeconomic data for a number of countries and a user friendly interface.  In addition, tools, such as [`pandas-datareader`](https://pandas-datareader.readthedocs.io) make it extremely easy to access the FRED API.  In this exercise, use `pandas-datareader` to download the quarterly, real GDP time series for South Africa from FRED.  Plot it.
 ```{exercise-end}
@@ -208,6 +215,7 @@ The [Federal Reserve Economic Database](https://fred.stlouisfed.org) (FRED) cont
 
 ```{exercise-start}
 :label: ExerCalib-macro_freq
+:class: green
 ```
 Now, use the [`datetime`](https://docs.python.org/3/library/datetime.html#datetime-objects) object functions to collapse the quarterly GDP data to annual data.  Plot it.
 ```{exercise-end}
@@ -215,6 +223,7 @@ Now, use the [`datetime`](https://docs.python.org/3/library/datetime.html#dateti
 
 ```{exercise-start}
 :label: ExerCalib-macro_gy
+:class: green
 ```
 With your annual data, compute the annual growth rate for each year.  Plot the time series of growth rates.
 ```{exercise-end}
@@ -222,6 +231,7 @@ With your annual data, compute the annual growth rate for each year.  Plot the t
 
 ```{exercise-start}
 :label: ExerCalib-macro_reg
+:class: green
 ```
 Now let's estimate the autocorrelation in GDP growth, assuming is a first order auto-regressive process (AR1).  We'll do this with the `statsmodles.OLS` function.
 
@@ -238,6 +248,7 @@ What did you estimate as $\alpha$?  What does this represent?  How persistent is
 
 ```{exercise-start}
 :label: ExerCalib-macro_???
+:class: green
 ```
 Other??
 ```{exercise-end}
@@ -262,6 +273,7 @@ To approximate the earnings processes in a country of interest, we recommend sta
 ## Exercises
 ```{exercise-start}
 :label: ExerCalib-earn_plot
+:class: green
 ```
 Use [`income.py` from `OG-USA`](https://github.com/PSLmodels/OG-USA/blob/master/ogusa/income.py) to retrieve the earnings process matrix.  Read through the docstrings of each function to see which to use.  With the `e` matrix that is returned, create a line plot of the earnings at each age for the `J` different types.
 ```{exercise-end}
@@ -269,6 +281,7 @@ Use [`income.py` from `OG-USA`](https://github.com/PSLmodels/OG-USA/blob/master/
 
 ```{exercise-start}
 :label: ExerCalib-earn_approx
+:class: green
 ```
 Now we're going to adjust the above earnings process to match the Gini coefficient in a country that isn't the U.S. (note that the Gini coefficient for income in the U.S. was 41.5 in 2019). The transformation we'll make is:
 

@@ -199,6 +199,7 @@ Percentage Changes in Macroeconomic Aggregates
 
 ```{exercise-start}
 :label: ExerOGoutput-life_cycle
+:class: green
 ```
 Solve for the steady state of the model with the default value for the rate of time preferences (this is $\beta =0.96$). Then solve for the steady-state solution with $\beta=0.90$ (remembering to save the output in a different location than your baseline simulation).  Use the `ogcore.output_plots.ss_profiles` function to plot savings by age over agents lifetimes before and after the change in the rate of time preference.  What do you notice happens to savings?
 ```{exercise-end}
@@ -206,6 +207,7 @@ Solve for the steady state of the model with the default value for the rate of t
 
 ```{exercise-start}
 :label: ExerOGoutput-change_units
+:class: green
 ```
 Take TPI output from `https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_baseline.pkl` and convert the GDP series to constant units of local currency using the `factor_ss` and the growth rates, `g_n` and `g_y`.  You can find the `factor_ss` in the steady state output at `https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/SS_vars_baseline.pkl` and the growth rates in the parameters file at `https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline.pkl` Hint: you can look at the [`OG-Core` chapter on stationarizing the model](https://pslmodels.github.io/OG-Core/content/theory/stationarization.html) to help see how to get back to non-stationary measures.
 ```{exercise-end}
@@ -221,6 +223,7 @@ For the next three exercises, you are going to need to use time path output from
 
 ```{exercise-start}
 :label: ExerOGoutput-TPI_table
+:class: green
 ```
 Use the `ogcore.output_tables.macro_table` function to create a table that shows differences by year between macro variables in the baseline and reform model solutions.
 ```{exercise-end}
@@ -228,6 +231,7 @@ Use the `ogcore.output_tables.macro_table` function to create a table that shows
 
 ```{exercise-start}
 :label: ExerOGoutput-plot_aggregates
+:class: green
 ```
 Use the `ogcore.output_plots.plot_aggregates` function to create a figure showing the percentage changes in GDP and consumption over the transition path between the baseline and reform simulations.
 ```{exercise-end}
@@ -235,6 +239,7 @@ Use the `ogcore.output_plots.plot_aggregates` function to create a figure showin
 
 ```{exercise-start}
 :label: ExerOGoutput-baseline
+:class: green
 ```
 Now use the `ogcore.output_plots.plot_aggregates` function to plot the baseline GDP forecast and the what that forecast (in levels) would look like under the reform scenario.  This will involve setting the `plot_type="forecast"` and passing in an array that is the baseline GDP forecast (you can make this up or find a real forecast online - just note that the length of this array needs to be equalt to the argument for `num_years_to_plot`, which defaults to 50 but can be adjusted).
 ```{exercise-end}

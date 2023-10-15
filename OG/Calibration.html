@@ -483,44 +483,44 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> has several functions with the module. For the South Africa version of <code class="docutils literal notranslate"><span class="pre">demographics,py</span></code> you can find a summary of those functions in the API documentation <a class="reference external" href="https://eapd-drb.github.io/OG-ZAF/content/api/public_api.html">here</a>.  Below we offer several exercise that have you interact with this module help you learn better understand its inputs and outputs.</p>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="ExerCalib-demo_country">
+<div class="exercise green admonition" id="ExerCalib-demo_country">
 
-<p class="admonition-title"><span class="caption-number">Exercise 62 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 63 </span></p>
 <section id="exercise-content">
 <p>First, let’s create a utility to get population data from the UN Population Prospects for a country of interest to you.  Start by making a copy of <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF/blob/main/ogzaf/demographics.py"><code class="docutils literal notranslate"><span class="pre">demographics.py</span></code></a> from the <code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code> repository.  Next, modify the <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> you just copied to gather population data for another country (i.e., not South Africa).  Each country in the UN database has a two or three digit code.  You can find a list of these <a class="reference external" href="https://unstats.un.org/unsd/methodology/m49/">here</a></p>
 </section>
 </div>
-<div class="exercise admonition" id="ExerCalib-demo_fert">
+<div class="exercise green admonition" id="ExerCalib-demo_fert">
 
-<p class="admonition-title"><span class="caption-number">Exercise 63 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 64 </span></p>
 <section id="exercise-content">
 <p>Using your modified <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code>, plot the fertility rates in this country.  Note that you can do this directly from the <code class="docutils literal notranslate"><span class="pre">demographics.get_fert()</span></code> function.</p>
 </section>
 </div>
-<div class="exercise admonition" id="ExerCalib-demo_mort">
+<div class="exercise green admonition" id="ExerCalib-demo_mort">
 
-<p class="admonition-title"><span class="caption-number">Exercise 64 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 65 </span></p>
 <section id="exercise-content">
 <p>Let’s do the same for mortality rates.  In this case, you will want interact with the <code class="docutils literal notranslate"><span class="pre">demographics.get_mort</span></code> function.</p>
 </section>
 </div>
-<div class="exercise admonition" id="ExerCalib-demo_pop_dist">
+<div class="exercise green admonition" id="ExerCalib-demo_pop_dist">
 
-<p class="admonition-title"><span class="caption-number">Exercise 65 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 66 </span></p>
 <section id="exercise-content">
 <p>The <code class="docutils literal notranslate"><span class="pre">demographics.py</span></code> module uses current fertility and mortality rates (and the implied immigration rates) to project the population forward.  This ensures a population distribution in each year of the model that is consistent with the fertility, mortality, and immigration rates.  Use the <code class="docutils literal notranslate"><span class="pre">demographics.get_pop_objs</span></code> function to return a dictionary with the population object that are inputs to calibrating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> (Use <code class="docutils literal notranslate"><span class="pre">E=20</span></code>, <code class="docutils literal notranslate"><span class="pre">S=80</span></code>, <code class="docutils literal notranslate"><span class="pre">T=320</span></code>, <code class="docutils literal notranslate"><span class="pre">curr_year=2023</span></code>).  From this dictionary, extract the population distribution object (the key for this is <code class="docutils literal notranslate"><span class="pre">omega</span></code> and it is an array with shape <code class="docutils literal notranslate"><span class="pre">TxS</span></code>, where <code class="docutils literal notranslate"><span class="pre">T</span></code> are the number of time periods and <code class="docutils literal notranslate"><span class="pre">S</span></code> is the number of age groups in the model).  Create a line plot of the population distribution in the first year, the 20th year, the 100th year, and the last year in the <code class="docutils literal notranslate"><span class="pre">omega</span></code> object.  Describe what you see happening to the distribution of people across age as you more forward in time?</p>
 </section>
 </div>
-<div class="exercise admonition" id="ExerCalib-demo_pop_growth">
+<div class="exercise green admonition" id="ExerCalib-demo_pop_growth">
 
-<p class="admonition-title"><span class="caption-number">Exercise 66 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 67 </span></p>
 <section id="exercise-content">
 <p>Also in the dictionary returned from <code class="docutils literal notranslate"><span class="pre">demographics.get_pop_objs</span></code>, is the population growth rate. This is a NumPy array object with key <code class="docutils literal notranslate"><span class="pre">g_n</span></code>.  Plot <code class="docutils literal notranslate"><span class="pre">g_n</span></code>.  How does the population growth rate change over time?  Given what you’ve seen in the plots you’ve created, what can you say about the driver(s) of population growth (i.e., how are fertility and mortality rates contributing?  What about immigration (something we haven’t yet plotted, but about which you might be able to infer something given fertility and mortality rates and the change in the age distribution over time…))</p>
 </section>
 </div>
-<div class="exercise admonition" id="ExerCalib-demo_sims">
+<div class="exercise green admonition" id="ExerCalib-demo_sims">
 
-<p class="admonition-title"><span class="caption-number">Exercise 67 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 68 </span></p>
 <section id="exercise-content">
 <p>Now that you’ve visualized the different demographic trends in the country you’ve chosen, let’s see how these affect the equilibrium in the OG model.  This will combine what you learned in <a class="reference internal" href="Simulation.html#chap-ogsimulation"><span class="std std-ref">Simulating OG-Core</span></a> with what you’ve learned here about population demographics objects for the model. You’ll proceed with the following steps:</p>
 <ol class="arabic">
@@ -609,30 +609,30 @@ document.write(`
 </section>
 <section id="id2">
 <h2>Exercises<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="ExerCalib-macro_datareader">
+<div class="exercise green admonition" id="ExerCalib-macro_datareader">
 
-<p class="admonition-title"><span class="caption-number">Exercise 68 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 69 </span></p>
 <section id="exercise-content">
 <p>The <a class="reference external" href="https://fred.stlouisfed.org">Federal Reserve Economic Database</a> (FRED) contains macroeconomic data for a number of countries and a user friendly interface.  In addition, tools, such as <a class="reference external" href="https://pandas-datareader.readthedocs.io"><code class="docutils literal notranslate"><span class="pre">pandas-datareader</span></code></a> make it extremely easy to access the FRED API.  In this exercise, use <code class="docutils literal notranslate"><span class="pre">pandas-datareader</span></code> to download the quarterly, real GDP time series for South Africa from FRED.  Plot it.</p>
 </section>
 </div>
-<div class="exercise admonition" id="ExerCalib-macro_freq">
+<div class="exercise green admonition" id="ExerCalib-macro_freq">
 
-<p class="admonition-title"><span class="caption-number">Exercise 69 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 70 </span></p>
 <section id="exercise-content">
 <p>Now, use the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime-objects"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a> object functions to collapse the quarterly GDP data to annual data.  Plot it.</p>
 </section>
 </div>
-<div class="exercise admonition" id="ExerCalib-macro_gy">
+<div class="exercise green admonition" id="ExerCalib-macro_gy">
 
-<p class="admonition-title"><span class="caption-number">Exercise 70 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 71 </span></p>
 <section id="exercise-content">
 <p>With your annual data, compute the annual growth rate for each year.  Plot the time series of growth rates.</p>
 </section>
 </div>
-<div class="exercise admonition" id="ExerCalib-macro_reg">
+<div class="exercise green admonition" id="ExerCalib-macro_reg">
 
-<p class="admonition-title"><span class="caption-number">Exercise 71 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 72 </span></p>
 <section id="exercise-content">
 <p>Now let’s estimate the autocorrelation in GDP growth, assuming is a first order auto-regressive process (AR1).  We’ll do this with the <code class="docutils literal notranslate"><span class="pre">statsmodles.OLS</span></code> function.</p>
 <p>First, create a new column in your data frame that is the lagged value of GDP growth.  Then, use the <a class="reference external" href="https://www.statsmodels.org/dev/generated/statsmodels.regression.linear_model.OLS.html"><code class="docutils literal notranslate"><span class="pre">statsmodels.regression.linear_model.OLS</span></code></a> function to estimate the following equation:</p>
@@ -641,9 +641,9 @@ document.write(`
 <p>What did you estimate as <span class="math notranslate nohighlight">\(\alpha\)</span>?  What does this represent?  How persistent is the growth process in South Africa?</p>
 </section>
 </div>
-<div class="exercise admonition" id="ExerCalib-macro_???">
+<div class="exercise green admonition" id="ExerCalib-macro_???">
 
-<p class="admonition-title"><span class="caption-number">Exercise 72 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 73 </span></p>
 <section id="exercise-content">
 <p>Other??</p>
 </section>
@@ -664,16 +664,16 @@ document.write(`
 <p>To approximate the earnings processes in a country of interest, we recommend starting with the <code class="docutils literal notranslate"><span class="pre">OG-USA</span></code> calibration and then applying a transformation to these earnings processes to match the distribution of income in the target country.<a class="footnote-reference brackets" href="#e-mat-zaf-note" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>.  Specifically, one will find mean earnings by age for the target country… TODO: getcode to link to in OG-ZAF from Marcelo <em>or</em> just reference the methods in OG-IND/MYS.</p>
 <section id="id4">
 <h2>Exercises<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-<div class="exercise admonition" id="ExerCalib-earn_plot">
+<div class="exercise green admonition" id="ExerCalib-earn_plot">
 
-<p class="admonition-title"><span class="caption-number">Exercise 73 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 74 </span></p>
 <section id="exercise-content">
 <p>Use <a class="reference external" href="https://github.com/PSLmodels/OG-USA/blob/master/ogusa/income.py"><code class="docutils literal notranslate"><span class="pre">income.py</span></code> from <code class="docutils literal notranslate"><span class="pre">OG-USA</span></code></a> to retrieve the earnings process matrix.  Read through the docstrings of each function to see which to use.  With the <code class="docutils literal notranslate"><span class="pre">e</span></code> matrix that is returned, create a line plot of the earnings at each age for the <code class="docutils literal notranslate"><span class="pre">J</span></code> different types.</p>
 </section>
 </div>
-<div class="exercise admonition" id="ExerCalib-earn_approx">
+<div class="exercise green admonition" id="ExerCalib-earn_approx">
 
-<p class="admonition-title"><span class="caption-number">Exercise 74 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 75 </span></p>
 <section id="exercise-content">
 <p>Now we’re going to adjust the above earnings process to match the Gini coefficient in a country that isn’t the U.S. (note that the Gini coefficient for income in the U.S. was 41.5 in 2019). The transformation we’ll make is:</p>
 <div class="math notranslate nohighlight">

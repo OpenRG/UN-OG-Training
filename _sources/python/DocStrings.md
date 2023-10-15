@@ -110,6 +110,7 @@ Put discusion of other forms of published documentation here such as white paper
 
 ```{exercise-start}
 :label: ExerDoc-google
+:class: green
 ```
 Take a function your wrote in your solution to {numref}`ExerScipy-BM72_ss`.  Add a docstring to this function that uses the Google style.
 ```{exercise-end}

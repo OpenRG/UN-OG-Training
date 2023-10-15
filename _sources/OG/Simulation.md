@@ -40,6 +40,7 @@ This above will simulate the model and save pickle files dictionaries of results
 
 ```{exercise-start}
 :label: ExerSim_cit
+:class: green
 ```
 Using the above code blocks as an example, simulate the effects of a change in the corporate income tax rate (note the default in `OG-Core` is 21%). Just simulate the effects on the steady state (see the keyword arguments to the `runner` function).  Warning: `OG-Core` allows the corporate income tax rate to vary over time and across industries, so you will need to enter it as a list of lists (even if it's just a scalar that applies to all industries and time).
 ```{exercise-end}

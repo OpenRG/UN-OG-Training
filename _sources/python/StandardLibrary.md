@@ -30,7 +30,7 @@ Read the BYU ACME "[The Standard Library](https://drive.google.com/file/d/1JT2To
 :label: ExerStd-module_run
 :class: green
 ```
-Create a python module that prints the phrasesomething (e.g. `Hello World!`) and run it from the command line using `python module_name.py`.
+Create a python module that prints something (e.g. `Hello World!`) and run it from the command line using `python module_name.py`.
 ```{exercise-end}
 ```
 

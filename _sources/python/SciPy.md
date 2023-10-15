@@ -396,6 +396,7 @@ Characterize a minimization problem that can also be solved using a root finder.
 
 ```{exercise-start}
 :label: ExerScipy-min_constraint
+:class: green
 ```
 Use `scipy.optimize.minimize` to minimize the function $f(x,y)=x^2y$ on the unit circle, i.e., subject to $x^2 + y^2 = 1$.  Use the `constraints` keyword argument to specify the constraint.  What is the minimum value of $f(x,y)$ subject to this constraint?  Can you confirm this by doing the problem by hand using calculus?
 ```{exercise-end}
@@ -403,6 +404,7 @@ Use `scipy.optimize.minimize` to minimize the function $f(x,y)=x^2y$ on the unit
 
 ```{exercise-start}
 :label: ExerScipy-interp
+:class: green
 ```
 Consider the following `x` and `y` vectors, which represent some functional relationship, `y=f(x)`:
 

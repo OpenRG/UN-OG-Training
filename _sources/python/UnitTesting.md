@@ -46,6 +46,7 @@ Read the BYU ACME "[Unit Testing](https://drive.google.com/file/d/1109ci_tqZz30C
 
 ```{exercise-start}
 :label: ExerTest-assert_value
+:class: green
 ```
 Take simple function to minimize from SciPy and write a unit test for it (know analytic solutions so can test that SciPy is working correctly)
 ```{exercise-end}
@@ -53,6 +54,7 @@ Take simple function to minimize from SciPy and write a unit test for it (know a
 
 ```{exercise-start}
 :label: ExerTest-assert_type
+:class: green
 ```
 Another single test where assert that object a certain type
 ```{exercise-end}
@@ -60,6 +62,7 @@ Another single test where assert that object a certain type
 
 ```{exercise-start}
 :label: ExerTest-parameterize
+:class: green
 ```
 Use the `@pytest.mark.parametrize` decorator to test a function for multiple inputs
 ```{exercise-end}
@@ -67,6 +70,7 @@ Use the `@pytest.mark.parametrize` decorator to test a function for multiple inp
 
 ```{exercise-start}
 :label: ExerTest-markers
+:class: green
 ```
 Use pytest markers to skip a test
 ```{exercise-end}
@@ -74,6 +78,7 @@ Use pytest markers to skip a test
 
 ```{exercise-start}
 :label: ExerTest-???
+:class: green
 ```
 Something else... Maybe a test that checks if an exception if raised?
 ```{exercise-end}
