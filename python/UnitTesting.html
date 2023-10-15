@@ -192,7 +192,6 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../OG/intro.html">Overlapping Generations Macro Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../OG/Install.html">Installing <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="../OG/Simulation.html">Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../OG/Output.html">Loading <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> output</a></li>
@@ -426,7 +425,7 @@ document.write(`
 <section id="pytest">
 <span id="secunittestpytest"></span><h2>PyTest<a class="headerlink" href="#pytest" title="Permalink to this heading">#</a></h2>
 <p>Testing of your source code is important to ensure that the results of your code are accurate and to cut down on debugging time.  Fortunately, <code class="docutils literal notranslate"><span class="pre">Python</span></code> has a nice suite of tools for unit testing. In this section, we will introduce the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> package and show how to use it to test your code.</p>
-<p>The iframe below contains a PDF of the BYU ACME open-access lab entitled, “<a class="reference external" href="https://drive.google.com/file/d/1109ci_tqZz30C2ymf0Hs3UO66l865U0-/view?usp=sharing">Unit Testing</a>”. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See <span id="id1">[<a class="reference internal" href="../UN-OG-Training_references.html#id24" title="BYU ACME. Unit testing. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 8. 2023. URL: https://acme.byu.edu/2023-2024-materials.">BYU ACME, 2023</a>]</span>. <a class="reference internal" href="#ExerTest-acme"><span class="std std-numref">Exercise 53</span></a> below has you work through the problems in this BYU ACME lab. Two Python scripts (<a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/UnitTest/specs.py"><code class="docutils literal notranslate"><span class="pre">specs.py</span></code></a> and <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/UnitTest/test_specs.py"><code class="docutils literal notranslate"><span class="pre">test_specs.py</span></code></a>) used in the lab are stored in the <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/UnitTest"><code class="docutils literal notranslate"><span class="pre">./code/UnitTest/</span></code></a> directory.</p>
+<p>The iframe below contains a PDF of the BYU ACME open-access lab entitled, “<a class="reference external" href="https://drive.google.com/file/d/1109ci_tqZz30C2ymf0Hs3UO66l865U0-/view?usp=sharing">Unit Testing</a>”. You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See <span id="id1">[<a class="reference internal" href="../UN-OG-Training_references.html#id24" title="BYU ACME. Unit testing. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 8. 2023. URL: https://acme.byu.edu/2023-2024-materials.">BYU ACME, 2023</a>]</span>. <a class="reference internal" href="#ExerTest-acme"><span class="std std-numref">Exercise 50</span></a> below has you work through the problems in this BYU ACME lab. Two Python scripts (<a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/UnitTest/specs.py"><code class="docutils literal notranslate"><span class="pre">specs.py</span></code></a> and <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/UnitTest/test_specs.py"><code class="docutils literal notranslate"><span class="pre">test_specs.py</span></code></a>) used in the lab are stored in the <a class="reference external" href="https://github.com/OpenRG/UN-OG-Training/tree/main/code/UnitTest"><code class="docutils literal notranslate"><span class="pre">./code/UnitTest/</span></code></a> directory.</p>
 <div>
   <iframe id="inlineFrameExample"
       title="Inline Frame Example"
@@ -448,42 +447,42 @@ document.write(`
 <span id="secunittestexercises"></span><h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise green admonition" id="ExerTest-acme">
 
-<p class="admonition-title"><span class="caption-number">Exercise 53 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 50 </span></p>
 <section id="exercise-content">
 <p>Read the BYU ACME “<a class="reference external" href="https://drive.google.com/file/d/1109ci_tqZz30C2ymf0Hs3UO66l865U0-/view?usp=sharing">Unit Testing</a>” lab and complete Problems 1 through 6 in the lab. <span id="id2">[<a class="reference internal" href="../UN-OG-Training_references.html#id24" title="BYU ACME. Unit testing. In BYU ACME 2023-2024 Incoming Junior Materials, chapter 8. 2023. URL: https://acme.byu.edu/2023-2024-materials.">BYU ACME, 2023</a>]</span></p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerTest-assert_value">
 
-<p class="admonition-title"><span class="caption-number">Exercise 54 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 51 </span></p>
 <section id="exercise-content">
 <p>Take simple function to minimize from SciPy and write a unit test for it (know analytic solutions so can test that SciPy is working correctly)</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerTest-assert_type">
 
-<p class="admonition-title"><span class="caption-number">Exercise 55 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 52 </span></p>
 <section id="exercise-content">
 <p>Another single test where assert that object a certain type</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerTest-parameterize">
 
-<p class="admonition-title"><span class="caption-number">Exercise 56 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 53 </span></p>
 <section id="exercise-content">
 <p>Use the <code class="docutils literal notranslate"><span class="pre">&#64;pytest.mark.parametrize</span></code> decorator to test a function for multiple inputs</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerTest-markers">
 
-<p class="admonition-title"><span class="caption-number">Exercise 57 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 54 </span></p>
 <section id="exercise-content">
 <p>Use pytest markers to skip a test</p>
 </section>
 </div>
 <div class="exercise admonition" id="ExerTest-???">
 
-<p class="admonition-title"><span class="caption-number">Exercise 58 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 55 </span></p>
 <section id="exercise-content">
 <p>Something else… Maybe a test that checks if an exception if raised?</p>
 </section>
