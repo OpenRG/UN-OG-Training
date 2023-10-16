@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Installing OG-Core &#8212; UN OG-Core Overlapping Generations Model Training</title>
+    <title>Macro parameters &#8212; UN OG-Core Overlapping Generations Model Training</title>
   
   
   
@@ -66,12 +66,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'OG/Install';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'OG/MacroParams';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Simulating OG-Core" href="Simulation.html" />
-    <link rel="prev" title="Overlapping Generations Macro Model" href="intro.html" />
+    <link rel="next" title="Fiscal Policy" href="FiscalParams.html" />
+    <link rel="prev" title="Demographics" href="Demographics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,16 +193,16 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">OG Macro Model</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Overlapping Generations Macro Model</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installing <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Install.html">Installing <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Simulation.html">Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Output.html">Loading <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> output</a></li>
 
 
 
-<li class="toctree-l1 has-children"><a class="reference internal" href="Calibration.html">Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Calibration.html">Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Demographics.html">Demographics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="MacroParams.html">Macro parameters</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Macro parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FiscalParams.html">Fiscal Policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Earnings.html">Earnings Processes</a></li>
 </ul>
@@ -285,7 +287,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/OpenRG/UN-OG-Training/issues/new?title=Issue%20on%20page%20%2FOG/Install.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/OpenRG/UN-OG-Training/issues/new?title=Issue%20on%20page%20%2FOG/MacroParams.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -315,7 +317,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/OG/Install.md" target="_blank"
+      <li><a href="../_sources/OG/MacroParams.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -397,7 +399,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Installing OG-Core</h1>
+    <h1>Macro parameters</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -407,9 +409,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-running-og-core-from-python-package-index-pypi-org">Installing and Running OG-Core from Python Package Index (PyPI.org)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-running-og-core-from-github-repository">Installing and Running OG-Core from GitHub repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-growth-and-production">Economic growth and production</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-production">Firm production</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#international-finance">International finance</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>
             </nav>
         </div>
@@ -421,113 +427,64 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="installing-og-core">
-<span id="chap-oginstall"></span><h1>Installing <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code><a class="headerlink" href="#installing-og-core" title="Permalink to this heading">#</a></h1>
-<section id="installing-and-running-og-core-from-python-package-index-pypi-org">
-<h2>Installing and Running OG-Core from Python Package Index (<a class="reference external" href="http://PyPI.org">PyPI.org</a>)<a class="headerlink" href="#installing-and-running-og-core-from-python-package-index-pypi-org" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Open your terminal (or Conda command prompt), and make sure you have the most recent version of <code class="docutils literal notranslate"><span class="pre">pip</span></code> (the Python Index Package manager) by typing on a Unix/macOS machine <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">pip</span></code> or on a Windows machine <code class="docutils literal notranslate"><span class="pre">py</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">pip</span></code>.</p></li>
-<li><p>Install the <a class="reference external" href="https://pypi.org/project/ogcore/"><code class="docutils literal notranslate"><span class="pre">ogcore</span></code></a> package from the Python Package Index by typing <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">ogcore</span></code>.</p></li>
-<li><p>Navigate to a folder <code class="docutils literal notranslate"><span class="pre">./YourFolderName/</span></code> where you want to save scripts to run OG-Core and output from the simulations in those scripts.</p></li>
-<li><p>Save the python script <a class="reference external" href="https://github.com/PSLmodels/OG-Core/blob/master/run_examples/run_ogcore_example.py"><code class="docutils literal notranslate"><span class="pre">run_ogcore_example.py</span></code></a> from the OG-Core GitHub repository in the folder where you are working on your local machine <code class="docutils literal notranslate"><span class="pre">./YourFolderName/run_ogcore_example.py</span></code>.</p></li>
-<li><p>Run the model with an example reform from terminal/command prompt by typing <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">run_ogcore_example.py</span></code></p></li>
-<li><p>You can adjust the <code class="docutils literal notranslate"><span class="pre">run_ogcore_example.py</span></code> script by modifying model parameters specified in the <code class="docutils literal notranslate"><span class="pre">og_spec</span></code> dictionary.</p></li>
-<li><p>Model outputs will be saved in the following files:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">./run_example_plots</span></code></p>
-<ul>
-<li><p>This folder will contain a number of plots generated from OG-Core to help you visualize the output from your run</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">./ogcore_example_output.csv</span></code></p>
-<ul>
-<li><p>This is a summary of the percentage changes in macro variables over the first ten years and in the steady-state.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">./OUTPUT_BASELINE/model_params.pkl</span></code></p>
-<ul>
-<li><p>Model parameters used in the baseline run</p></li>
-<li><p>See <a class="reference external" href="https://github.com/PSLmodels/OG-Core/blob/master/ogcore/execute.py"><code class="docutils literal notranslate"><span class="pre">execute.py</span></code></a> in the OG-Core repository for items in the dictionary object in this pickle file</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">./OUTPUT_BASELINE/SS/SS_vars.pkl</span></code></p>
-<ul>
-<li><p>Outputs from the model steady state solution under the baseline policy</p></li>
-<li><p>See <a class="reference external" href="https://github.com/PSLmodels/OG-Core/blob/master/ogcore/SS.py"><code class="docutils literal notranslate"><span class="pre">SS.py</span></code></a> in the OG-Core repository for what is in the dictionary object in this pickle file</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">./OUTPUT_BASELINE/TPI/TPI_vars.pkl</span></code></p>
-<ul>
-<li><p>Outputs from the model timepath solution under the baseline policy</p></li>
-<li><p>See <a class="reference external" href="https://github.com/PSLmodels/OG-Core/blob/master/ogcore/TPI.py"><code class="docutils literal notranslate"><span class="pre">TPI.py</span></code></a> in the OG-Core repository for what is in the dictionary object in this pickle file</p></li>
-</ul>
-</li>
-<li><p>An analogous set of files in the <code class="docutils literal notranslate"><span class="pre">./OUTPUT_REFORM</span></code> directory, which represent objects from the simulation of the reform policy</p></li>
-</ul>
-</li>
-</ul>
-<p>Note that, depending on your machine, a full model run (solving for the full time path equilibrium for the baseline and reform policies) can take more than two hours of compute time.</p>
-<p>If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant tracebacks you receive.</p>
-<p>The CSV output file <code class="docutils literal notranslate"><span class="pre">./ogcore_example_output.csv</span></code> can be compared to the <a class="reference external" href="https://github.com/PSLmodels/OG-Core/blob/master/run_examples/expected_ogcore_example_output.csv"><code class="docutils literal notranslate"><span class="pre">./run_examples/expected_ogcore_example_output.csv</span></code></a> file in the OG-Core repository to confirm that you are generating the expected output. The easiest way to do this is to copy the <a class="reference external" href="https://github.com/PSLmodels/OG-Core/blob/master/run_examples/example-diffs"><code class="docutils literal notranslate"><span class="pre">example-diffs</span></code></a> and <a class="reference external" href="https://github.com/PSLmodels/OG-Core/blob/master/run_examples/example-diffs.bat"><code class="docutils literal notranslate"><span class="pre">example-diffs.bat</span></code></a> files from the OG-Core repository and use the <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">example-diffs</span></code> command (or <code class="docutils literal notranslate"><span class="pre">example-diffs</span></code> on Windows) from the <code class="docutils literal notranslate"><span class="pre">run_examples</span></code> directory. If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant tracebacks you receive.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="macro-parameters">
+<span id="secmacroparams"></span><h1>Macro parameters<a class="headerlink" href="#macro-parameters" title="Permalink to this heading">#</a></h1>
+<p>There are a number of parameters of the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model that are calibrated using macroeconomic data from national accounts or national government reports.  In general, we’ve tended to read in data that inform these values in a single module, such as the <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF/blob/main/ogzaf/macro_params.py"><code class="docutils literal notranslate"><span class="pre">macro_params.py</span></code></a> module in <code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code>.  We break the discussion of the parameters calibrated from macro data into separate groupings based in what they represent in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code>.</p>
+<section id="economic-growth-and-production">
+<h2>Economic growth and production<a class="headerlink" href="#economic-growth-and-production" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model needs to be stationary in order to employ traditional solution methods.  This means that in the model solution, there cannot be underlying growth in the model objects.  However, the model is able to allow for such underlying growth, which may be driven by population growth rates (as discussed above) or underlying changes in productivity.  In order to solve the model, then, trend growth from these sources are removed.<a class="footnote-reference brackets" href="#stationary-note" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.  However, since different variables grow at different rates, we need to know both the underlying growth rates of the population and of technological growth.  The population growth rate was determined from the demographic data and described in Section <a class="reference internal" href="Demographics.html#secdemographics"><span class="std std-ref">Demographics</span></a>. We use macroeconomic data, namely the growth rate in gross domestic product per capita to pin down the rate of growth in (labor-augmenting) technological change, <code class="docutils literal notranslate"><span class="pre">g_y_annual</span></code> in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code>.  Let <span class="math notranslate nohighlight">\(\hat{y}_t\)</span> represent the growth rate in GDP per capital from year <span class="math notranslate nohighlight">\(t-1\)</span> to year <span class="math notranslate nohighlight">\(t\)</span>.  We find the value of <code class="docutils literal notranslate"><span class="pre">g_y_annual</span></code> as equal to the long-run average of <span class="math notranslate nohighlight">\(\hat{y}_t\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-g-y-calib">
+<span class="eqno">(7)<a class="headerlink" href="#equation-g-y-calib" title="Permalink to this equation">#</a></span>\[ g_y = \sum_{t = \text{First year of data}}^{\text{Most recent year of data}} \hat{y}_t\]</div>
+<p>Note that you will want to use some judgement in what is the appropriate time period for the “first year of data”. For example, if the economy in question is now a market economy, but your data extend back to a time when it was not a market economy, you will probably want to exclude those data from the non-market economy period.  In addition, you might alter the calibration of <code class="docutils literal notranslate"><span class="pre">g_y</span></code> to be more forward looking and, rather than base future growth on recent history, you may use long run economic forecasts for GDP per capita.  But in either case the important thing is to be sure you are correctly mapping the data to the theoretical concept of <code class="docutils literal notranslate"><span class="pre">g_y</span></code>, which is measuring the constant rate of growth in output per person in the long run.</p>
+<section id="firm-production">
+<h3>Firm production<a class="headerlink" href="#firm-production" title="Permalink to this heading">#</a></h3>
+<p>Changes in productivity in the short run are accounted for by changes in total factor productivity (TFP).  This parameter is denoted as <code class="docutils literal notranslate"><span class="pre">Z</span></code> in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> and is represented by a 2-dimensional array that is <code class="docutils literal notranslate"><span class="pre">TxM</span></code> in size, where <code class="docutils literal notranslate"><span class="pre">T</span></code> is the number of time periods over the transition path and <code class="docutils literal notranslate"><span class="pre">M</span></code> is the number of industries.  Thus, you may have total factor productivity, that changes over time and varies across production industry. Values of <code class="docutils literal notranslate"><span class="pre">Z</span></code> are found through <a class="reference external" href="https://www.imf.org/external/pubs/ft/wp/1999/wp9977.pdf">growth accounting</a> techniques. However, you may not want to (or easily be able to) do the accounting yourself because it is often difficult to find the necessary data to do such accounting, which requires industry specific capital stocks.  You might find research on sectoral TFP from central banks or other sources.  For the calibration of sectoral TFP from South Africa, we used data published by the central bank. You can find a nice discussion of the process used in that case in <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF/issues/29">this GitHub Issue</a>.</p>
+<p>In addition to the level of TFP, the production functions of firms are determined by the shares of income attributable to capital, labor, and infrastructure (public capital) and the elasticity of substitution between these inputs. These are the parameters <code class="docutils literal notranslate"><span class="pre">gamma</span></code>, which is the share of income attributable to capital, and <code class="docutils literal notranslate"><span class="pre">gamma_g</span></code>, which is the share of income attributable to infrastructure. The remainder, <span class="math notranslate nohighlight">\(1-\gamma-\gamma_g\)</span> is the share attributable to labor.  Factor shares can be determined through national accounts data.  The share out output paid to labor is found from the ration of labor income (wages and salaries) to GDP, while capital’s share of income can be found through the payments to capital (interest, dividends, profits) divided by GDP.  The share of output attributed to infrastructure will then be found as a residual (= 1 - labor share - capital share), as the OG-Core model requires a constant returns to scale production function.  Determining the elasticity of substitution between inputs is more involved and would require detailed panel with prices and quantities.  We therefore recommend using a default calibration with a unit elasticity (<span class="math notranslate nohighlight">\(\epsilon_m = 1\)</span>) for each industry – or finding other research from your economy of interest where this parameter has been estimated.</p>
+<p>Finally, we need to map the <span class="math notranslate nohighlight">\(M\)</span> output goods to the <span class="math notranslate nohighlight">\(I\)</span> consumption goods.  The <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model assumes what is called a “fixed coefficient” matrix for the mapping between producer outputs and consumption goods.  That is, a fixed share of each output good is required to produce each consumption good.  This is represented by an <code class="docutils literal notranslate"><span class="pre">MxI</span></code> matrix denoted as <span class="math notranslate nohighlight">\(\Pi\)</span>, which has elements <span class="math notranslate nohighlight">\(\pi_{m,i}\)</span> that is the share out consumption good <span class="math notranslate nohighlight">\(i\)</span> that is from output good <span class="math notranslate nohighlight">\(m\)</span>.  Note that the columns of this matrix must sum to one (i.e., we need to fully account for the output goods that go into each input good).  The <span class="math notranslate nohighlight">\(\Pi\)</span> matrix can be calibrated directly from a input-output tables that are typically produced through national accounts.  In the <code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code> project, there is a nice example of calibrating the <span class="math notranslate nohighlight">\(\Pi\)</span> matrix using input-output data in detailed producer outputs and consumer goods categories available in the social accounting matrix files available from <a class="reference external" href="https://www.wider.unu.edu/social-accounting-matrices">UNU Wider</a>.</p>
 </section>
-<section id="installing-and-running-og-core-from-github-repository">
-<h2>Installing and Running OG-Core from GitHub repository<a class="headerlink" href="#installing-and-running-og-core-from-github-repository" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Install the <a class="reference external" href="https://www.anaconda.com/distribution/">Anaconda distribution</a> of Python</p></li>
-<li><p>Clone the <a class="reference external" href="https://github.com/PSLmodels/OG-Core"><code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> repository</a> to a directory on your computer</p></li>
-<li><p>From the terminal (or Conda command prompt), navigate to the directory to which you cloned this repository and run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">environment.yml</span></code></p></li>
-<li><p>Then, <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">ogcore-dev</span></code></p></li>
-<li><p>Then install by <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code></p></li>
-<li><p>Navigate to <code class="docutils literal notranslate"><span class="pre">./run_examples</span></code></p></li>
-<li><p>Run the model with an example reform from terminal/command prompt by typing <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">run_ogcore_example.py</span></code></p></li>
-<li><p>You can adjust the <code class="docutils literal notranslate"><span class="pre">./run_examples/run_ogcore_example.py</span></code> script by modifying model parameters specified in the <code class="docutils literal notranslate"><span class="pre">og_spec</span></code> dictionary.</p></li>
-<li><p>Model outputs will be saved in the following files:</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">./run_examples/run_example_plots</span></code></p>
-<ul>
-<li><p>This folder will contain a number of plots generated from OG-Core to help you visualize the output from your run</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">./run_examples/ogcore_example_output.csv</span></code></p>
-<ul>
-<li><p>This is a summary of the percentage changes in macro variables over the first ten years and in the steady-state.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">./run_examples/OUTPUT_BASELINE/model_params.pkl</span></code></p>
-<ul>
-<li><p>Model parameters used in the baseline run</p></li>
-<li><p>See <code class="docutils literal notranslate"><span class="pre">execute.py</span></code> for items in the dictionary object in this pickle file</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">./run_examples/OUTPUT_BASELINE/SS/SS_vars.pkl</span></code></p>
-<ul>
-<li><p>Outputs from the model steady state solution under the baseline policy</p></li>
-<li><p>See <code class="docutils literal notranslate"><span class="pre">SS.py</span></code> for what is in the dictionary object in this pickle file</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">./run_examples/OUTPUT_BASELINE/TPI/TPI_vars.pkl</span></code></p>
-<ul>
-<li><p>Outputs from the model timepath solution under the baseline policy</p></li>
-<li><p>See <code class="docutils literal notranslate"><span class="pre">TPI.py</span></code> for what is in the dictionary object in this pickle file</p></li>
-</ul>
-</li>
-<li><p>An analogous set of files in the <code class="docutils literal notranslate"><span class="pre">./run_examples/OUTPUT_REFORM</span></code> directory, which represent objects from the simulation of the reform policy</p></li>
-</ul>
-</li>
-</ul>
-<p>Note that, depending on your machine, a full model run (solving for the full time path equilibrium for the baseline and reform policies) can take more than two hours of compute time.</p>
-<p>If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant tracebacks you receive.</p>
-<p>The CSV output file <code class="docutils literal notranslate"><span class="pre">./run_examples/ogcore_example_output.csv</span></code> can be compared to the <code class="docutils literal notranslate"><span class="pre">./run_examples/expected_ogcore_example_output.csv</span></code> file that is checked into the repository to confirm that you are generating the expected output. The easiest way to do this is to use the <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">example-diffs</span></code> command (or <code class="docutils literal notranslate"><span class="pre">example-diffs</span></code> on Windows) from the <code class="docutils literal notranslate"><span class="pre">run_examples</span></code> directory. If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant tracebacks you receive.</p>
+</section>
+<section id="international-finance">
+<h2>International finance<a class="headerlink" href="#international-finance" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model parameterizes the degree of economic openness with two parameters relating to international capital flows.  The first is the fraction of new government debt issues which are purchased by foreign investors, <code class="docutils literal notranslate"><span class="pre">zeta_D</span></code>.  This parameter can be calibrated through financial accounts data that shows the location of buyers of government debt.  The second parameter reflects the amount of excess capital demand that is satisfied by foreign investors.  Here, excess demand is defined as the difference between the capital demand of firms at the interest rate outside the domestic economy (i.e., the world interest rate) and the capital of demand from firms if they face teh domestic interest rate.  The  parameter <code class="docutils literal notranslate"><span class="pre">zeta_D</span></code> takes a value between zero and one and is the share of this excess demand for capital that foreign investors make up.  A value of zero would represent a closed economy, which no foreign investment in domestic capital. While a value of one represented a small open economy, where the domestic interest rate is equated to the world interest rate since capital flows in (or out) freely.  One cannot look just at financial accounts data to calibrate <code class="docutils literal notranslate"><span class="pre">zeta_D</span></code> , because the excess demand concept is model based and there’s not a direct analog in the data.  Rather, we have utilized an approach of moving the value of <code class="docutils literal notranslate"><span class="pre">zeta_D</span></code> up or down based on the size of the economy relative to the world, with countries that have a smaller share of world financial market activity having a <code class="docutils literal notranslate"><span class="pre">zeta_D</span></code> closer to one. Of course, one would also like to consider any capital controls that may be in place in the economy of interest.  If there are capital controls, then the value of <code class="docutils literal notranslate"><span class="pre">zeta_D</span></code> should be set to a smaller value.</p>
 </section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
-<div class="exercise green admonition" id="ExerInstall-install">
+<div class="exercise green admonition" id="ExerCalib-macro_datareader">
 
-<p class="admonition-title"><span class="caption-number">Exercise 56 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 69 </span></p>
 <section id="exercise-content">
-<p>Intall and run the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> example file as instructed above on your computer.  How long did it take to execute?</p>
+<p>The <a class="reference external" href="https://fred.stlouisfed.org">Federal Reserve Economic Database</a> (FRED) contains macroeconomic data for a number of countries and a user friendly interface.  In addition, tools, such as <a class="reference external" href="https://pandas-datareader.readthedocs.io"><code class="docutils literal notranslate"><span class="pre">pandas-datareader</span></code></a> make it extremely easy to access the FRED API.  In this exercise, use <code class="docutils literal notranslate"><span class="pre">pandas-datareader</span></code> to download the quarterly, real GDP time series for South Africa from FRED.  Plot it.</p>
 </section>
 </div>
+<div class="exercise green admonition" id="ExerCalib-macro_freq">
+
+<p class="admonition-title"><span class="caption-number">Exercise 70 </span></p>
+<section id="exercise-content">
+<p>Now, use the <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime-objects"><code class="docutils literal notranslate"><span class="pre">datetime</span></code></a> object functions to collapse the quarterly GDP data to annual data.  Plot it.</p>
+</section>
+</div>
+<div class="exercise green admonition" id="ExerCalib-macro_gy">
+
+<p class="admonition-title"><span class="caption-number">Exercise 71 </span></p>
+<section id="exercise-content">
+<p>With your annual data, compute the annual growth rate for each year.  Plot the time series of growth rates.</p>
+</section>
+</div>
+<div class="exercise green admonition" id="ExerCalib-macro_???">
+
+<p class="admonition-title"><span class="caption-number">Exercise 72 </span></p>
+<section id="exercise-content">
+<p>Other??</p>
+</section>
+</div>
+</section>
+<section id="footnotes">
+<span id="secogcalibrationmacrofootnotes"></span><h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
+<hr class="footnotes docutils" />
+<aside class="footnote brackets" id="stationary-note" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>For specifics on how this is done, please see the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> <a class="reference external" href="https://pslmodels.github.io/OG-Core/content/theory/stationarization.html">Stationarization Chapter</a>.</p>
+</aside>
 </section>
 </section>
 
@@ -562,20 +519,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="Demographics.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Overlapping Generations Macro Model</p>
+        <p class="prev-next-title">Demographics</p>
       </div>
     </a>
     <a class="right-next"
-       href="Simulation.html"
+       href="FiscalParams.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></p>
+        <p class="prev-next-title">Fiscal Policy</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -594,9 +551,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-running-og-core-from-python-package-index-pypi-org">Installing and Running OG-Core from Python Package Index (PyPI.org)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-and-running-og-core-from-github-repository">Installing and Running OG-Core from GitHub repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#economic-growth-and-production">Economic growth and production</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#firm-production">Firm production</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#international-finance">International finance</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>
   </nav></div>
 

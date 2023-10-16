@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Calibrating the OG-Core model &#8212; UN OG-Core Overlapping Generations Model Training</title>
+    <title>Earnings Processes &#8212; UN OG-Core Overlapping Generations Model Training</title>
   
   
   
@@ -66,12 +66,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'OG/Calibration';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'OG/Earnings';</script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Demographics" href="Demographics.html" />
-    <link rel="prev" title="Loading OG-Core output" href="Output.html" />
+    <link rel="next" title="Glossary" href="../appendix/glossary.html" />
+    <link rel="prev" title="Fiscal Policy" href="FiscalParams.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -198,11 +200,11 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Calibration.html">Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Demographics.html">Demographics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="MacroParams.html">Macro parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FiscalParams.html">Fiscal Policy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Earnings.html">Earnings Processes</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Earnings Processes</a></li>
 </ul>
 </li>
 </ul>
@@ -285,7 +287,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/OpenRG/UN-OG-Training/issues/new?title=Issue%20on%20page%20%2FOG/Calibration.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/OpenRG/UN-OG-Training/issues/new?title=Issue%20on%20page%20%2FOG/Earnings.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -315,7 +317,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/OG/Calibration.md" target="_blank"
+      <li><a href="../_sources/OG/Earnings.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -384,7 +386,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -395,11 +399,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Calibrating the OG-Core model</h1>
+    <h1>Earnings Processes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -409,12 +422,46 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="calibrating-the-og-core-model">
-<span id="chap-ogcalibration"></span><h1>Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model<a class="headerlink" href="#calibrating-the-og-core-model" title="Permalink to this heading">#</a></h1>
-<p>As noted in the introduction, the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model must be parametrized to represent a specific country. We refer to the process of finding parameter values that represent a specific economy as “calibration”.  Because data sources for country-specific data differ, there’s not a single way to calibrate all economies. We have therefor have created country-specific calibration packages.   Some examples of these include the <a class="reference external" href="https://github.com/PSLmodels/OG-USA">United States</a>, the <a class="reference external" href="https://github.com/PSLmodels/OG-UK">United Kingdom</a>, <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF">South Africa</a>, <a class="reference external" href="https://github.com/Revenue-Academy/OG-IND">India</a>, and <a class="reference external" href="https://github.com/Revenue-Academy/OG-MYS">Malaysia</a>.</p>
-<p>In this chapter, we describe the process of creating a country-specific calibration and provide exercises related to certain components of that calibration.  We will use as an example the calibration of <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> to South Africa, in the <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF"><code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code></a> package.</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="earnings-processes">
+<span id="secearnings"></span><h1>Earnings Processes<a class="headerlink" href="#earnings-processes" title="Permalink to this heading">#</a></h1>
+<p>An important component of the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model are the household earnings processes.  These help to match real difference across age and households in earnings ability and are a key set of parameters to model income inequality. Household earnings are endogenous and depend on the households’ decisions to work and save given the state of the economy and household preferences and ability.  What is exogenous to the model are how productive households are with each unit of labor they supply, i.e., their earnings ability.  <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> assumes that there are <code class="docutils literal notranslate"><span class="pre">J</span></code> groups of households with different earnings abilities.  Within each group, the earnings ability process is deterministic and known to the household, although labor productivity of these workers vary over their working life.  Fore example, consider <a class="reference internal" href="#usa-earn"><span class="std std-numref">Figure 7</span></a>, which shows the log of effective labor units for each of seven lifetime income groups, estimated in the United States.  Each group is defined by their “potential” earnings over their lifetime (i.e., if they worked full time, what would they earn over a 40 year career) and grouped by their percentile rank in the distribution of lifetime incomes. We can see that the top 1% of lifetime earnings have higher productivity in each year of working life, but because productivity varies with age, this gap is not constant.  Rather, it’s largest during the peak earnings year of middle age and then is quite small at older ages.</p>
+<figure class="align-default" id="usa-earn">
+<a class="bg-primary mb-1 reference internal image-reference" href="OG/images/USA_ability_profiles.png"><img alt="USA_earn" class="bg-primary mb-1" src="OG/images/USA_ability_profiles.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Log Effective Labor Units by Lifetime Income Group, Estimated in the United States</span><a class="headerlink" href="#usa-earn" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code>, these earnings processes are described by <code class="docutils literal notranslate"><span class="pre">SxJ</span></code> matrix, with each cell representing the effective labor units for a given age and lifetime income group.  Note that this matrix is normalized such that the average value of earnings ability is one.  It is assumed that these processes remain constant over time, so despite growth in the level of productivity through the exogenous technological growth,</p>
+<p>To estimate the earnings processes in <a class="reference internal" href="#usa-earn"><span class="std std-numref">Figure 7</span></a>, we used administrative data from tax returns the covered a panel of US taxpayers over four decades.  A detailed description of this process is given in the <a class="reference external" href="https://pslmodels.github.io/OG-USA/content/calibration/earnings.html"><code class="docutils literal notranslate"><span class="pre">OG-USA</span></code> documentation</a>. Suffice it to say, this estimation process is quite involved and requires a large panel dataset in individual or household earnings, ideally without censoring the top end. In many contexts, these data may not be available.  We therefore will describe here an approximation technique that is less data intensive, and leave the more involved estimation process for the interested reader to explore in the <code class="docutils literal notranslate"><span class="pre">OG-USA</span></code> documentation.</p>
+<p>To approximate the earnings processes in a country of interest, we recommend starting with the <code class="docutils literal notranslate"><span class="pre">OG-USA</span></code> calibration and then applying a transformation to these earnings processes to match the distribution of income in the target country.<a class="footnote-reference brackets" href="#e-mat-zaf-note" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.  Specifically, one will find mean earnings by age for the target country… TODO: getcode to link to in OG-ZAF from Marcelo <em>or</em> just reference the methods in OG-IND/MYS.</p>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<div class="exercise green admonition" id="ExerCalib-earn_plot">
+
+<p class="admonition-title"><span class="caption-number">Exercise 74 </span></p>
+<section id="exercise-content">
+<p>Use <a class="reference external" href="https://github.com/PSLmodels/OG-USA/blob/master/ogusa/income.py"><code class="docutils literal notranslate"><span class="pre">income.py</span></code> from <code class="docutils literal notranslate"><span class="pre">OG-USA</span></code></a> to retrieve the earnings process matrix.  Read through the docstrings of each function to see which to use.  With the <code class="docutils literal notranslate"><span class="pre">e</span></code> matrix that is returned, create a line plot of the earnings at each age for the <code class="docutils literal notranslate"><span class="pre">J</span></code> different types.</p>
+</section>
 </div>
+<div class="exercise green admonition" id="ExerCalib-earn_approx">
+
+<p class="admonition-title"><span class="caption-number">Exercise 75 </span></p>
+<section id="exercise-content">
+<p>Now we’re going to adjust the above earnings process to match the Gini coefficient in a country that isn’t the U.S. (note that the Gini coefficient for income in the U.S. was 41.5 in 2019). The transformation we’ll make is:</p>
+<div class="math notranslate nohighlight">
+\[e_{C} = e_{USA} e^{a * e_{USA}}\]</div>
+<p>where <span class="math notranslate nohighlight">\(C\)</span> represents the country of interest. We will find <span class="math notranslate nohighlight">\(a\)</span> by matching the Gini coefficient in the country of interest.  To do this, we’ll use the <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> module.  First, create a function that takes <span class="math notranslate nohighlight">\(a\)</span> as an argument and returns the Gini coefficient in the country of interest (hint: the <a class="reference external" href="https://github.com/PSLmodels/OG-Core/blob/9d7c814bafd210a581ffebf7df6f357aa5b2a048/ogcore/utils.py#L463"><code class="docutils literal notranslate"><span class="pre">ogusa.utils.Inequality</span></code></a> class object will be helpful here).  Then, use the <code class="docutils literal notranslate"><span class="pre">scipy.optimize.minimize_scalar</span></code> function to find the value of <span class="math notranslate nohighlight">\(a\)</span> that minimizes the difference between the Gini coefficient in the country of interest and the Gini coefficient in the U.S.  Finally, use the value of <span class="math notranslate nohighlight">\(a\)</span> you found to transform the <code class="docutils literal notranslate"><span class="pre">e</span></code> matrix from the U.S. to the country of interest.  Plot the earnings processes in the U.S. and the country of interest.  How do they differ?</p>
+</section>
+</div>
+</section>
+<section id="footnotes">
+<span id="secogcalibrationearningsfootnotes"></span><h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
+<hr class="footnotes docutils" />
+<aside class="footnote brackets" id="e-mat-zaf-note" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>For a discussion with the original application of this method from Marcelo LaFluer see the <code class="docutils literal notranslate"><span class="pre">OG-ZAF</span></code> repo’s <a class="reference external" href="https://github.com/EAPD-DRB/OG-ZAF/pull/28">Pull Request #28</a>.</p>
+</aside>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -448,20 +495,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Output.html"
+       href="FiscalParams.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Loading <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> output</p>
+        <p class="prev-next-title">Fiscal Policy</p>
       </div>
     </a>
     <a class="right-next"
-       href="Demographics.html"
+       href="../appendix/glossary.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Demographics</p>
+        <p class="prev-next-title">Glossary</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -471,6 +518,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
