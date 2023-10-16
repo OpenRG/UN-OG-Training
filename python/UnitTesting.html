@@ -440,11 +440,11 @@ document.write(`
 </section>
 <section id="code-coverage">
 <span id="secunittestcodecov"></span><h2>Code coverage<a class="headerlink" href="#code-coverage" title="Permalink to this heading">#</a></h2>
-<p>Put section here on code coverage.</p>
+<p>Ideally, one wants to make sure that all of their source code is tested, thereby ensuring it is producing expected results and reducing the potential that new contributions will introduce bugs.  But for any significant code base, it is difficult to know which lines of code are tested and which are.  To get an understanding of what is covered by unit tests, packages like <a class="reference external" href="https://coverage.readthedocs.io/en/7.3.2/#"><code class="docutils literal notranslate"><span class="pre">coverage.py</span></code></a> can be used to automatically generate a report of code coverage.  The report will show which lines of code are covered by unit tests and which are not.  This can be useful for identifying parts of the code that need more testing.</p>
 </section>
 <section id="continuous-integration-testing-and-github-actions">
 <span id="secunittestghactions"></span><h2>Continuous integration testing and GitHub Actions<a class="headerlink" href="#continuous-integration-testing-and-github-actions" title="Permalink to this heading">#</a></h2>
-<p>Put section here on GitHub Actions and continuous integration.</p>
+<p>When using GitHub to collaborate with others on a code base, one can leverage the ability to use <a class="reference external" href="https://github.com/features/actions">GitHub Actions</a> to automate unit testing and code coverage reports (as well as other checks on might want to run).  GitHub actions are specified in yaml files and triggered by some set event (e.g., a push, or a pull request, or a chronological schedule).  One of the most effective ways to ensure new contributions are not introducing bugs is to run unit tests and code coverage reports on every push to the repository.  This can be done by creating a GitHub action that runs the unit tests and code coverage report on every push to the repository.  <a class="reference external" href="https://about.codecov.io">Codecov</a> provides some useful tools for reporting code coverage from unit tests in GitHub Actions.  You can see the actions <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> uses <a class="reference external" href="https://github.com/PSLmodels/OG-Core/tree/master/.github/workflows">here</a>.  These include unit tests and coverage reports, as well as checks that documentation builds and then is published upon a merge to the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch.</p>
 </section>
 <section id="exercises">
 <span id="secunittestexercises"></span><h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
@@ -459,35 +459,33 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">Exercise 51 </span></p>
 <section id="exercise-content">
-<p>Take simple function to minimize from SciPy and write a unit test for it (know analytic solutions so can test that SciPy is working correctly)</p>
+<p>In Chapter <a class="reference internal" href="SciPy.html#chap-scipy"><span class="std std-ref">SciPy: Root finding, minimizing, interpolation</span></a>, <a class="reference internal" href="SciPy.html#ExerScipy-root-lin"><span class="std std-numref">Exercise 42</span></a>, you wrote wrote a function, and called <code class="docutils literal notranslate"><span class="pre">SciPy.optimize</span></code> to minimize that function. This function had an analytical solution so you could check that SciPy obtained the correct constrained minimum. Now, write a <code class="docutils literal notranslate"><span class="pre">test_min</span></code> function in a module named <code class="docutils literal notranslate"><span class="pre">test_exercises.py</span></code>.  This function should end with an assert statement that the minimum value of the function is equal to the analytical solution.  Then, run the test using <code class="docutils literal notranslate"><span class="pre">pytest</span></code> and make sure it passes. Note, if your wrote the original function for <a class="reference internal" href="SciPy.html#ExerScipy-root-lin"><span class="std std-numref">Exercise 42</span></a> in a notebook, copy it over to a module can save it as <code class="docutils literal notranslate"><span class="pre">exercises.py</span></code>.</p>
 </section>
 </div>
 <div class="exercise green admonition" id="ExerTest-assert_type">
 
 <p class="admonition-title"><span class="caption-number">Exercise 52 </span></p>
 <section id="exercise-content">
-<p>Another single test where assert that object a certain type</p>
+<p>Write another test in your <code class="docutils literal notranslate"><span class="pre">test_exercises.py</span></code> module that uses an assert statement to test that the type of the output of your <code class="docutils literal notranslate"><span class="pre">test_min</span></code> function is a NumPy <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> object.  Then, run the test using <code class="docutils literal notranslate"><span class="pre">pytest</span></code> and make sure it passes.</p>
 </section>
 </div>
 <div class="exercise green admonition" id="ExerTest-parameterize">
 
 <p class="admonition-title"><span class="caption-number">Exercise 53 </span></p>
 <section id="exercise-content">
-<p>Use the <code class="docutils literal notranslate"><span class="pre">&#64;pytest.mark.parametrize</span></code> decorator to test a function for multiple inputs</p>
+<p>Write a simple function that returns the sum of two digits:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+<p>Save this in a module called <code class="docutils literal notranslate"><span class="pre">exercises.py</span></code>.  Now, use the <code class="docutils literal notranslate"><span class="pre">&#64;pytest.mark.parametrize</span></code> decorator to test a function for multiple inputs of <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p>
 </section>
 </div>
 <div class="exercise green admonition" id="ExerTest-markers">
 
 <p class="admonition-title"><span class="caption-number">Exercise 54 </span></p>
 <section id="exercise-content">
-<p>Use pytest markers to skip a test</p>
-</section>
-</div>
-<div class="exercise green admonition" id="ExerTest-???">
-
-<p class="admonition-title"><span class="caption-number">Exercise 55 </span></p>
-<section id="exercise-content">
-<p>Something else… Maybe a test that checks if an exception if raised?</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">&#64;pytest.mark</span></code> decorator to mark one of your tests in <code class="docutils literal notranslate"><span class="pre">test_exercises.py</span></code>.  Then, your tests using <code class="docutils literal notranslate"><span class="pre">pytest</span></code> but in a way that skips tests with the marker you just gave.</p>
 </section>
 </div>
 </section>
