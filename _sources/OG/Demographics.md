@@ -4,50 +4,31 @@
 A key feature of OG models is the ability to model the impacts of economic shocks or policy changes across generations. Because they capture generations of finitely-lived agents, OG models can be made to reflect realistic demographics.  Demographic trends are of massive importance to economic trends [TODO: add CITATIONS here]. Furthermore, there is a tremendous amount of variation in demographic trends across countries.  Consider Figure {ref}{TODO: create and reference 3 panel figure}, which shows the population distributions, and their evolution over time, for three countries: South Africa, India, and the United States. In each figure, we plot the 2023 population distribution (according to data from the [UN World Population Prospects](https://population.un.org/wpp/)) and then the evolution of the population as we age it forward two, 40, and 80 years and then to it's steady state distribution using the `demographics.py` module from the relevant country calibration (i.e., `OG-ZAF`, `OG-IND`, `OG-USA`). Comparing the 2023 distributions first, we see that South African distribution has humps, which reflect the initial wave of the HIV epidemic and then it's echo on the next generation.  We see also that India has more young adults than the two other countries, but displays a relatively flat gradient as the number of individuals decline quickly with age, reflecting relatively high mortality rates in that country.  The United States has a more right skewed distribution than South Africa and India, with more individuals of advanced age, reflecting relatively low mortality rates for adults. As each population is simulated forward in time, we see the age distribution move to the right, with older individuals representing a larger share of the population in each country.  After about 40 years, these populations are very close to their steady-state. Since older individuals make significantly different labor supply and savings decisions than young individuals, these evolutions of the population will have profound effects on wages, interest rates, and economic growth.
 
 
-TODO: HOW TO MAKE ONE FIGURE WITH 3 PANELS?
-:::{figure-md} zaf_pop_fig
-<img src="./images/ZAF_pop_distribution.png" alt="ZAF_demog" class="bg-primary mb-1" width="80%">
+````{subfigure}
+:layout-sm: AB|CC
+:layout-lg: AB|CC
+:gap: 8px
+:subcaptions: above
+:name: pop_dists
+:class-grid: outline
 
-South Africa
-:::
-
-:::{figure-md} ind_pop_fig
-<img src="./images/IND_pop_distribution.png" alt="ZAF_demog" class="bg-primary mb-1" width="80%">
-
-India
-:::
-
-:::{figure-md} usa_pop_fig
-<img src="./images/USA_pop_distribution.png" alt="ZAF_demog" class="bg-primary mb-1" width="80%">
-
-United States
-:::
-
-<!-- Below I test using sphinx panels, but it doesn't seem to work -->
-````{panels}
-:container: container-fluid
-:column: col-lg-6 col-md-6 col-sm-6 col-xs-12
-:card: shadow-none border-0
-
-```{figure} "./images/ZAF_pop_distribution.png"
-:width: 100%
-:name: example1
-
-Sub-caption 1
+```{image} ./images/ZAF_pop_distribution.png
+  :alt: South Africa
+  :width: 90%
 ```
 
----
-
-```{figure} "./images/IND_pop_distribution.png"
-:width: 100%
-:name: example2
-
-Sub-caption 2
+```{image} ./images/IND_pop_distribution.png
+  :alt: India
+  :width: 100%
 ```
-
+```{image} ./images/USA_pop_distribution.png
+  :alt: United States
+  :width: 50%
+```
+Population Distributions in South Africa, India, and the United States
 ````
 
-Figure {ref}{TODO: add reference to 3 panel figure} plots population growth rates over time for the three countries illustrated above.  The growth rates are determined by the same mortality, fertility, and immigration trends that drive the evolution of the population in Figure {ref}{TODO: create and reference 3 panel figure}. In terms of population growth, we see that in all countries the population growth rate is declining in each of the three counties over the next 60 years.  This is consistent with what we saw in the evolution of the population distribution in the three countries above: each economy is aging and with relatively more older individuals, total fertility will be declining.  Looking at the level of population growth in the long run in {numref}`Figure %s <pop_growth_rates_fig>`, we see that India and the United States will have negative population growth, which will put downward pressure on their long run economic growth rates.  In contract, South Africa will have positive population growth, owing to it's relatively high fertility rates, which will contribute positively to that economy in the long run.
+{numref}`pop_dists` plots population growth rates over time for the three countries illustrated above.  The growth rates are determined by the same mortality, fertility, and immigration trends that drive the evolution of the population in Figure {ref}{TODO: create and reference 3 panel figure}. In terms of population growth, we see that in all countries the population growth rate is declining in each of the three counties over the next 60 years.  This is consistent with what we saw in the evolution of the population distribution in the three countries above: each economy is aging and with relatively more older individuals, total fertility will be declining.  Looking at the level of population growth in the long run in {numref}`Figure %s <pop_growth_rates_fig>`, we see that India and the United States will have negative population growth, which will put downward pressure on their long run economic growth rates.  In contract, South Africa will have positive population growth, owing to it's relatively high fertility rates, which will contribute positively to that economy in the long run.
 
 :::{figure-md} pop_growth_rates_fig
 <img src="./images/pop_growth_rates.png" alt="ZAF_demog" class="bg-primary mb-1" width="80%">
