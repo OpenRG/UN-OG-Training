@@ -3,13 +3,13 @@
 
 Governments in the `OG-Core` model may raise revenue through the taxation of personal and corporate income,  payroll taxes, consumption taxes, taxes on bequests, and wealth taxes. These revenues, along with government borrowing, as you used to finance expenditures on transfers, government investment in infrastructure, spending on a public good, and interest payments on debt.  Here, we discuss the calibration of each of these parameters.
 
-### Tax rates
+## Tax rates
 
 
-### Pension systems
+## Pension systems
 
 
-### Spending parameters
+## Spending parameters
 
 Government spending, at least that is modeled outside of the net tax functions or pension functions, is modeled as an exogenous fraction of GDP, with an exception in some parameterizations that we discuss below.  By calibrating spending as a fraction of GDP, on avoids any need to convert between model and data units and it also more accurately mimics the empirical fact that the size of governments tends to grow with the size of the economy.  There are three spending related parameters that are shares of GDP.  These are `alpha_G`, the ratio of government spending on public goods to GDP, `alpha_T`, the ratio of government spending on transfers to GPD, and `alpha_I`, the ratio of government spending on infrastructure to GDP.
 
@@ -19,7 +19,7 @@ The default way in which total transfers, $TR_t = alpha_{T,t} * GDP_{t}$ gets al
 
 As a final note, one will need to set the value for the initial infrastructure to GDP ratio, `initial_Kg_ratio`.  To find this, one needs an estimate of the stock of public infrastructure.  If no report exists reporting this an approximation would be to say that $K_g = \frac{I_g,t} / \delta_{g}$, where $I_{g,t}$ is the among of infrastructure spending (at present or averaged over recent years) and $\delta_g$ is the ratio of depreciation on this infrastructure (e.g., 2\% per annum).
 
-### Government financing parameters
+## Government financing parameters
 
 Governments can run an unbalanced budget, but in order for an equilibrium to exist, deficits must be restricted such that they do not grow faster than GDP (if they did, interest payments on the debt would grow beyond available resources).  Governments therefore can borrow to finance outlays.  As there is no idiosyncratic risk on private capital in the model, we build in a risk premium by allowing the government to borrow at a rate lower than the private market.  If the rate the private market pays is given by `r`, then the government pays an interest rate of `r_gov = r_gov_scale * r - r_gov_shift`.  The `r_gov_scale` and `r_gov_shift` parameters are two that one would calibrate to the economy in question.  We advise doing this by looking at the historical haircut on private interest rates that the government has paid.  For example, if the government has paid an average interest rate of 1.5 percentage points below the private market, then `r_gov_scale` would be 1.0 and `r_gov_shift` would be 0.015.  One can do this in a systematic manner by finding time series data on government debt and corporate debt of the same maturity and estimating the two parameters directly.  For example, with these data you can estimate, via OLS, the following equation:
 
@@ -30,6 +30,10 @@ r_{gov,t} = \alpha + \beta r_{corp,t} + \epsilon_t
 where $r_{gov,t}$ is the interest rate on government debt and $r_t$ is the interest rate on corporate debt.  The parameter $\beta$ would then be the value of `r_gov_scale` and $\alpha$ would be the negative of the value of `r_gov_shift`.
 
 Finally, we need to calibrate the initial government debt to GDP ratio, `initial_debt_ratio`.  This is done by finding the ratio of government debt to GDP in the most recent year of data and setting `initial_debt_ratio` equal to that value.
+
+
+(SecCalibFiscalExercises)=
+## Exercises
 
 ```{exercise-start}
 :label: ExerCalib-macro_reg

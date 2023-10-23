@@ -1,17 +1,19 @@
 (SecEarnings)=
 # Earnings Processes
 
-An important component of the `OG-Core` model are the household earnings processes.  These help to match real difference across age and households in earnings ability and are a key set of parameters to model income inequality. Household earnings are endogenous and depend on the households' decisions to work and save given the state of the economy and household preferences and ability.  What is exogenous to the model are how productive households are with each unit of labor they supply, i.e., their earnings ability.  `OG-Core` assumes that there are `J` groups of households with different earnings abilities.  Within each group, the earnings ability process is deterministic and known to the household, although labor productivity of these workers vary over their working life.  Fore example, consider {numref}`Figure %s <USA_earn>`, which shows the log of effective labor units for each of seven lifetime income groups, estimated in the United States.  Each group is defined by their "potential" earnings over their lifetime (i.e., if they worked full time, what would they earn over a 40 year career) and grouped by their percentile rank in the distribution of lifetime incomes. We can see that the top 1\% of lifetime earnings have higher productivity in each year of working life, but because productivity varies with age, this gap is not constant.  Rather, it's largest during the peak earnings year of middle age and then is quite small at older ages.
+An important component of the `OG-Core` model are the household earnings processes.  These help to match real difference across age and households in earnings ability and are a key set of parameters to model income inequality. Household earnings are endogenous and depend on the households' decisions to work and save given the state of the economy and household preferences and ability.  What is exogenous to the model are how productive households are with each unit of labor they supply, i.e., their earnings ability.  `OG-Core` assumes that there are `J` groups of households with different earnings abilities.  Within each group, the earnings ability process is deterministic and known to the household, although labor productivity of these workers vary over their working life.  Fore example, consider {numref}`Figure %s <FigOG_Earn_AbilProfiles>`, which shows the log of effective labor units for each of seven lifetime income groups, estimated in the United States.  Each group is defined by their "potential" earnings over their lifetime (i.e., if they worked full time, what would they earn over a 40 year career) and grouped by their percentile rank in the distribution of lifetime incomes. We can see that the top 1\% of lifetime earnings have higher productivity in each year of working life, but because productivity varies with age, this gap is not constant.  Rather, it's largest during the peak earnings year of middle age and then is quite small at older ages.
 
-:::{figure-md} USA_earn
-<img src="./images/USA_ability_profiles.png" alt="USA_earn" class="bg-primary mb-1" width="80%">
-
+```{figure} ./images/USA_ability_profiles.png
+---
+height: 500px
+name: FigOG_Earn_AbilProfiles
+---
 Log Effective Labor Units by Lifetime Income Group, Estimated in the United States
-:::
+```
 
 In `OG-Core`, these earnings processes are described by `SxJ` matrix, with each cell representing the effective labor units for a given age and lifetime income group.  Note that this matrix is normalized such that the average value of earnings ability is one.  It is assumed that these processes remain constant over time, so despite growth in the level of productivity through the exogenous technological growth,
 
-To estimate the earnings processes in {numref}`Figure %s <USA_earn>`, we used administrative data from tax returns the covered a panel of US taxpayers over four decades.  A detailed description of this process is given in the [`OG-USA` documentation](https://pslmodels.github.io/OG-USA/content/calibration/earnings.html). Suffice it to say, this estimation process is quite involved and requires a large panel dataset in individual or household earnings, ideally without censoring the top end. In many contexts, these data may not be available.  We therefore will describe here an approximation technique that is less data intensive, and leave the more involved estimation process for the interested reader to explore in the `OG-USA` documentation.
+To estimate the earnings processes in {numref}`Figure %s <FigOG_Earn_AbilProfiles>`, we used administrative data from tax returns the covered a panel of US taxpayers over four decades.  A detailed description of this process is given in the [`OG-USA` documentation](https://pslmodels.github.io/OG-USA/content/calibration/earnings.html). Suffice it to say, this estimation process is quite involved and requires a large panel dataset in individual or household earnings, ideally without censoring the top end. In many contexts, these data may not be available.  We therefore will describe here an approximation technique that is less data intensive, and leave the more involved estimation process for the interested reader to explore in the `OG-USA` documentation.
 
 To approximate the earnings processes in a country of interest, we recommend starting with the `OG-USA` calibration and then applying a transformation to these earnings processes to match the distribution of income in the target country.[^e_mat_zaf_note].  Specifically, one will find mean earnings by age for the target country... TODO: getcode to link to in OG-ZAF from Marcelo *or* just reference the methods in OG-IND/MYS.
 
@@ -42,6 +44,8 @@ where $C$ represents the country of interest. We will find $a$ by matching the G
 
 (SecOGCalibrationEarningsFootnotes)=
 ## Footnotes
+
+The footnotes from this chapter.
 
 [^stationary_note]: For specifics on how this is done, please see the `OG-Core` [Stationarization Chapter](https://pslmodels.github.io/OG-Core/content/theory/stationarization.html).
 [^e_mat_zaf_note]:  For a discussion with the original application of this method from Marcelo LaFluer see the `OG-ZAF` repo's [Pull Request #28](https://github.com/EAPD-DRB/OG-ZAF/pull/28).

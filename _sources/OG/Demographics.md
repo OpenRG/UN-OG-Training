@@ -25,16 +25,18 @@ A key feature of OG models is the ability to model the impacts of economic shock
   :alt: United States
   :width: 50%
 ```
-Population Distributions in South Africa, India, and the United States
+Population distributions in South Africa, India, and the United States
 ````
 
-{numref}`pop_dists` plots population growth rates over time for the three countries illustrated above.  The growth rates are determined by the same mortality, fertility, and immigration trends that drive the evolution of the population in Figure {ref}{TODO: create and reference 3 panel figure}. In terms of population growth, we see that in all countries the population growth rate is declining in each of the three counties over the next 60 years.  This is consistent with what we saw in the evolution of the population distribution in the three countries above: each economy is aging and with relatively more older individuals, total fertility will be declining.  Looking at the level of population growth in the long run in {numref}`Figure %s <pop_growth_rates_fig>`, we see that India and the United States will have negative population growth, which will put downward pressure on their long run economic growth rates.  In contract, South Africa will have positive population growth, owing to it's relatively high fertility rates, which will contribute positively to that economy in the long run.
+{numref}`Figure %s <pop_dists>` plots population growth rates over time for the three countries illustrated above.  The growth rates are determined by the same mortality, fertility, and immigration trends that drive the evolution of the population in Figure {ref}{TODO: create and reference 3 panel figure}. In terms of population growth, we see that in all countries the population growth rate is declining in each of the three counties over the next 60 years.  This is consistent with what we saw in the evolution of the population distribution in the three countries above: each economy is aging and with relatively more older individuals, total fertility will be declining.  Looking at the level of population growth in the long run in {numref}`Figure %s <FigOG_Demog_PopGrowth>`, we see that India and the United States will have negative population growth, which will put downward pressure on their long run economic growth rates.  In contract, South Africa will have positive population growth, owing to it's relatively high fertility rates, which will contribute positively to that economy in the long run.
 
-:::{figure-md} pop_growth_rates_fig
-<img src="./images/pop_growth_rates.png" alt="ZAF_demog" class="bg-primary mb-1" width="80%">
-
-Population Growth Rates in South Africa, India, and the United States
-:::
+```{figure} ./images/USA_popgrowth_path.png
+---
+height: 500px
+name: FigOG_Demog_PopGrowth
+---
+Projected time path of population growth rate in the United States
+```
 
 The population distribution and growth rates in the plots above were created using the `demographics.py` module from the relevant country calibration repository. Each of these country calibrations utilizes population data from the [UN World Population Prospects](https://population.un.org/wpp/) database, which provides consistent data on the population distribution and age-specific mortality, fertility, and immigration rates by country for many countries.  Note that although immigration rates are provided, the `demographics.py` module imputes them as the residual between the population counts by age and what would be expected given the measured fertility and mortality rates.  This is done for two reasons.  First, it ensures that the evolution of the distribution of population by age is consistent with the three forces affecting it: fertility, mortality, and immigration. Second, it is difficult to accurately measure immigration since not all immigrants are documented (with substantial variation in this across country).  Using the residual method to identify immigration may therefore be more accurate than official statistics.
 

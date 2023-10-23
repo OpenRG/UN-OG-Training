@@ -64,4 +64,6 @@ Other??
 (SecOGCalibrationMacroFootnotes)=
 ## Footnotes
 
+The footnotes from this chapter.
+
 [^stationary_note]: For specifics on how this is done, please see the `OG-Core` [Stationarization Chapter](https://pslmodels.github.io/OG-Core/content/theory/stationarization.html).
