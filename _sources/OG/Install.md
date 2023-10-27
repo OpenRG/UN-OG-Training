@@ -22,15 +22,15 @@
     * Outputs from the model steady state solution under the baseline policy
     * See [`SS.py`](https://github.com/PSLmodels/OG-Core/blob/master/ogcore/SS.py) in the OG-Core repository for what is in the dictionary object in this pickle file
   * `./OUTPUT_BASELINE/TPI/TPI_vars.pkl`
-    * Outputs from the model timepath solution under the baseline policy
+    * Outputs from the model time path solution under the baseline policy
     * See [`TPI.py`](https://github.com/PSLmodels/OG-Core/blob/master/ogcore/TPI.py) in the OG-Core repository for what is in the dictionary object in this pickle file
   * An analogous set of files in the `./OUTPUT_REFORM` directory, which represent objects from the simulation of the reform policy
 
 Note that, depending on your machine, a full model run (solving for the full time path equilibrium for the baseline and reform policies) can take more than two hours of compute time.
 
-If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant tracebacks you receive.
+If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant trace backs you receive.
 
-The CSV output file `./ogcore_example_output.csv` can be compared to the [`./run_examples/expected_ogcore_example_output.csv`](https://github.com/PSLmodels/OG-Core/blob/master/run_examples/expected_ogcore_example_output.csv) file in the OG-Core repository to confirm that you are generating the expected output. The easiest way to do this is to copy the [`example-diffs`](https://github.com/PSLmodels/OG-Core/blob/master/run_examples/example-diffs) and [`example-diffs.bat`](https://github.com/PSLmodels/OG-Core/blob/master/run_examples/example-diffs.bat) files from the OG-Core repository and use the `sh example-diffs` command (or `example-diffs` on Windows) from the `run_examples` directory. If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant tracebacks you receive.
+The CSV output file `./ogcore_example_output.csv` can be compared to the [`./run_examples/expected_ogcore_example_output.csv`](https://github.com/PSLmodels/OG-Core/blob/master/run_examples/expected_ogcore_example_output.csv) file in the OG-Core repository to confirm that you are generating the expected output. The easiest way to do this is to copy the [`example-diffs`](https://github.com/PSLmodels/OG-Core/blob/master/run_examples/example-diffs) and [`example-diffs.bat`](https://github.com/PSLmodels/OG-Core/blob/master/run_examples/example-diffs.bat) files from the OG-Core repository and use the `sh example-diffs` command (or `example-diffs` on Windows) from the `run_examples` directory. If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant trace backs you receive.
 
 
 ## Installing and Running OG-Core from GitHub repository
@@ -55,15 +55,15 @@ The CSV output file `./ogcore_example_output.csv` can be compared to the [`./run
     * Outputs from the model steady state solution under the baseline policy
     * See `SS.py` for what is in the dictionary object in this pickle file
   * `./run_examples/OUTPUT_BASELINE/TPI/TPI_vars.pkl`
-    * Outputs from the model timepath solution under the baseline policy
+    * Outputs from the model time path solution under the baseline policy
     * See `TPI.py` for what is in the dictionary object in this pickle file
   * An analogous set of files in the `./run_examples/OUTPUT_REFORM` directory, which represent objects from the simulation of the reform policy
 
 Note that, depending on your machine, a full model run (solving for the full time path equilibrium for the baseline and reform policies) can take more than two hours of compute time.
 
-If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant tracebacks you receive.
+If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant trace backs you receive.
 
-The CSV output file `./run_examples/ogcore_example_output.csv` can be compared to the `./run_examples/expected_ogcore_example_output.csv` file that is checked into the repository to confirm that you are generating the expected output. The easiest way to do this is to use the `sh example-diffs` command (or `example-diffs` on Windows) from the `run_examples` directory. If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant tracebacks you receive.
+The CSV output file `./run_examples/ogcore_example_output.csv` can be compared to the `./run_examples/expected_ogcore_example_output.csv` file that is checked into the repository to confirm that you are generating the expected output. The easiest way to do this is to use the `sh example-diffs` command (or `example-diffs` on Windows) from the `run_examples` directory. If you run into errors running the example script, please open a new issue in the OG-Core repo with a description of the issue and any relevant trace backs you receive.
 
 ## Exercises
 ```{exercise-start}

@@ -3,7 +3,7 @@
 
 Python stops the computation process when it encounters an error. Sometimes you want to describe certain errors with descriptive error messages. And sometimes you want your code to move past errors while saving them and including descriptive error messages. Other times, you want to ensure that no errors occur and that your program stops and informs you in the case of an error.
 
-Python's error handling, assertion functionality, traceback capability, and type hinting are powerful methods to make sure your code does what you expect it to do, breaks when you expect it to break, and moves past issues when you don't want the computation to stop.
+Python's error handling, assertion functionality, trace back capability, and type hinting are powerful methods to make sure your code does what you expect it to do, breaks when you expect it to break, and moves past issues when you don't want the computation to stop.
 
 The iframe below contains a PDF of the BYU ACME open-access lab entitled, "Exceptions and File Input/Output". You can either scroll through the lab on this page using the iframe window, or you can download the PDF for use on your computer. See {cite}`BYUACME_ExceptIO`. {numref}`ExerExceptionIO` below has you work through the problems in this BYU ACME lab. The Python file ([`exceptions_fileIO.py`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/Exceptions_FileIO/exceptions_filIO.py)) and associated text files (`.txt`) associated with this lab are stored in the [`./code/Exceptions_FileIO/`](https://github.com/OpenRG/UN-OG-Training/tree/main/code/Exceptions_FileIO) directory.
 

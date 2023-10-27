@@ -2,10 +2,11 @@
 # Git and GitHub
 
 Two warnings that a seasoned Git and GitHub user should always give a new entrant to this type of version control and code collaboration are the following.
+
 * The learning curve is steep.
 * The workflow initially is not intuitive.
 
-These two obstacles seem to work together to make this form of collaboration harder than the sum of their parts initially. However, once you begin collaborating on open source projects or on large-group academic or research projects, you start to see the value of all the different steps, methods, and safeguards invoved with using Git and GitHub. {numref}`Figure %s <FigGitFlowDiag>` below is a diagram of the main pieces and actions in the primary workflow that we advocate in this book. You will notice that a version of this figure is the main image for the book and is also the `favicon` for the tabs of the web pages of the online book. This figure of a Git and GitHub workflow diagram looks complicated, but these actions will become second nature. And following this workflow will save the collaborators time in the long-run.
+These two obstacles seem to work together to make this form of collaboration harder than the sum of their parts initially. However, once you begin collaborating on open source projects or on large-group academic or research projects, you start to see the value of all the different steps, methods, and safeguards involved with using Git and GitHub. {numref}`Figure %s <FigGitFlowDiag>` below is a diagram of the main pieces and actions in the primary workflow that we advocate in this book. You will notice that a version of this figure is the main image for the book and is also the `favicon` for the tabs of the web pages of the online book. This figure of a Git and GitHub workflow diagram looks complicated, but these actions will become second nature. And following this workflow will save the collaborators time in the long-run.
 
 ```{figure} ../images/Git/GitFlowDiag.png
 :height: 500px
@@ -36,7 +37,7 @@ A {term}`repository` or "repo" is a directory containing files that are tracked 
 {term}`GitHub` or [*GitHub.com*](https://github.com/) is a {term}`cloud` {term}`source code management service` platform designed to enable scalable, efficient, and secure version controlled collaboration by linking {term}`local` {term}`Git` version controlled software development by users. *GitHub*'s main business footprint is hosting a collection of millions of version controlled code repositories. In addition to being a platform for {term}`distributed version control system` (DVCS), *GitHub*'s primary features include code review, project management, {term}`continuous integration` {term}`unit testing`, {term}`GitHub actions`, and associated web page (GitHub pages) and documentation hosting and deployment.
 ```
 
-To be clear at the outset, Git is the version control software that resides on your local computer. It's main functionalities are to track changes in the files in specified directories. But Git also has some functionality to interact with remote repositories. The ineraction between Git and GitHub creates an ideal environment and platform for scaleable collaboration on code among large teams.
+To be clear at the outset, Git is the version control software that resides on your local computer. It's main functionalities are to track changes in the files in specified directories. But Git also has some functionality to interact with remote repositories. The interaction between Git and GitHub creates an ideal environment and platform for scalable collaboration on code among large teams.
 
 ## Wide usage
 Every year in November, GitHub publishes are report entitled, "The State of the Octoverse", in which they detail the growth and developments in the GitHub community in the most recent year. The most recent [State of the Octoverse](https://github.blog/2022-11-17-octoverse-2022-10-years-of-tracking-open-source/) was published on November 17, 2022 and covered developments from October 1, 2021 to September 30, 2022. Some interesting statistics from that report are the following.

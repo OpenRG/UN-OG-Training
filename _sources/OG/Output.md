@@ -124,8 +124,8 @@ path_dict = {
         "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_reform.pkl?raw=true"
             ],
     "Params": [
-        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline.pkl?raw=true",
-        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_reform.pkl?raw=true"
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline_v311.pkl?raw=true",
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_reform_v311.pkl?raw=true"
 
     ]
 }
@@ -167,12 +167,12 @@ import pickle
 import requests
 path_dict = {
     "TPI": [
-        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_baseline.pkl?raw=true",
-        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_reform.pkl?raw=true"
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_baseline_v311.pkl?raw=true",
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_reform_v311.pkl?raw=true"
             ],
     "Params": [
-        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline.pkl?raw=true",
-        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_reform.pkl?raw=true"
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline_v311.pkl?raw=true",
+        "https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_reform_v311.pkl?raw=true"
 
     ]
 }
@@ -244,7 +244,7 @@ Use the `ogcore.output_plots.plot_aggregates` function to create a figure showin
 :label: ExerOGoutput-baseline
 :class: green
 ```
-Now use the `ogcore.output_plots.plot_aggregates` function to plot the baseline GDP forecast and the what that forecast (in levels) would look like under the reform scenario.  This will involve setting the `plot_type="forecast"` and passing in an array that is the baseline GDP forecast (you can make this up or find a real forecast online - just note that the length of this array needs to be equalt to the argument for `num_years_to_plot`, which defaults to 50 but can be adjusted).
+Now use the `ogcore.output_plots.plot_aggregates` function to plot the baseline GDP forecast and the what that forecast (in levels) would look like under the reform scenario.  This will involve setting the `plot_type="forecast"` and passing in an array that is the baseline GDP forecast (you can make this up or find a real forecast online - just note that the length of this array needs to be equal to the argument for `num_years_to_plot`, which defaults to 50 but can be adjusted).
 ```{exercise-end}
 ```
 
@@ -256,4 +256,4 @@ The footnotes from this chapter.
 
 [^SJMI_def]: Recall that `S` refers to the maximum number of model periods an individual may be economically active and `J` refers to the number of ability types.  The number of production industries is given by `M` and the number of consumption goods by `I`.
 [^T_def]: The number of periods in the transition path is given by `T`.
-[^tax_scale_note] This is done in functions in the `ogcore.tax` module. The value of `factor_ss` is endogenous and is solved for in the steady-state equilibirum by finding the value of the factor that makes the mean household income in the steady-state solution equal the mean household income from data used to estimate the tax functions.
+[^tax_scale_note] This is done in functions in the `ogcore.tax` module. The value of `factor_ss` is endogenous and is solved for in the steady-state equilibrium by finding the value of the factor that makes the mean household income in the steady-state solution equal the mean household income from data used to estimate the tax functions.

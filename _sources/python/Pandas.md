@@ -1,7 +1,7 @@
 (Chap_Pandas)=
 # Pandas
 
-Pandas is to data wrangling and analysis in Python what {ref}`Chap_NumPy` is to numerical methods in Python. Pandas is Python's primary data analysis package.[^Pandas1] Its name is derived from the econometric term, "panel data". The Pandas package was originially developed in 2008 by Wes McKinney while at global investment firm AQR Capital Management.[^Pandas2] The Python Pandas package became open source in 2009, and Pandas became a NumFOCUS sponsored project in 2015.
+Pandas is to data wrangling and analysis in Python what {ref}`Chap_NumPy` is to numerical methods in Python. Pandas is Python's primary data analysis package.[^Pandas1] Its name is derived from the econometric term, "panel data". The Pandas package was originally developed in 2008 by Wes McKinney while at global investment firm AQR Capital Management.[^Pandas2] The Python Pandas package became open source in 2009, and Pandas became a NumFOCUS sponsored project in 2015.
 
 The primary Python object in Pandas is the DataFrame ([`pandas.DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)). A Pandas DataFrame is similar to the R programming language's dataframe.[^PandasR] The dataframe is a two-dimensional data object that often include rows that serve as observations, columns that serve as variables, advanced date functions, and rich multi-layered indexing capability. Pandas also includes rich functionality for reading in data, saving and exporting data, data cleaning and munging, data description, and data manipulation, selection, and grouping.
 
@@ -109,7 +109,7 @@ The DataFrame object has several methods to help output a formatted table suitab
 :label: ExerPandas-read
 :class: green
 ```
-In most cases, you are likely to use a DataFrame as a container for a large dataset, not something simple that you can enter by manually as we did above. Pandas has [several methods](https://pandas.pydata.org/docs/user_guide/io.html) to read in data from files are various formats. Let's use one of these methods to read in some population data extracted from the [United Nations' World Population Prospects](https://population.un.org/wpp/). Note that Pandas will download these data for you if you have a URL to the data file. The URL for these data on South Africa's population is: [https://raw.githubusercontent.com/EAPD-DRB/OG-ZAF/main/ogzaf/data/demographic/un_zaf_pop.csv](https://raw.githubusercontent.com/EAPD-DRB/OG-ZAF/main/ogzaf/data/demographic/un_zaf_pop.csv). Please read in these data (Note: the separator is the verical bar ("|") and the header is on the second line (in Python this has index 1, so you'll want to use the argument `header=1`)). Print the first 5 rows of the DataFrame.
+In most cases, you are likely to use a DataFrame as a container for a large dataset, not something simple that you can enter by manually as we did above. Pandas has [several methods](https://pandas.pydata.org/docs/user_guide/io.html) to read in data from files are various formats. Let's use one of these methods to read in some population data extracted from the [United Nations' World Population Prospects](https://population.un.org/wpp/). Note that Pandas will download these data for you if you have a URL to the data file. The URL for these data on South Africa's population is: [https://raw.githubusercontent.com/EAPD-DRB/OG-ZAF/main/ogzaf/data/demographic/un_zaf_pop.csv](https://raw.githubusercontent.com/EAPD-DRB/OG-ZAF/main/ogzaf/data/demographic/un_zaf_pop.csv). Please read in these data (Note: the separator is the vertical bar ("|") and the header is on the second line (in Python this has index 1, so you'll want to use the argument `header=1`)). Print the first 5 rows of the DataFrame.
 ```{exercise-end}
 ```
 
@@ -163,4 +163,4 @@ The footnotes from this chapter.
 
 [^Pandas2]: See the "About" page on the Pandas website (https://pandas.pydata.org/about/) as well as the Pandas Wikipedia article {cite}`PandasWiki`.
 
-[^PandasR]: The Pandas online documentation has a page that gives a correspondence between Pandas Dataframe functionality and R dataframe functionality (https://pandas.pydata.org/pandas-docs/stable/getting_started/comparison/comparison_with_r.html).
+[^PandasR]: The Pandas online documentation has a page that gives a correspondence between Pandas DataFrame functionality and R dataframe functionality (https://pandas.pydata.org/pandas-docs/stable/getting_started/comparison/comparison_with_r.html).

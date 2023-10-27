@@ -506,7 +506,7 @@ document.write(`
 </div><p>Many systems of equations that occur in theoretical models are <em>exactly identified</em> as defined in <a class="reference internal" href="#DefSciPy_Identif">Definition 2</a>. The easiest way to solve exactly identified systems of linear equations—systems in which each function <span class="math notranslate nohighlight">\(f_i(x)\)</span> is a linear function of the vector of <span class="math notranslate nohighlight">\(x\)</span> variables—is often matrix inversion. When the system of equations <span class="math notranslate nohighlight">\(f(x)\)</span> is nonlinear, finding the solution takes more advanced methods.<a class="footnote-reference brackets" href="#scipyjuddmethods" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 <p>It is <em>not</em> widely recognized among researchers that even in systems of equations for which existence and uniqueness of the solution can be proven, no root finding algorithm with finite computational power exists that guarantees convergence to the solution of the system in every case. Judd states:</p>
 <blockquote>
-<div><p>Nonlinear equation solving presents problems not present with linear equations or optimization. In particular, the existence problem is much more difficult for nonlinear systems. Unless one has an existence proof in had, a programmer must keep in mind that the absence of a solutino may explain a program’s failure to converge. Ever if there exists a solution, all methods will do poorly if the problem is poorly conditioned near a solution. Transforming the problem will often improve performance.<span id="id3">[<a class="reference internal" href="../UN-OG-Training_references.html#id41" title="Kenneth L. Judd. Numerical Methods in Economics. MIT Press, 1998.">Judd, 1998</a>]</span> (p. 192)</p>
+<div><p>Nonlinear equation solving presents problems not present with linear equations or optimization. In particular, the existence problem is much more difficult for nonlinear systems. Unless one has an existence proof in had, a programmer must keep in mind that the absence of a solution may explain a program’s failure to converge. Ever if there exists a solution, all methods will do poorly if the problem is poorly conditioned near a solution. Transforming the problem will often improve performance.<span id="id3">[<a class="reference internal" href="../UN-OG-Training_references.html#id41" title="Kenneth L. Judd. Numerical Methods in Economics. MIT Press, 1998.">Judd, 1998</a>]</span> (p. 192)</p>
 </div></blockquote>
 <p>Because root finding in nonlinear systems can be so difficult, much research into the best methods has accumulated over the years. And the approaches to solving nonlinear systems can be an art as much as a science. This is also true of minimization problems discussed in the next section (<a class="reference internal" href="#secscipymin"><span class="std std-ref">Minimization</span></a>). For this reason, the <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.root.html"><code class="docutils literal notranslate"><span class="pre">scipy.optimize.root</span></code></a> module has many different solution algorithms you can use to find the solution to a nonlinear system of equations (e.g., <code class="docutils literal notranslate"><span class="pre">hybr</span></code>, <code class="docutils literal notranslate"><span class="pre">lm</span></code>, <code class="docutils literal notranslate"><span class="pre">linearmixing</span></code>).</p>
 <p>All of the root finder methods in <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.root.html"><code class="docutils literal notranslate"><span class="pre">scipy.optimize.root</span></code></a> are iterative. They take an initial guess for the solution for the variable vector <span class="math notranslate nohighlight">\(x_i\)</span>, evaluate the functions <span class="math notranslate nohighlight">\(f(x_i)\)</span> in <a class="reference internal" href="#equation-eqscipy-zerofuncerr">(4)</a> at <span class="math notranslate nohighlight">\(x_i\)</span>, and guess a new value for the solution vector <span class="math notranslate nohighlight">\(x_{i+1}\)</span> until the errors on the left-hand-side of the functions in <a class="reference internal" href="#equation-eqscipy-zerofuncerr">(4)</a> get arbitrarily close to zero.</p>
@@ -533,7 +533,7 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Knowing and debugging the <strong>underlying model theory</strong> is often more effective and more important than finding the best, most advanced, or most robust root finder or minimizer. In most instances in which our optimizers have given non solutions or incorrect solutions, the adjustment that fixed the problem was most often going back to the underlying system of equations and understanding what they mean.</p></li>
 <li><p>Choose an <strong>intelligent initial guess</strong>. Many optimization algorithms require an initial guess as an input. When the underlying system of equations or criterion function is highly nonlinear, a good initial guess is critical for the root finder or minimizer to converge. The theory or the underlying data often suggest a reasonable initial guess. In dynamic models, the steady-state or the previous period’s solution might be a good initial guess.</p></li>
-<li><p>Give the root finder or minimizer <strong>as much information as possible</strong> about the problem. Many root finders and minimizers can take as inputs contraints on the solution and theoretical derivatives. These save the algorithm computational calories and may engage components of the algorithm that are specifically designed to use those details.</p></li>
+<li><p>Give the root finder or minimizer <strong>as much information as possible</strong> about the problem. Many root finders and minimizers can take as inputs constraints on the solution and theoretical derivatives. These save the algorithm computational calories and may engage components of the algorithm that are specifically designed to use those details.</p></li>
 </ol>
 </section>
 </div></section>
@@ -668,7 +668,7 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> message: The solution converged.
  success: True
   status: 1
-     fun: [-1.239e-13 -1.013e-13]
+     fun: [-1.235e-13 -1.017e-13]
        x: [ 8.463e-01  2.331e+00]
     nfev: 10
     fjac: [[-8.332e-01  5.529e-01]
@@ -678,7 +678,7 @@ document.write(`
 
 The solution for (x, y) is: [0.84630378 2.33101497]
 
-The error values for eq1 and eq2 at the solution are: [-1.2390089e-13 -1.0125234e-13]
+The error values for eq1 and eq2 at the solution are: [-1.23456800e-13 -1.01696429e-13]
 </pre></div>
 </div>
 </div>

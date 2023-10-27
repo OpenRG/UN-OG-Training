@@ -512,8 +512,8 @@ document.write(`
         <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_reform.pkl?raw=true&quot;</span>
             <span class="p">],</span>
     <span class="s2">&quot;Params&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline.pkl?raw=true&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_reform.pkl?raw=true&quot;</span>
+        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline_v311.pkl?raw=true&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_reform_v311.pkl?raw=true&quot;</span>
 
     <span class="p">]</span>
 <span class="p">}</span>
@@ -646,12 +646,12 @@ document.write(`
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="n">path_dict</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;TPI&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_baseline.pkl?raw=true&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_reform.pkl?raw=true&quot;</span>
+        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_baseline_v311.pkl?raw=true&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/TPI_vars_reform_v311.pkl?raw=true&quot;</span>
             <span class="p">],</span>
     <span class="s2">&quot;Params&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline.pkl?raw=true&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_reform.pkl?raw=true&quot;</span>
+        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_baseline_v311.pkl?raw=true&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;https://github.com/PSLmodels/OG-Core/blob/master/tests/test_io_data/model_params_reform_v311.pkl?raw=true&quot;</span>
 
     <span class="p">]</span>
 <span class="p">}</span>
@@ -717,7 +717,7 @@ document.write(`
 
 <p class="admonition-title"><span class="caption-number">Exercise 61 </span></p>
 <section id="exercise-content">
-<p>Now use the <code class="docutils literal notranslate"><span class="pre">ogcore.output_plots.plot_aggregates</span></code> function to plot the baseline GDP forecast and the what that forecast (in levels) would look like under the reform scenario.  This will involve setting the <code class="docutils literal notranslate"><span class="pre">plot_type=&quot;forecast&quot;</span></code> and passing in an array that is the baseline GDP forecast (you can make this up or find a real forecast online - just note that the length of this array needs to be equalt to the argument for <code class="docutils literal notranslate"><span class="pre">num_years_to_plot</span></code>, which defaults to 50 but can be adjusted).</p>
+<p>Now use the <code class="docutils literal notranslate"><span class="pre">ogcore.output_plots.plot_aggregates</span></code> function to plot the baseline GDP forecast and the what that forecast (in levels) would look like under the reform scenario.  This will involve setting the <code class="docutils literal notranslate"><span class="pre">plot_type=&quot;forecast&quot;</span></code> and passing in an array that is the baseline GDP forecast (you can make this up or find a real forecast online - just note that the length of this array needs to be equal to the argument for <code class="docutils literal notranslate"><span class="pre">num_years_to_plot</span></code>, which defaults to 50 but can be adjusted).</p>
 </section>
 </div>
 </section>
@@ -732,7 +732,7 @@ document.write(`
 <aside class="footnote brackets" id="t-def" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
 <p>The number of periods in the transition path is given by <code class="docutils literal notranslate"><span class="pre">T</span></code>.
-[^tax_scale_note] This is done in functions in the <code class="docutils literal notranslate"><span class="pre">ogcore.tax</span></code> module. The value of <code class="docutils literal notranslate"><span class="pre">factor_ss</span></code> is endogenous and is solved for in the steady-state equilibirum by finding the value of the factor that makes the mean household income in the steady-state solution equal the mean household income from data used to estimate the tax functions.</p>
+[^tax_scale_note] This is done in functions in the <code class="docutils literal notranslate"><span class="pre">ogcore.tax</span></code> module. The value of <code class="docutils literal notranslate"><span class="pre">factor_ss</span></code> is endogenous and is solved for in the steady-state equilibrium by finding the value of the factor that makes the mean household income in the steady-state solution equal the mean household income from data used to estimate the tax functions.</p>
 </aside>
 </section>
 </section>

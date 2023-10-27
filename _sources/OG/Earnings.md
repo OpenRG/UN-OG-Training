@@ -15,7 +15,9 @@ In `OG-Core`, these earnings processes are described by `SxJ` matrix, with each 
 
 To estimate the earnings processes in {numref}`Figure %s <FigOG_Earn_AbilProfiles>`, we used administrative data from tax returns the covered a panel of US taxpayers over four decades.  A detailed description of this process is given in the [`OG-USA` documentation](https://pslmodels.github.io/OG-USA/content/calibration/earnings.html). Suffice it to say, this estimation process is quite involved and requires a large panel dataset in individual or household earnings, ideally without censoring the top end. In many contexts, these data may not be available.  We therefore will describe here an approximation technique that is less data intensive, and leave the more involved estimation process for the interested reader to explore in the `OG-USA` documentation.
 
-To approximate the earnings processes in a country of interest, we recommend starting with the `OG-USA` calibration and then applying a transformation to these earnings processes to match the distribution of income in the target country.[^e_mat_zaf_note].  Specifically, one will find mean earnings by age for the target country... TODO: getcode to link to in OG-ZAF from Marcelo *or* just reference the methods in OG-IND/MYS.
+To approximate the earnings processes in a country of interest, we recommend starting with the `OG-USA` calibration and then applying a transformation to these earnings processes to match the distribution of income in the target country.[^e_mat_zaf_note].
+
+<!-- Specifically, one will find mean earnings by age for the target country... TODO: getcode to link to in OG-ZAF from Marcelo *or* just reference the methods in OG-IND/MYS. -->
 
 ## Exercises
 ```{exercise-start}
