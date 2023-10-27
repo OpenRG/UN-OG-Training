@@ -98,6 +98,8 @@ As discussed in the {ref}`Chap_PythonIntro` Chapter, Jupyter notebooks are a gre
 
 For long and detailed documentation, [Jupyter Books](https://jupyterbook.org/en/stable/intro.html) are a great option.  Jupyter Books are a collection Markdown, ReStructuredText, [MyST](https://mystmd.org) files and Jupyter notebooks that are compiled into a book format.  Jupyter Books can be compiled to HTML or PDF formats, making them easy to share.  This training guide was created in Jupyter Book!
 
+[TODO: Show the slick rst interface between Sphinx and the OG-Core modules that automatically compile LaTeX documentation into the Jupyter Book API documentation. See this Jupyter Book API chapter on [Firms](https://pslmodels.github.io/OG-Core/content/api/firm.html) and the code that created it in [this folder](https://github.com/PSLmodels/OG-Core/tree/master/docs/book/content/api).]
+
 
 (SecDoc_Other)=
 ## Other published documentaiton
