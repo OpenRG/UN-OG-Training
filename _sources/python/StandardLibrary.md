@@ -18,6 +18,10 @@ In addition, the iframe below contains a PDF of the BYU ACME open-access lab ent
 (SecStdLibExercises)=
 ## Exercises
 
+# A note about answering the exercises
+
+Just below you will find the first exercises in this training guide. As described in Section {numref}`SecPythonIntroWorkingWith`, there are a number of ways to interact with Python.  You can feel free to use any of these as you work through the exercises we've included.  But to make things as easy as possible, you can use our [answer template](UN-OG-Training_AnswerTemplate.ipynb).  By clicking on the rocket ship shaped button in the menu bar at the top of the page and then select Google Colab and you will be able to open the notebook in [Google Colaboratory](https://colab.research.google.com), where you can execute cells as in any Jupyter Notebook ([basic instructions](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html) or use of a Notebook) without needed any local python installation.  You will only need a Google account to save this notebook to your Drive.
+
 ```{exercise-start}
 :label: ExerStandardLibrary
 :class: green
