@@ -29,7 +29,7 @@ p_reform = ogcore.parameters.Specifications(
     output_base = './OUTPUT_REFORM',
     baseline = False,
 )
-p_reform.update_specifications({'CIT_rate': [[0.15]]})
+p_reform.update_specifications({'cit_rate': [[0.15]]})
 ogcore.execute.runner(p_reform)
 
 ```

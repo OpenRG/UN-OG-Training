@@ -104,15 +104,15 @@ where you set the directory you'd like this output saved with a string `base_dir
 2. Now, create a new Specifcations object with:
    ```python
      p2 = Specifications(
-           baseline=True,
+           baseline=False,
            baseline_dir=base_dir,
-           output_base=base_dir,
+           output_base=reform_dir,
        )
    ```
 where you set the directory you'd like the output from this second model run saved with a string `reform_dir`.
 1. Use the demographics module you edited above to return the a dictoinary of population objects from `demographics.get_pop_objs`.  Use these to update the `p2` object:
 ```python
-p2.update_specifications(pop_obs_dict)
+p2.update_specifications(pop_objs_dict)
 ```
 1. Use `ogcore.execute.runner()` to solve the model again, this time with the parameters in `p2`.
 2. Finaly, comparet the differences in the steady-state macroeconomics variablkes using `ogcore.output_tables.macro_table_SS`.  What do you see?  How did demographics affect aggregate output?  Wages?  Interest rates?  Do you have intuition about why this happened?
