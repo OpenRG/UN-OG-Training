@@ -15,7 +15,7 @@ kernelspec:
 
 ## Loading `OG-Core` output
 
-When run, the `OG-Core` model saves model output in the `baseline_dir` and `output_base` files paths, which are set in the `Specifications` class object.  For example:
+When run, the `OG-Core` model saves model output in the `baseline_dir` and `output_base` files paths, which are set in the `Specifications` class object.  For example (and this example assumes a certain directory structure that may not be the same on your computer):
 
 ```python
      p = Specifications(

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>18.4. Earnings Processes &#8212; UN OG-Core Overlapping Generations Model Training</title>
+    <title>17.4. Earnings Processes &#8212; UN OG-Core Overlapping Generations Model Training</title>
   
   
   
@@ -73,7 +73,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Glossary" href="../appendix/glossary.html" />
-    <link rel="prev" title="18.3. Fiscal Policy" href="FiscalParams.html" />
+    <link rel="prev" title="17.3. Fiscal Policy" href="FiscalParams.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -206,13 +206,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="intro.html">13. Overlapping Generations Macro Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install.html">14. Installing <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="Simulation.html">15. Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="Output.html">17. <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> Output</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Calibration.html">18. Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Demographics.html">18.1. Demographics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="MacroParams.html">18.2. Macro parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FiscalParams.html">18.3. Fiscal Policy</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">18.4. Earnings Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Output.html">16. <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> Output</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Calibration.html">17. Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Demographics.html">17.1. Demographics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MacroParams.html">17.2. Macro parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FiscalParams.html">17.3. Fiscal Policy</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">17.4. Earnings Processes</a></li>
 </ul>
 </li>
 </ul>
@@ -420,8 +419,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">18.4.1. Exercises</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">18.4.2. Footnotes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">17.4.1. Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">17.4.2. Footnotes</a></li>
 </ul>
             </nav>
         </div>
@@ -434,30 +433,30 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="earnings-processes">
-<span id="secearnings"></span><h1><span class="section-number">18.4. </span>Earnings Processes<a class="headerlink" href="#earnings-processes" title="Permalink to this heading">#</a></h1>
-<p>An important component of the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model are the household earnings processes.  These help to match real difference across age and households in earnings ability and are a key set of parameters to model income inequality. Household earnings are endogenous and depend on the households’ decisions to work and save given the state of the economy and household preferences and ability.  What is exogenous to the model are how productive households are with each unit of labor they supply, i.e., their earnings ability.  <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> assumes that there are <code class="docutils literal notranslate"><span class="pre">J</span></code> groups of households with different earnings abilities.  Within each group, the earnings ability process is deterministic and known to the household, although labor productivity of these workers vary over their working life.  Fore example, consider <a class="reference internal" href="#figog-earn-abilprofiles"><span class="std std-numref">Figure 18.3</span></a>, which shows the log of effective labor units for each of seven lifetime income groups, estimated in the United States.  Each group is defined by their “potential” earnings over their lifetime (i.e., if they worked full time, what would they earn over a 40 year career) and grouped by their percentile rank in the distribution of lifetime incomes. We can see that the top 1% of lifetime earnings have higher productivity in each year of working life, but because productivity varies with age, this gap is not constant.  Rather, it’s largest during the peak earnings year of middle age and then is quite small at older ages.</p>
+<span id="secearnings"></span><h1><span class="section-number">17.4. </span>Earnings Processes<a class="headerlink" href="#earnings-processes" title="Permalink to this heading">#</a></h1>
+<p>An important component of the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model are the household earnings processes.  These help to match real difference across age and households in earnings ability and are a key set of parameters to model income inequality. Household earnings are endogenous and depend on the households’ decisions to work and save given the state of the economy and household preferences and ability.  What is exogenous to the model are how productive households are with each unit of labor they supply, i.e., their earnings ability.  <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> assumes that there are <code class="docutils literal notranslate"><span class="pre">J</span></code> groups of households with different earnings abilities.  Within each group, the earnings ability process is deterministic and known to the household, although labor productivity of these workers vary over their working life.  Fore example, consider <a class="reference internal" href="#figog-earn-abilprofiles"><span class="std std-numref">Figure 17.3</span></a>, which shows the log of effective labor units for each of seven lifetime income groups, estimated in the United States.  Each group is defined by their “potential” earnings over their lifetime (i.e., if they worked full time, what would they earn over a 40 year career) and grouped by their percentile rank in the distribution of lifetime incomes. We can see that the top 1% of lifetime earnings have higher productivity in each year of working life, but because productivity varies with age, this gap is not constant.  Rather, it’s largest during the peak earnings year of middle age and then is quite small at older ages.</p>
 <figure class="align-default" id="figog-earn-abilprofiles">
 <a class="reference internal image-reference" href="../_images/USA_ability_profiles.png"><img alt="../_images/USA_ability_profiles.png" src="../_images/USA_ability_profiles.png" style="height: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 18.3 </span><span class="caption-text">Log Effective Labor Units by Lifetime Income Group, Estimated in the United States</span><a class="headerlink" href="#figog-earn-abilprofiles" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17.3 </span><span class="caption-text">Log Effective Labor Units by Lifetime Income Group, Estimated in the United States</span><a class="headerlink" href="#figog-earn-abilprofiles" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code>, these earnings processes are described by <code class="docutils literal notranslate"><span class="pre">SxJ</span></code> matrix, with each cell representing the effective labor units for a given age and lifetime income group.  Note that this matrix is normalized such that the average value of earnings ability is one.  It is assumed that these processes remain constant over time, so despite growth in the level of productivity through the exogenous technological growth,</p>
-<p>To estimate the earnings processes in <a class="reference internal" href="#figog-earn-abilprofiles"><span class="std std-numref">Figure 18.3</span></a>, we used administrative data from tax returns the covered a panel of US taxpayers over four decades.  A detailed description of this process is given in the <a class="reference external" href="https://pslmodels.github.io/OG-USA/content/calibration/earnings.html"><code class="docutils literal notranslate"><span class="pre">OG-USA</span></code> documentation</a>. Suffice it to say, this estimation process is quite involved and requires a large panel dataset in individual or household earnings, ideally without censoring the top end. In many contexts, these data may not be available.  We therefore will describe here an approximation technique that is less data intensive, and leave the more involved estimation process for the interested reader to explore in the <code class="docutils literal notranslate"><span class="pre">OG-USA</span></code> documentation.</p>
+<p>To estimate the earnings processes in <a class="reference internal" href="#figog-earn-abilprofiles"><span class="std std-numref">Figure 17.3</span></a>, we used administrative data from tax returns the covered a panel of US taxpayers over four decades.  A detailed description of this process is given in the <a class="reference external" href="https://pslmodels.github.io/OG-USA/content/calibration/earnings.html"><code class="docutils literal notranslate"><span class="pre">OG-USA</span></code> documentation</a>. Suffice it to say, this estimation process is quite involved and requires a large panel dataset in individual or household earnings, ideally without censoring the top end. In many contexts, these data may not be available.  We therefore will describe here an approximation technique that is less data intensive, and leave the more involved estimation process for the interested reader to explore in the <code class="docutils literal notranslate"><span class="pre">OG-USA</span></code> documentation.</p>
 <p>To approximate the earnings processes in a country of interest, we recommend starting with the <code class="docutils literal notranslate"><span class="pre">OG-USA</span></code> calibration and then applying a transformation to these earnings processes to match the distribution of income in the target country.<a class="footnote-reference brackets" href="#e-mat-zaf-note" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
 <!-- Specifically, one will find mean earnings by age for the target country... TODO: getcode to link to in OG-ZAF from Marcelo *or* just reference the methods in OG-IND/MYS. -->
 <section id="exercises">
-<h2><span class="section-number">18.4.1. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">17.4.1. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise green admonition" id="ExerCalib-earn_plot">
 
-<p class="admonition-title"><span class="caption-number">Exercise 18.11 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 17.11 </span></p>
 <section id="exercise-content">
 <p>Use <a class="reference external" href="https://github.com/PSLmodels/OG-USA/blob/master/ogusa/income.py"><code class="docutils literal notranslate"><span class="pre">income.py</span></code> from <code class="docutils literal notranslate"><span class="pre">OG-USA</span></code></a> to retrieve the earnings process matrix.  Read through the docstrings of each function to see which to use.  With the <code class="docutils literal notranslate"><span class="pre">e</span></code> matrix that is returned, create a line plot of the earnings at each age for the <code class="docutils literal notranslate"><span class="pre">J</span></code> different types.</p>
 </section>
 </div>
 <div class="exercise green admonition" id="ExerCalib-earn_approx">
 
-<p class="admonition-title"><span class="caption-number">Exercise 18.12 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 17.12 </span></p>
 <section id="exercise-content">
 <p>Now we’re going to adjust the above earnings process to match the Gini coefficient in a country that isn’t the U.S. (note that the Gini coefficient for income in the U.S. was 41.5 in 2019). The transformation we’ll make is:</p>
 <div class="math notranslate nohighlight">
@@ -467,7 +466,7 @@ document.write(`
 </div>
 </section>
 <section id="footnotes">
-<span id="secogcalibrationearningsfootnotes"></span><h2><span class="section-number">18.4.2. </span>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
+<span id="secogcalibrationearningsfootnotes"></span><h2><span class="section-number">17.4.2. </span>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this heading">#</a></h2>
 <p>The footnotes from this chapter.</p>
 <hr class="footnotes docutils" />
 <aside class="footnote brackets" id="e-mat-zaf-note" role="note">
@@ -513,7 +512,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">18.3. </span>Fiscal Policy</p>
+        <p class="prev-next-title"><span class="section-number">17.3. </span>Fiscal Policy</p>
       </div>
     </a>
     <a class="right-next"
@@ -541,8 +540,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">18.4.1. Exercises</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">18.4.2. Footnotes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">17.4.1. Exercises</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">17.4.2. Footnotes</a></li>
 </ul>
   </nav></div>
 

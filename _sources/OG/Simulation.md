@@ -36,7 +36,7 @@ ogcore.execute.runner(p_reform)
 
 This above will simulate the model and save pickle files dictionaries of results to the `'./OUTPUT_REFORM'` directory on your computer.  The output of this run can then be compared to that in the `'./OUTPUT_BASELINE'` directory to see the effects of the reform on the economy.  `OG-Core` has some built in functions for creating tables and figures that are helpful in comparing these results.  We discuss those in the next chapter, {ref}`Chap_OGoutput`.
 
-# Exercises:
+## Exercises:
 
 ```{exercise-start}
 :label: ExerSim_cit

@@ -70,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="17. OG-Core Output" href="Output.html" />
+    <link rel="next" title="16. OG-Core Output" href="Output.html" />
     <link rel="prev" title="14. Installing OG-Core" href="Install.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -204,13 +204,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="intro.html">13. Overlapping Generations Macro Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Install.html">14. Installing <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">15. Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="Output.html">17. <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> Output</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Calibration.html">18. Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Demographics.html">18.1. Demographics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="MacroParams.html">18.2. Macro parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FiscalParams.html">18.3. Fiscal Policy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Earnings.html">18.4. Earnings Processes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Output.html">16. <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> Output</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Calibration.html">17. Calibrating the <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> model</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Demographics.html">17.1. Demographics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MacroParams.html">17.2. Macro parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FiscalParams.html">17.3. Fiscal Policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Earnings.html">17.4. Earnings Processes</a></li>
 </ul>
 </li>
 </ul>
@@ -418,10 +417,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">15. Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">16. Exercises:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">15.1. Exercises:</a></li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -459,16 +456,16 @@ document.write(`
 </pre></div>
 </div>
 <p>This above will simulate the model and save pickle files dictionaries of results to the <code class="docutils literal notranslate"><span class="pre">'./OUTPUT_REFORM'</span></code> directory on your computer.  The output of this run can then be compared to that in the <code class="docutils literal notranslate"><span class="pre">'./OUTPUT_BASELINE'</span></code> directory to see the effects of the reform on the economy.  <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> has some built in functions for creating tables and figures that are helpful in comparing these results.  We discuss those in the next chapter, <a class="reference internal" href="Output.html#chap-ogoutput"><span class="std std-ref">OG-Core Output</span></a>.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="exercises">
-<h1><span class="section-number">16. </span>Exercises:<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
+<section id="exercises">
+<h2><span class="section-number">15.1. </span>Exercises:<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <div class="exercise green admonition" id="ExerSim_cit">
 
-<p class="admonition-title"><span class="caption-number">Exercise 16.1 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 15.1 </span></p>
 <section id="exercise-content">
 <p>Using the above code blocks as an example, simulate the effects of a change in the corporate income tax rate (note the default in <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> is 21%). Just simulate the effects on the steady state (see the keyword arguments to the <code class="docutils literal notranslate"><span class="pre">runner</span></code> function).  Warning: <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> allows the corporate income tax rate to vary over time and across industries, so you will need to enter it as a list of lists (even if it’s just a scalar that applies to all industries and time).</p>
 </section>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -515,7 +512,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">17. </span><code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> Output</p>
+        <p class="prev-next-title"><span class="section-number">16. </span><code class="docutils literal notranslate"><span class="pre">OG-Core</span></code> Output</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -535,10 +532,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">15. Simulating <code class="docutils literal notranslate"><span class="pre">OG-Core</span></code></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">16. Exercises:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">15.1. Exercises:</a></li>
 </ul>
-
   </nav></div>
 
 </div></div>
