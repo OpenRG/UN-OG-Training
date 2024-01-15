@@ -198,7 +198,7 @@ Percentage Changes in Macroeconomic Aggregates
 ```
 
 
-## Excercises:
+## Exercises:
 
 ```{exercise-start}
 :label: ExerOGoutput-life_cycle

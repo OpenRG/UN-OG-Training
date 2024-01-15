@@ -53,14 +53,6 @@ With your annual data, compute the annual growth rate for each year.  Plot the t
 ```
 
 
-```{exercise-start}
-:label: ExerCalib-macro_???
-:class: green
-```
-Other??
-```{exercise-end}
-```
-
 (SecOGCalibrationMacroFootnotes)=
 ## Footnotes
 
