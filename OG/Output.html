@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
@@ -41,9 +41,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -86,7 +86,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -126,20 +125,15 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -587,7 +581,7 @@ document.write(`
         <span class="n">output_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)))</span>
 <span class="c1"># make table</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">ot</span><span class="o">.</span><span class="n">macro_table</span><span class="p">(</span><span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;TPI&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;Params&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;TPI&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;Params&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">output_type</span><span class="o">=</span><span class="s2">&quot;pct_diff&quot;</span><span class="p">,</span> <span class="n">num_years</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;Params&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start_year</span><span class="p">)</span>
-<span class="n">glue</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+<span class="n">glue</span><span class="p">(</span><span class="s1">&#39;pct_change_table&#39;</span><span class="p">,</span> <span class="n">table</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
 </pre></div>
 </div>
 <table class="table">
@@ -725,7 +719,7 @@ document.write(`
         <span class="n">output_dict</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()))</span>
 <span class="c1"># make table</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">plot_aggregates</span><span class="p">(</span><span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;TPI&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;Params&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;TPI&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;Params&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">plot_type</span><span class="o">=</span><span class="s2">&quot;pct_diff&quot;</span><span class="p">,</span> <span class="n">start_year</span><span class="o">=</span> <span class="n">output_dict</span><span class="p">[</span><span class="s2">&quot;Params&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">start_year</span><span class="p">)</span>
-<span class="n">glue</span><span class="p">(</span><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">())</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;pct_change_agg_fig&quot;</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 <figure class="align-center" id="figogcoreoutputpctchgplot">
@@ -918,8 +912,8 @@ By Jason DeBacker and Richard W. Evans
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
